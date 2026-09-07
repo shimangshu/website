@@ -3,875 +3,1127 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>CIDSESRF-2027 | H.R.H. The P.O.W.I.E.T., Jorhat</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-
-        /* =====================================================
-           GENERAL
-        ===================================================== */
-
-        :root {
-            --navy: #10243e;
-            --dark-navy: #071522;
-            --gold: #c69b45;
-            --cream: #f6f2e9;
-            --white: #ffffff;
-            --text: #263342;
-            --muted: #697586;
-            --border: #e5dfd3;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "DM Sans", sans-serif;
-            color: var(--text);
-            background: var(--white);
-            line-height: 1.7;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-
-        /* =====================================================
-           NAVIGATION
-        ===================================================== */
-
-        .navbar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 20;
-
-            padding: 22px 5%;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            color: white;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .brand img {
-            width: 72px;
-            height: 72px;
-            object-fit: contain;
-            background: rgba(255,255,255,0.96);
-            padding: 5px;
-            border-radius: 50%;
-        }
-
-        .brand-text {
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 1.4;
-            letter-spacing: 0.045em;
-        }
-
-        .brand-text span {
-            display: block;
-            font-size: 11px;
-            font-weight: 500;
-            opacity: 0.75;
-            margin-top: 2px;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            font-size: 13px;
-            font-weight: 500;
-            color: white;
-            transition: 0.25s ease;
-        }
 
-        .nav-links a:hover {
-            color: var(--gold);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .nav-register {
-            border: 1px solid rgba(255,255,255,0.65);
-            padding: 9px 18px;
-            border-radius: 30px;
-        }
+<title>CIDSESRF-2027 | H.R.H. The P.O.W.I.E.T., Jorhat</title>
 
-        .nav-register:hover {
-            background: white;
-            color: var(--navy) !important;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-        /* =====================================================
-           HERO
-        ===================================================== */
 
-        .hero {
-            min-height: 100vh;
+<style>
 
-            position: relative;
+/* =====================================================
+   GENERAL
+===================================================== */
 
-            display: flex;
-            align-items: center;
+:root {
+    --navy: #10243e;
+    --dark-navy: #071522;
+    --gold: #c69b45;
+    --cream: #f6f2e9;
+    --white: #ffffff;
+    --text: #263342;
+    --muted: #697586;
+    --border: #e5dfd3;
+}
 
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(4,17,29,0.97) 0%,
-                    rgba(4,17,29,0.91) 40%,
-                    rgba(4,17,29,0.63) 70%,
-                    rgba(4,17,29,0.74) 100%
-                ),
-                url("college-photo.jpg");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-            background-size: cover;
-            background-position: center;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background: white;
+    line-height: 1.7;
+}
 
-            padding-top: 105px;
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-            max-width: 950px;
-        }
+img {
+    max-width: 100%;
+    display: block;
+}
 
+.container {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+}
 
-        /* =====================================================
-           CONFERENCE IDENTITY AT TOP
-        ===================================================== */
 
-        .conference-id {
-            display: flex;
-            align-items: center;
-            gap: 22px;
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
-            margin-bottom: 25px;
-        }
+.navbar {
+    position: absolute;
 
-        .centenary-logo {
-            width: 125px;
-            height: 125px;
-            object-fit: contain;
+    top: 0;
+    left: 0;
 
-            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.30));
-        }
+    width: 100%;
 
-        .conference-id-text {
-            border-left: 1px solid rgba(255,255,255,0.30);
-            padding-left: 22px;
-        }
+    z-index: 50;
 
-        .conference-shortname {
-            color: var(--gold);
+    padding: 22px 4%;
 
-            font-size: 18px;
-            font-weight: 700;
+    display: flex;
 
-            letter-spacing: 0.12em;
+    justify-content: space-between;
+    align-items: center;
 
-            margin-bottom: 5px;
-        }
+    color: white;
+}
 
-        .conference-label {
-            color: rgba(255,255,255,0.72);
 
-            font-size: 12px;
-            font-weight: 600;
+/* COLLEGE BRAND */
 
-            text-transform: uppercase;
-            letter-spacing: 0.16em;
-        }
+.brand {
+    display: flex;
 
+    align-items: center;
 
-        /* =====================================================
-           HERO TITLE
-        ===================================================== */
+    gap: 17px;
 
-        .hero h1 {
-            font-family: "Playfair Display", serif;
+    flex-shrink: 0;
+}
 
-            color: white;
+.brand img {
+    width: 82px;
+    height: 82px;
 
-            font-size: clamp(40px, 5vw, 68px);
+    object-fit: contain;
 
-            line-height: 1.08;
+    background: rgba(255,255,255,0.97);
 
-            margin-bottom: 24px;
+    padding: 6px;
 
-            max-width: 930px;
-        }
+    border-radius: 50%;
 
-        .hero h1 span {
-            color: var(--gold);
-        }
+    box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+}
 
-        .hero-description {
-            color: rgba(255,255,255,0.82);
+.brand-text {
+    font-size: 16px;
 
-            max-width: 780px;
+    font-weight: 700;
 
-            font-size: 16px;
+    line-height: 1.35;
 
-            margin-bottom: 32px;
-        }
+    letter-spacing: 0.035em;
 
+    color: white;
+}
 
-        /* =====================================================
-           HERO DETAILS
-        ===================================================== */
+.brand-text .location {
+    font-size: 14px;
 
-        .hero-details {
-            display: flex;
-            flex-wrap: wrap;
+    font-weight: 500;
 
-            gap: 30px;
+    letter-spacing: 0.08em;
 
-            margin-bottom: 36px;
-        }
+    opacity: 0.85;
+}
 
-        .hero-detail {
-            border-left: 2px solid var(--gold);
+.brand-text .institution {
+    font-size: 11px;
 
-            padding-left: 15px;
-        }
+    font-weight: 400;
 
-        .hero-detail strong {
-            display: block;
+    letter-spacing: 0.05em;
 
-            color: white;
+    opacity: 0.65;
 
-            font-size: 17px;
-        }
+    margin-top: 3px;
+}
 
-        .hero-detail small {
-            display: block;
 
-            color: rgba(255,255,255,0.58);
+/* NAVIGATION LINKS */
 
-            font-size: 11px;
+.nav-links {
+    display: flex;
 
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
+    align-items: center;
 
+    gap: 25px;
+}
 
-        /* =====================================================
-           BUTTONS
-        ===================================================== */
+.nav-links a {
+    font-size: 14px;
 
-        .hero-buttons {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
+    font-weight: 600;
 
-        .btn {
-            display: inline-block;
+    color: white;
 
-            padding: 12px 24px;
+    transition: 0.25s ease;
 
-            border-radius: 30px;
+    white-space: nowrap;
+}
 
-            font-size: 14px;
-            font-weight: 600;
+.nav-links a:hover {
+    color: var(--gold);
+}
 
-            transition: 0.25s ease;
-        }
+.nav-register {
+    border: 1px solid rgba(255,255,255,0.75);
 
-        .btn-primary {
-            background: var(--gold);
-            color: #101b26;
-        }
+    padding: 11px 20px;
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            background: #d4ad5d;
-        }
+    border-radius: 30px;
+}
 
-        .btn-outline {
-            color: white;
+.nav-register:hover {
+    background: white;
 
-            border: 1px solid rgba(255,255,255,0.65);
-        }
+    color: var(--navy) !important;
+}
 
-        .btn-outline:hover {
-            background: white;
-            color: var(--navy);
-        }
 
+/* =====================================================
+   HERO
+===================================================== */
 
-        /* =====================================================
-           CENTENARY STRIP
-        ===================================================== */
+.hero {
 
-        .centenary-strip {
-            background: var(--cream);
+    min-height: 100vh;
 
-            padding: 32px 0;
+    position: relative;
 
-            border-bottom: 1px solid var(--border);
-        }
+    display: flex;
 
-        .centenary-strip-inner {
-            display: flex;
+    align-items: center;
 
-            justify-content: center;
-            align-items: center;
+    background:
 
-            gap: 22px;
+        linear-gradient(
+            90deg,
+            rgba(4,17,29,0.97) 0%,
+            rgba(4,17,29,0.92) 38%,
+            rgba(4,17,29,0.67) 70%,
+            rgba(4,17,29,0.76) 100%
+        ),
 
-            text-align: center;
-        }
+        url("college-photo.jpg");
 
-        .centenary-years {
-            font-family: "Playfair Display", serif;
+    background-size: cover;
 
-            color: var(--navy);
+    background-position: center;
+}
 
-            font-size: 29px;
-            font-weight: 600;
-        }
 
-        .centenary-divider {
-            width: 55px;
-            height: 1px;
+.hero-content {
 
-            background: var(--gold);
-        }
+    position: relative;
 
-        .centenary-caption {
-            color: var(--muted);
+    z-index: 2;
 
-            font-size: 12px;
-            font-weight: 600;
+    padding-top: 105px;
 
-            text-transform: uppercase;
-            letter-spacing: 0.13em;
-        }
+    max-width: 1000px;
+}
 
 
-        /* =====================================================
-           INTRODUCTION
-        ===================================================== */
+/* =====================================================
+   CONFERENCE IDENTITY
+===================================================== */
 
-        .intro {
-            background: var(--cream);
+.conference-id {
 
-            padding: 85px 0;
-        }
+    display: flex;
 
-        .intro-grid {
-            display: grid;
+    align-items: center;
 
-            grid-template-columns: 1.2fr 0.8fr;
+    gap: 24px;
 
-            gap: 70px;
+    margin-bottom: 28px;
+}
 
-            align-items: center;
-        }
 
-        .section-label {
-            color: var(--gold);
+.centenary-logo {
 
-            font-size: 12px;
-            font-weight: 700;
+    width: 135px;
+    height: 135px;
 
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
+    object-fit: contain;
 
-            margin-bottom: 10px;
-        }
+    filter:
+        drop-shadow(0 8px 20px rgba(0,0,0,0.35));
+}
 
-        .section-title {
-            font-family: "Playfair Display", serif;
 
-            color: var(--navy);
+.conference-id-text {
 
-            font-size: 42px;
+    border-left:
+        1px solid rgba(255,255,255,0.35);
 
-            line-height: 1.2;
+    padding-left: 23px;
+}
 
-            margin-bottom: 20px;
-        }
 
-        .intro-text p {
-            color: var(--muted);
+.conference-shortname {
 
-            margin-bottom: 16px;
-        }
+    color: var(--gold);
 
-        .intro-highlight {
-            margin-top: 25px;
+    font-size: 22px;
 
-            padding: 18px 22px;
+    font-weight: 700;
 
-            background: white;
+    letter-spacing: 0.12em;
 
-            border-left: 3px solid var(--gold);
+    margin-bottom: 6px;
+}
 
-            color: var(--navy);
 
-            font-weight: 600;
-        }
+.conference-label {
 
-        .intro-card {
-            background: var(--navy);
+    color: rgba(255,255,255,0.78);
 
-            color: white;
+    font-size: 13px;
 
-            padding: 42px;
+    font-weight: 600;
 
-            position: relative;
-        }
+    text-transform: uppercase;
 
-        .intro-card::before {
-            content: "";
+    letter-spacing: 0.15em;
+}
 
-            position: absolute;
 
-            width: 60px;
-            height: 3px;
+/* =====================================================
+   MAIN CONFERENCE HEADING
+===================================================== */
 
-            background: var(--gold);
+.hero h1 {
 
-            top: 28px;
-            left: 42px;
-        }
+    font-family: "Playfair Display", serif;
 
-        .intro-card h3 {
-            font-family: "Playfair Display", serif;
+    color: white;
 
-            font-size: 27px;
+    font-size: clamp(42px, 5vw, 70px);
 
-            margin-top: 20px;
-            margin-bottom: 15px;
-        }
+    line-height: 1.08;
 
-        .intro-card p {
-            color: rgba(255,255,255,0.68);
+    margin-bottom: 25px;
 
-            font-size: 14px;
+    max-width: 970px;
+}
 
-            margin-bottom: 22px;
-        }
+.hero h1 span {
+    color: var(--gold);
+}
 
 
-        /* =====================================================
-           CONFERENCE HIGHLIGHTS
-        ===================================================== */
+.hero-description {
 
-        .highlights {
-            background: var(--navy);
+    color: rgba(255,255,255,0.83);
 
-            padding: 75px 0;
+    max-width: 800px;
 
-            color: white;
-        }
+    font-size: 16px;
 
-        .highlights .section-label {
-            color: var(--gold);
-        }
+    margin-bottom: 34px;
+}
 
-        .highlights .section-title {
-            color: white;
-        }
 
-        .highlight-grid {
-            display: grid;
+/* =====================================================
+   DETAILS
+===================================================== */
 
-            grid-template-columns: repeat(4, 1fr);
+.hero-details {
 
-            margin-top: 35px;
+    display: flex;
 
-            border-top: 1px solid rgba(255,255,255,0.15);
-            border-bottom: 1px solid rgba(255,255,255,0.15);
-        }
+    flex-wrap: wrap;
 
-        .highlight-box {
-            padding: 30px 22px;
+    gap: 32px;
 
-            border-right: 1px solid rgba(255,255,255,0.15);
-        }
+    margin-bottom: 38px;
+}
 
-        .highlight-box:last-child {
-            border-right: none;
-        }
+.hero-detail {
 
-        .highlight-box strong {
-            display: block;
+    border-left:
+        2px solid var(--gold);
 
-            color: white;
+    padding-left: 15px;
+}
 
-            font-size: 17px;
+.hero-detail strong {
 
-            margin-bottom: 5px;
-        }
+    display: block;
 
-        .highlight-box span {
-            color: rgba(255,255,255,0.55);
+    color: white;
 
-            font-size: 12px;
-        }
+    font-size: 18px;
+}
 
+.hero-detail small {
 
-        /* =====================================================
-           CENTENARY MESSAGE
-        ===================================================== */
+    display: block;
 
-        .centenary-message {
-            padding: 90px 0;
+    color: rgba(255,255,255,0.60);
 
-            background: white;
-        }
+    font-size: 11px;
 
-        .centenary-message-grid {
-            display: grid;
+    text-transform: uppercase;
 
-            grid-template-columns: 0.35fr 1.65fr;
+    letter-spacing: 0.1em;
+}
 
-            gap: 55px;
 
-            align-items: center;
-        }
+/* =====================================================
+   BUTTONS
+===================================================== */
 
-        .message-emblem {
-            width: 180px;
-            height: 180px;
+.hero-buttons {
 
-            object-fit: contain;
+    display: flex;
 
-            margin: auto;
+    gap: 14px;
 
-            filter: drop-shadow(0 8px 18px rgba(0,0,0,0.12));
-        }
+    flex-wrap: wrap;
+}
 
-        .centenary-message h2 {
-            font-family: "Playfair Display", serif;
+.btn {
 
-            color: var(--navy);
+    display: inline-block;
 
-            font-size: 43px;
+    padding: 13px 26px;
 
-            line-height: 1.2;
+    border-radius: 30px;
 
-            margin-bottom: 17px;
-        }
+    font-size: 14px;
 
-        .centenary-message p {
-            color: var(--muted);
+    font-weight: 700;
 
-            max-width: 760px;
+    transition: 0.25s ease;
+}
 
-            font-size: 15px;
-        }
+.btn-primary {
 
+    background: var(--gold);
 
-        /* =====================================================
-           CALL TO ACTION
-        ===================================================== */
+    color: #101b26;
+}
 
-        .cta {
-            padding: 90px 0;
+.btn-primary:hover {
 
-            text-align: center;
+    transform: translateY(-2px);
 
-            background:
-                linear-gradient(
-                    rgba(8,22,36,0.93),
-                    rgba(8,22,36,0.93)
-                ),
-                url("college-photo.jpg");
+    background: #d4ad5d;
+}
 
-            background-size: cover;
-            background-position: center;
-        }
+.btn-outline {
 
-        .cta h2 {
-            font-family: "Playfair Display", serif;
+    color: white;
 
-            color: white;
+    border:
+        1px solid rgba(255,255,255,0.7);
+}
 
-            font-size: 43px;
+.btn-outline:hover {
 
-            margin-bottom: 15px;
-        }
+    background: white;
 
-        .cta p {
-            max-width: 650px;
+    color: var(--navy);
+}
 
-            margin: auto;
 
-            color: rgba(255,255,255,0.68);
+/* =====================================================
+   CENTENARY STRIP
+===================================================== */
 
-            font-size: 14px;
+.centenary-strip {
 
-            margin-bottom: 28px;
-        }
+    background: var(--cream);
 
+    padding: 30px 0;
 
-        /* =====================================================
-           FOOTER
-        ===================================================== */
+    border-bottom:
+        1px solid var(--border);
+}
 
-        footer {
-            background: var(--dark-navy);
+.centenary-strip-inner {
 
-            color: white;
+    display: flex;
 
-            padding: 55px 0 25px;
-        }
+    justify-content: center;
 
-        .footer-grid {
-            display: grid;
+    align-items: center;
 
-            grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 22px;
 
-            gap: 50px;
-        }
+    text-align: center;
+}
 
-        .footer-brand {
-            display: flex;
+.centenary-years {
 
-            align-items: flex-start;
+    font-family: "Playfair Display", serif;
 
-            gap: 15px;
-        }
+    color: var(--navy);
 
-        .footer-brand img {
-            width: 72px;
-            height: 72px;
+    font-size: 30px;
 
-            object-fit: contain;
-        }
+    font-weight: 600;
+}
 
-        footer h3 {
-            font-family: "Playfair Display", serif;
+.centenary-divider {
 
-            font-size: 21px;
+    width: 55px;
 
-            margin-bottom: 14px;
-        }
+    height: 1px;
 
-        footer p,
-        footer li {
-            color: rgba(255,255,255,0.52);
+    background: var(--gold);
+}
 
-            font-size: 13px;
-        }
+.centenary-caption {
 
-        footer ul {
-            list-style: none;
-        }
+    color: var(--muted);
 
-        footer li {
-            margin-bottom: 8px;
-        }
+    font-size: 12px;
 
-        footer a:hover {
-            color: var(--gold);
-        }
+    font-weight: 700;
 
-        .official-link {
-            color: var(--gold);
-            font-weight: 600;
-        }
+    text-transform: uppercase;
 
-        .copyright {
-            margin-top: 40px;
+    letter-spacing: 0.13em;
+}
 
-            padding-top: 20px;
 
-            border-top: 1px solid rgba(255,255,255,0.1);
+/* =====================================================
+   INTRODUCTION
+===================================================== */
 
-            text-align: center;
+.intro {
 
-            color: rgba(255,255,255,0.35);
+    background: var(--cream);
 
-            font-size: 11px;
-        }
+    padding: 90px 0;
+}
 
+.intro-grid {
 
-        /* =====================================================
-           MOBILE
-        ===================================================== */
+    display: grid;
 
-        @media (max-width: 900px) {
+    grid-template-columns: 1.2fr 0.8fr;
 
-            .nav-links {
-                display: none;
-            }
+    gap: 70px;
 
-            .hero {
-                min-height: 900px;
-            }
+    align-items: center;
+}
 
-            .intro-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
+.section-label {
 
-            .highlight-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+    color: var(--gold);
 
-            .highlight-box:nth-child(2) {
-                border-right: none;
-            }
+    font-size: 12px;
 
-            .centenary-message-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
+    font-weight: 700;
 
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+    text-transform: uppercase;
 
+    letter-spacing: 0.18em;
 
-        @media (max-width: 600px) {
+    margin-bottom: 10px;
+}
 
-            .navbar {
-                padding: 15px 5%;
-            }
+.section-title {
 
-            .brand img {
-                width: 55px;
-                height: 55px;
-            }
+    font-family: "Playfair Display", serif;
 
-            .brand-text {
-                font-size: 11px;
-            }
+    color: var(--navy);
 
-            .brand-text span {
-                font-size: 9px;
-            }
+    font-size: 43px;
 
-            .hero {
-                min-height: 950px;
-            }
+    line-height: 1.2;
 
-            .hero-content {
-                padding-top: 115px;
-            }
+    margin-bottom: 20px;
+}
 
-            .conference-id {
-                align-items: flex-start;
-                gap: 15px;
-            }
+.intro-text p {
 
-            .centenary-logo {
-                width: 88px;
-                height: 88px;
-            }
+    color: var(--muted);
 
-            .conference-id-text {
-                padding-left: 15px;
-            }
+    margin-bottom: 16px;
+}
 
-            .conference-shortname {
-                font-size: 15px;
-            }
+.intro-highlight {
 
-            .conference-label {
-                font-size: 9px;
-            }
+    margin-top: 25px;
 
-            .hero h1 {
-                font-size: 38px;
-            }
+    padding: 18px 22px;
 
-            .hero-description {
-                font-size: 14px;
-            }
+    background: white;
 
-            .centenary-strip-inner {
-                flex-direction: column;
-                gap: 8px;
-            }
+    border-left:
+        3px solid var(--gold);
 
-            .centenary-divider {
-                width: 45px;
-            }
+    color: var(--navy);
 
-            .section-title {
-                font-size: 34px;
-            }
+    font-weight: 600;
+}
 
-            .highlight-grid {
-                grid-template-columns: 1fr;
-            }
+.intro-card {
 
-            .highlight-box {
-                border-right: none;
+    background: var(--navy);
 
-                border-bottom: 1px solid rgba(255,255,255,0.15);
-            }
+    color: white;
 
-            .highlight-box:last-child {
-                border-bottom: none;
-            }
+    padding: 45px;
 
-            .centenary-message h2 {
-                font-size: 34px;
-            }
+    position: relative;
+}
 
-            .message-emblem {
-                width: 140px;
-                height: 140px;
-            }
+.intro-card::before {
 
-            .cta h2 {
-                font-size: 34px;
-            }
-        }
+    content: "";
 
-    </style>
+    position: absolute;
+
+    width: 60px;
+
+    height: 3px;
+
+    background: var(--gold);
+
+    top: 30px;
+
+    left: 45px;
+}
+
+.intro-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    margin-top: 22px;
+
+    margin-bottom: 16px;
+}
+
+.intro-card p {
+
+    color: rgba(255,255,255,0.68);
+
+    font-size: 14px;
+
+    margin-bottom: 24px;
+}
+
+
+/* =====================================================
+   HIGHLIGHTS
+===================================================== */
+
+.highlights {
+
+    background: var(--navy);
+
+    padding: 80px 0;
+
+    color: white;
+}
+
+.highlights .section-label {
+    color: var(--gold);
+}
+
+.highlights .section-title {
+    color: white;
+}
+
+.highlight-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    margin-top: 35px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.15);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.15);
+}
+
+.highlight-box {
+
+    padding: 32px 24px;
+
+    border-right:
+        1px solid rgba(255,255,255,0.15);
+}
+
+.highlight-box:last-child {
+    border-right: none;
+}
+
+.highlight-box strong {
+
+    display: block;
+
+    color: white;
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+.highlight-box span {
+
+    color: rgba(255,255,255,0.56);
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   CENTENARY MESSAGE
+===================================================== */
+
+.centenary-message {
+
+    padding: 90px 0;
+
+    background: white;
+}
+
+.centenary-message-grid {
+
+    display: grid;
+
+    grid-template-columns: 0.35fr 1.65fr;
+
+    gap: 55px;
+
+    align-items: center;
+}
+
+.message-emblem {
+
+    width: 185px;
+
+    height: 185px;
+
+    object-fit: contain;
+
+    margin: auto;
+
+    filter:
+        drop-shadow(0 8px 18px rgba(0,0,0,0.12));
+}
+
+.centenary-message h2 {
+
+    font-family: "Playfair Display", serif;
+
+    color: var(--navy);
+
+    font-size: 44px;
+
+    line-height: 1.2;
+
+    margin-bottom: 17px;
+}
+
+.centenary-message p {
+
+    color: var(--muted);
+
+    max-width: 780px;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   CALL TO ACTION
+===================================================== */
+
+.cta {
+
+    padding: 90px 0;
+
+    text-align: center;
+
+    background:
+
+        linear-gradient(
+            rgba(8,22,36,0.93),
+            rgba(8,22,36,0.93)
+        ),
+
+        url("college-photo.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.cta h2 {
+
+    font-family: "Playfair Display", serif;
+
+    color: white;
+
+    font-size: 44px;
+
+    margin-bottom: 15px;
+}
+
+.cta p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: rgba(255,255,255,0.68);
+
+    font-size: 14px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background: var(--dark-navy);
+
+    color: white;
+
+    padding: 55px 0 25px;
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr;
+
+    gap: 60px;
+}
+
+.footer-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+.footer-brand img {
+
+    width: 70px;
+
+    height: 70px;
+
+    object-fit: contain;
+}
+
+footer h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+footer p,
+footer li {
+
+    color:
+        rgba(255,255,255,0.55);
+
+    font-size: 13px;
+}
+
+footer ul {
+
+    list-style: none;
+}
+
+footer li {
+
+    margin-bottom: 9px;
+}
+
+footer a:hover {
+
+    color: var(--gold);
+}
+
+.official-website {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: var(--gold);
+
+    font-weight: 700;
+
+    font-size: 13px;
+}
+
+.footer-address {
+
+    margin-top: 16px;
+}
+
+.copyright {
+
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.1);
+
+    text-align: center;
+
+    color:
+        rgba(255,255,255,0.35);
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .brand img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .brand-text {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .navbar {
+        position: absolute;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        min-height: 900px;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .highlight-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .highlight-box:nth-child(2) {
+        border-right: none;
+    }
+
+    .centenary-message-grid {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .centenary-message p {
+        margin: auto;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        padding: 15px 5%;
+    }
+
+    .brand {
+
+        gap: 11px;
+    }
+
+    .brand img {
+
+        width: 55px;
+
+        height: 55px;
+    }
+
+    .brand-text {
+
+        font-size: 10px;
+    }
+
+    .brand-text .location {
+
+        font-size: 9px;
+    }
+
+    .brand-text .institution {
+
+        display: none;
+    }
+
+    .hero {
+
+        min-height: 950px;
+    }
+
+    .hero-content {
+
+        padding-top: 120px;
+    }
+
+    .conference-id {
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .centenary-logo {
+
+        width: 90px;
+
+        height: 90px;
+    }
+
+    .conference-id-text {
+
+        padding-left: 15px;
+    }
+
+    .conference-shortname {
+
+        font-size: 16px;
+    }
+
+    .conference-label {
+
+        font-size: 9px;
+    }
+
+    .hero h1 {
+
+        font-size: 38px;
+    }
+
+    .hero-description {
+
+        font-size: 14px;
+    }
+
+    .hero-details {
+
+        gap: 20px;
+    }
+
+    .centenary-strip-inner {
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .centenary-years {
+
+        font-size: 27px;
+    }
+
+    .section-title {
+
+        font-size: 34px;
+    }
+
+    .highlight-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-box {
+
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.15);
+    }
+
+    .highlight-box:last-child {
+
+        border-bottom: none;
+    }
+
+    .centenary-message h2 {
+
+        font-size: 34px;
+    }
+
+    .message-emblem {
+
+        width: 145px;
+
+        height: 145px;
+    }
+
+    .cta h2 {
+
+        font-size: 34px;
+    }
+}
+
+</style>
 
 </head>
 
@@ -890,13 +1142,21 @@
         <!-- COLLEGE LOGO -->
         <img
             src="college-logo.png"
-            alt="H.R.H. The P.O.W.I.E.T. Logo"
+            alt="H.R.H. The P.O.W.I.E.T. College Logo"
         >
 
         <div class="brand-text">
+
             H.R.H. THE P.O.W.I.E.T.<br>
-            JORHAT, ASSAM
-            <span>Government of Assam Institution</span>
+
+            <span class="location">
+                JORHAT, ASSAM
+            </span>
+
+            <span class="institution">
+                Government of Assam Institution
+            </span>
+
         </div>
 
     </a>
@@ -904,21 +1164,38 @@
 
     <nav class="nav-links">
 
-        <a href="index.html">Home</a>
+        <a href="index.html">
+            Home
+        </a>
 
-        <a href="about.html">About</a>
+        <a href="about.html">
+            About
+        </a>
 
-        <a href="themes.html">Themes</a>
+        <a href="themes.html">
+            Themes
+        </a>
 
-        <a href="committee.html">Committee</a>
+        <a href="committee.html">
+            Committee
+        </a>
 
-        <a href="speakers.html">Speakers</a>
+        <a href="speakers.html">
+            Speakers
+        </a>
 
-        <a href="programme.html">Programme</a>
+        <a href="programme.html">
+            Programme
+        </a>
 
-        <a href="call-for-papers.html">Papers</a>
+        <a href="call-for-papers.html">
+            Papers
+        </a>
 
-        <a href="registration.html" class="nav-register">
+        <a
+            href="registration.html"
+            class="nav-register"
+        >
             Registration
         </a>
 
@@ -939,13 +1216,13 @@
         <div class="hero-content">
 
 
-            <!-- CENTENARY EMBLEM + SHORT NAME -->
+            <!-- 100 YEAR EMBLEM -->
 
             <div class="conference-id">
 
                 <img
-                    src="centenary.png"
-                    alt="H.R.H. The P.O.W.I.E.T. Centenary Emblem 1927–2027"
+                    src="png1.png"
+                    alt="Centenary Emblem 1927–2027"
                     class="centenary-logo"
                 >
 
@@ -991,7 +1268,9 @@
 
                 <div class="hero-detail">
 
-                    <strong>2027</strong>
+                    <strong>
+                        2027
+                    </strong>
 
                     <small>
                         Centenary Conference Year
@@ -1002,7 +1281,9 @@
 
                 <div class="hero-detail">
 
-                    <strong>Jorhat, Assam</strong>
+                    <strong>
+                        Jorhat, Assam
+                    </strong>
 
                     <small>
                         Venue
@@ -1013,7 +1294,9 @@
 
                 <div class="hero-detail">
 
-                    <strong>National Conference</strong>
+                    <strong>
+                        National Conference
+                    </strong>
 
                     <small>
                         Academic Event
@@ -1082,7 +1365,7 @@
 
 
 <!-- =========================================================
-     ABOUT THE CONFERENCE
+     SHORT ABOUT
 ========================================================= -->
 
 <section class="intro">
@@ -1146,16 +1429,19 @@
             <div class="intro-card">
 
                 <h3>
+
                     A century behind us.
                     A resilient future ahead.
+
                 </h3>
 
 
                 <p>
 
-                    The centenary of H.R.H. The P.O.W.I.E.T. provides
-                    a meaningful backdrop for a national dialogue on
-                    innovation, knowledge and sustainable development.
+                    The centenary of H.R.H. The P.O.W.I.E.T.
+                    provides a meaningful backdrop for a national
+                    dialogue on innovation, knowledge and
+                    sustainable development.
 
                 </p>
 
@@ -1272,7 +1558,7 @@
             <div>
 
                 <img
-                    src="centenary.png"
+                    src="png1.png"
                     alt="100 Years Centenary Emblem"
                     class="message-emblem"
                 >
@@ -1287,18 +1573,20 @@
                 </div>
 
                 <h2>
+
                     Celebrating a Century.
                     Shaping the Future.
+
                 </h2>
 
                 <p>
 
-                    As H.R.H. The P.O.W.I.E.T. marks 100 years of
-                    technical education and service, CIDSESRF-2027
-                    looks forward to bringing together diverse
-                    perspectives to build knowledge, encourage
-                    innovation and contribute towards a resilient
-                    future.
+                    As H.R.H. The P.O.W.I.E.T. marks 100 years
+                    of technical education and service,
+                    CIDSESRF-2027 looks forward to bringing
+                    together diverse perspectives to build
+                    knowledge, encourage innovation and
+                    contribute towards a resilient future.
 
                 </p>
 
@@ -1349,7 +1637,7 @@
 
 
 <!-- =========================================================
-     FOOTER
+     CLEAN FOOTER
 ========================================================= -->
 
 <footer>
@@ -1359,7 +1647,7 @@
         <div class="footer-grid">
 
 
-            <!-- INSTITUTION -->
+            <!-- COLLEGE -->
 
             <div>
 
@@ -1385,26 +1673,23 @@
                 </div>
 
 
-                <p style="margin-top:20px; max-width:450px;">
+                <p class="footer-address">
 
-                    Celebrating 100 years of technical education
-                    and service.
-
-                </p>
-
-
-                <p style="margin-top:10px;">
-
-                    <a
-                        href="https://powietjrt.in/index.php"
-                        target="_blank"
-                        rel="noopener"
-                        class="official-link"
-                    >
-                        Visit Official College Website →
-                    </a>
+                    Gar Ali, Jorhat – 785001, Assam
 
                 </p>
+
+
+                <a
+                    href="https://powietjrt.in/"
+                    target="_blank"
+                    rel="noopener"
+                    class="official-website"
+                >
+
+                    Visit College Website →
+
+                </a>
 
             </div>
 
@@ -1456,7 +1741,7 @@
 
 
 
-            <!-- PARTICIPATE -->
+            <!-- PARTICIPATION -->
 
             <div>
 
@@ -1507,7 +1792,7 @@
         <div class="copyright">
 
             © 2027 H.R.H. The P.O.W.I.E.T., Jorhat, Assam
-            · Centenary Celebration 1927–2027
+            · Centenary 1927–2027
 
         </div>
 
