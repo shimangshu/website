@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Downloads | CIDSESRF-2027</title>
+<title>Contact | CIDSESRF-2027</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,10 +31,6 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
 }
 
 body{
@@ -250,7 +246,7 @@ a{
 
 .intro p{
 
-    max-width:760px;
+    max-width:750px;
 
     margin:auto;
 
@@ -261,248 +257,289 @@ a{
 
 
 /* =====================================================
-   DOWNLOADS
+   CONTACT GRID
 ===================================================== */
 
-.downloads-section{
+.contact-section{
 
     padding:20px 0 100px;
 }
 
-.download-grid{
+.contact-grid{
 
     display:grid;
 
     grid-template-columns:
-        repeat(2,1fr);
+        1fr 1fr;
 
-    gap:20px;
+    gap:25px;
 
-    max-width:1000px;
+    max-width:1050px;
 
     margin:auto;
 }
 
-.download-card{
+.contact-card{
 
     border:1px solid var(--border);
 
+    padding:35px;
+
     background:white;
-
-    padding:30px;
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:20px;
 
     transition:.25s ease;
 }
 
-.download-card:hover{
+.contact-card:hover{
 
     transform:translateY(-3px);
 
-    border-color:#c9b98f;
+    box-shadow:
+        0 12px 30px rgba(16,36,62,.07);
 
-    box-shadow:0 10px 30px rgba(16,36,62,.07);
+}
+
+.card-label{
+
+    color:var(--gold);
+
+    font-size:10px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.16em;
+
+    margin-bottom:9px;
+}
+
+.contact-card h3{
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--navy);
+
+    font-size:27px;
+
+    margin-bottom:17px;
+}
+
+.contact-card p{
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    margin-bottom:10px;
+}
+
+.contact-card strong{
+
+    color:var(--navy);
+}
+
+.contact-link{
+
+    color:var(--navy);
+
+    font-weight:600;
+
+    border-bottom:1px solid var(--gold);
+
+    padding-bottom:1px;
+}
+
+.contact-link:hover{
+    color:var(--gold);
 }
 
 
-/* PDF icon */
+/* =====================================================
+   ADDRESS
+===================================================== */
 
-.file-icon{
+.address-section{
 
-    min-width:54px;
+    background:var(--cream);
 
-    height:64px;
+    padding:80px 0;
+}
+
+.address-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.address-content h2{
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--navy);
+
+    font-size:38px;
+
+    line-height:1.2;
+
+    margin-bottom:17px;
+}
+
+.address-content p{
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    margin-bottom:15px;
+}
+
+.address-box{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    padding:35px;
+}
+
+.address-box .line{
+
+    display:flex;
+
+    gap:16px;
+
+    align-items:flex-start;
+
+    margin-bottom:23px;
+}
+
+.address-box .line:last-child{
+    margin-bottom:0;
+}
+
+.icon{
+
+    width:38px;
+
+    height:38px;
+
+    flex-shrink:0;
 
     border:1px solid var(--gold);
 
     display:flex;
-
-    flex-direction:column;
 
     align-items:center;
 
     justify-content:center;
 
     color:var(--gold);
+
+    font-size:16px;
 }
 
-.file-icon strong{
-
-    font-size:10px;
-
-    letter-spacing:.08em;
-}
-
-.file-icon span{
-
-    font-size:8px;
-
-    margin-top:2px;
-
-    color:var(--muted);
-}
-
-
-.download-content{
-
-    flex:1;
-}
-
-.download-content h3{
+.address-box h4{
 
     font-family:"Playfair Display",serif;
 
     color:var(--navy);
 
-    font-size:22px;
+    font-size:17px;
 
-    line-height:1.25;
-
-    margin-bottom:6px;
+    margin-bottom:2px;
 }
 
-.download-content p{
+.address-box p{
 
     color:var(--muted);
 
     font-size:12.5px;
 
-    margin-bottom:15px;
-}
-
-.download-button{
-
-    display:inline-block;
-
-    color:var(--navy);
-
-    border-bottom:1px solid var(--gold);
-
-    font-size:11px;
-
-    font-weight:700;
-
-    padding-bottom:2px;
-
-    transition:.2s ease;
-}
-
-.download-button:hover{
-
-    color:var(--gold);
+    margin:0;
 }
 
 
 /* =====================================================
-   AVAILABLE SOON
+   MAP
 ===================================================== */
 
-.coming-soon{
+.map-section{
+
+    padding:80px 0;
+}
+
+.map-heading{
+
+    text-align:center;
+
+    margin-bottom:35px;
+}
+
+.map-heading h2{
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--navy);
+
+    font-size:37px;
+
+    margin-top:5px;
+}
+
+.map-frame{
+
+    max-width:1050px;
+
+    margin:auto;
+
+    height:380px;
+
+    border:1px solid var(--border);
+
+    background:#eee;
+
+    overflow:hidden;
+}
+
+.map-frame iframe{
+
+    width:100%;
+
+    height:100%;
+
+    border:0;
+}
+
+
+/* =====================================================
+   CONTACT NOTE
+===================================================== */
+
+.note{
+
+    max-width:1050px;
 
     margin:35px auto 0;
-
-    max-width:1000px;
-
-    padding:27px 30px;
 
     background:var(--cream);
 
     border-left:3px solid var(--gold);
 
+    padding:25px 28px;
+
     color:var(--muted);
 
     font-size:13px;
-
-    text-align:center;
 }
 
-.coming-soon strong{
+.note strong{
     color:var(--navy);
-}
-
-
-/* =====================================================
-   DOCUMENT CATEGORIES
-===================================================== */
-
-.categories{
-
-    background:var(--cream);
-
-    padding:75px 0;
-}
-
-.section-heading{
-
-    text-align:center;
-
-    margin-bottom:38px;
-}
-
-.section-heading .eyebrow{
-    margin-bottom:9px;
-}
-
-.section-heading h2{
-
-    font-family:"Playfair Display",serif;
-
-    color:var(--navy);
-
-    font-size:36px;
-}
-
-.category-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:18px;
-}
-
-.category{
-
-    background:white;
-
-    padding:27px;
-
-    border:1px solid var(--border);
-}
-
-.category-number{
-
-    font-family:"Playfair Display",serif;
-
-    font-size:30px;
-
-    color:var(--gold);
-
-    margin-bottom:8px;
-}
-
-.category h3{
-
-    font-family:"Playfair Display",serif;
-
-    color:var(--navy);
-
-    font-size:21px;
-
-    margin-bottom:7px;
-}
-
-.category p{
-
-    color:var(--muted);
-
-    font-size:12.5px;
 }
 
 
@@ -636,11 +673,8 @@ footer a:hover{
         display:none;
     }
 
-    .download-grid{
-        grid-template-columns:1fr;
-    }
-
-    .category-grid{
+    .contact-grid,
+    .address-grid{
         grid-template-columns:1fr;
     }
 
@@ -681,8 +715,17 @@ footer a:hover{
         font-size:34px;
     }
 
-    .download-card{
-        padding:23px;
+    .contact-card{
+        padding:25px;
+    }
+
+    .address-section,
+    .map-section{
+        padding:60px 0;
+    }
+
+    .map-frame{
+        height:300px;
     }
 
 }
@@ -752,7 +795,7 @@ footer a:hover{
             Programme
         </a>
 
-        <a href="downloads.html" class="active">
+        <a href="downloads.html">
             Downloads
         </a>
 
@@ -761,6 +804,10 @@ footer a:hover{
             class="nav-register"
         >
             Registration
+        </a>
+
+        <a href="contact.html" class="active">
+            Contact
         </a>
 
     </nav>
@@ -784,14 +831,14 @@ footer a:hover{
             </div>
 
             <h1>
-                Downloads
+                Contact Us
             </h1>
 
             <p>
 
-                Conference documents, templates,
-                programme information and resources
-                for participants.
+                For conference enquiries, participation,
+                submissions and other information,
+                please get in touch with the organising team.
 
             </p>
 
@@ -812,17 +859,19 @@ footer a:hover{
     <div class="container">
 
         <div class="eyebrow">
-            Conference Resources
+            Get in Touch
         </div>
 
         <h2>
-            Everything you need, in one place.
+            We would be glad to hear from you.
         </h2>
 
         <p>
 
-            Official conference documents will be made
-            available here as they are released.
+            Whether you are interested in submitting a paper,
+            participating in the conference or seeking
+            additional information, the organising team is
+            available to assist you.
 
         </p>
 
@@ -833,289 +882,159 @@ footer a:hover{
 
 
 <!-- =====================================================
-     DOWNLOAD GRID
+     CONTACT CARDS
 ===================================================== -->
 
-<section class="downloads-section">
+<section class="contact-section">
 
     <div class="container">
 
-        <div class="download-grid">
+        <div class="contact-grid">
 
 
-            <!-- BROCHURE -->
+            <!-- CONFERENCE CONTACT -->
 
-            <div class="download-card">
+            <div class="contact-card">
 
-                <div class="file-icon">
+                <div class="card-label">
+                    Conference
+                </div>
 
+                <h3>
+                    Conference Secretariat
+                </h3>
+
+                <p>
                     <strong>
-                        PDF
+                        CIDSESRF-2027
                     </strong>
+                </p>
 
-                    <span>
-                        FILE
-                    </span>
+                <p>
 
-                </div>
+                    National Conference on Convergence,
+                    Innovation and Development of Science,
+                    Engineering and Society for a Resilient Future.
 
-                <div class="download-content">
+                </p>
 
-                    <h3>
-                        Conference Brochure
-                    </h3>
+                <p>
 
-                    <p>
+                    H.R.H. The Prince of Wales Institute
+                    of Engineering &amp; Technology,
+                    Jorhat, Assam.
 
-                        Detailed information about
-                        CIDSESRF-2027, the conference,
-                        themes and participation.
-
-                    </p>
-
-                    <!--
-                    WHEN READY:
-
-                    Replace # with:
-
-                    href="files/conference-brochure.pdf"
-
-                    -->
-
-                    <a
-                        href="#"
-                        class="download-button"
-                    >
-                        Coming Soon
-                    </a>
-
-                </div>
+                </p>
 
             </div>
 
 
 
-            <!-- NOTIFICATION -->
+            <!-- EMAIL -->
 
-            <div class="download-card">
+            <div class="contact-card">
 
-                <div class="file-icon">
-
-                    <strong>
-                        PDF
-                    </strong>
-
-                    <span>
-                        FILE
-                    </span>
-
+                <div class="card-label">
+                    Email
                 </div>
 
-                <div class="download-content">
+                <h3>
+                    Write to Us
+                </h3>
 
-                    <h3>
-                        Conference Notification
-                    </h3>
+                <p>
 
-                    <p>
+                    For general conference enquiries,
+                    abstract submission and participation
+                    related queries:
 
-                        Official notification and
-                        announcement of the conference.
+                </p>
 
-                    </p>
+                <p style="margin-top:18px;">
 
                     <a
-                        href="#"
-                        class="download-button"
+                        href="mailto:hrhpowiet@gmail.com"
+                        class="contact-link"
                     >
-                        Coming Soon
+                        hrhpowiet@gmail.com
                     </a>
 
-                </div>
+                </p>
 
             </div>
 
 
 
-            <!-- ABSTRACT TEMPLATE -->
+            <!-- PHONE -->
 
-            <div class="download-card">
+            <div class="contact-card">
 
-                <div class="file-icon">
+                <div class="card-label">
+                    Telephone
+                </div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+
+                    Conference contact number:
+
+                </p>
+
+                <p style="margin-top:18px;">
 
                     <strong>
-                        DOC
+                        7399232471
                     </strong>
 
-                    <span>
-                        FILE
-                    </span>
+                </p>
 
-                </div>
+                <p style="font-size:11px;margin-top:12px;">
 
-                <div class="download-content">
+                    Additional contact numbers may be
+                    added when available.
 
-                    <h3>
-                        Abstract Template
-                    </h3>
-
-                    <p>
-
-                        Template and formatting guidelines
-                        for submission of abstracts.
-
-                    </p>
-
-                    <a
-                        href="#"
-                        class="download-button"
-                    >
-                        Coming Soon
-                    </a>
-
-                </div>
+                </p>
 
             </div>
 
 
 
-            <!-- FULL PAPER TEMPLATE -->
+            <!-- INSTITUTE -->
 
-            <div class="download-card">
+            <div class="contact-card">
 
-                <div class="file-icon">
-
-                    <strong>
-                        DOC
-                    </strong>
-
-                    <span>
-                        FILE
-                    </span>
-
+                <div class="card-label">
+                    Institution
                 </div>
 
-                <div class="download-content">
+                <h3>
+                    H.R.H. The P.O.W.I.E.T.
+                </h3>
 
-                    <h3>
-                        Full Paper Template
-                    </h3>
+                <p>
 
-                    <p>
+                    Gar Ali, Jorhat – 785001<br>
+                    Assam, India
 
-                        Formatting template and instructions
-                        for full paper submission.
+                </p>
 
-                    </p>
+                <p style="margin-top:15px;">
 
                     <a
-                        href="#"
-                        class="download-button"
+                        href="https://powietjrt.in/index.php"
+                        target="_blank"
+                        class="contact-link"
                     >
-                        Coming Soon
+                        Visit Institute Website
                     </a>
 
-                </div>
+                </p>
 
             </div>
 
-
-
-            <!-- PROGRAMME -->
-
-            <div class="download-card">
-
-                <div class="file-icon">
-
-                    <strong>
-                        PDF
-                    </strong>
-
-                    <span>
-                        FILE
-                    </span>
-
-                </div>
-
-                <div class="download-content">
-
-                    <h3>
-                        Detailed Programme
-                    </h3>
-
-                    <p>
-
-                        Final conference schedule,
-                        sessions and presentation timings.
-
-                    </p>
-
-                    <a
-                        href="#"
-                        class="download-button"
-                    >
-                        Coming Soon
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- REGISTRATION -->
-
-            <div class="download-card">
-
-                <div class="file-icon">
-
-                    <strong>
-                        PDF
-                    </strong>
-
-                    <span>
-                        FILE
-                    </span>
-
-                </div>
-
-                <div class="download-content">
-
-                    <h3>
-                        Registration Information
-                    </h3>
-
-                    <p>
-
-                        Registration categories, fees,
-                        payment information and instructions.
-
-                    </p>
-
-                    <a
-                        href="registration.html"
-                        class="download-button"
-                    >
-                        View Registration
-                    </a>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-
-        <div class="coming-soon">
-
-            <strong>
-                More documents will be added here.
-            </strong>
-
-            Conference materials will be uploaded
-            progressively as they are finalised.
 
         </div>
 
@@ -1126,93 +1045,175 @@ footer a:hover{
 
 
 <!-- =====================================================
-     DOCUMENT CATEGORIES
+     ADDRESS
 ===================================================== -->
 
-<section class="categories">
+<section class="address-section">
 
     <div class="container">
 
+        <div class="address-grid">
 
-        <div class="section-heading">
+
+            <div class="address-content">
+
+                <div class="eyebrow">
+                    Visit Us
+                </div>
+
+                <h2>
+                    H.R.H. The P.O.W.I.E.T.,
+                    Jorhat
+                </h2>
+
+                <p>
+
+                    The conference will be hosted at
+                    H.R.H. The Prince of Wales Institute
+                    of Engineering &amp; Technology,
+                    Jorhat, Assam.
+
+                </p>
+
+                <p>
+
+                    The institute is located at Gar Ali,
+                    in the historic town of Jorhat.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="address-box">
+
+
+                <div class="line">
+
+                    <div class="icon">
+                        ◆
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Address
+                        </h4>
+
+                        <p>
+                            H.R.H. The P.O.W.I.E.T.<br>
+                            Gar Ali, Jorhat – 785001<br>
+                            Assam, India
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="line">
+
+                    <div class="icon">
+                        ✉
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Email
+                        </h4>
+
+                        <p>
+                            hrhpowiet@gmail.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="line">
+
+                    <div class="icon">
+                        ☎
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Phone
+                        </h4>
+
+                        <p>
+                            7399232471
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAP
+===================================================== -->
+
+<section class="map-section">
+
+    <div class="container">
+
+        <div class="map-heading">
 
             <div class="eyebrow">
-                Resources
+                Location
             </div>
 
             <h2>
-                Conference Documents
+                Find the Institute
             </h2>
 
         </div>
 
 
-        <div class="category-grid">
+        <div class="map-frame">
+
+            <iframe
+
+                src="https://www.google.com/maps?q=H.R.H.%20The%20Prince%20of%20Wales%20Institute%20of%20Engineering%20and%20Technology,%20Jorhat,%20Assam&output=embed"
+
+                loading="lazy"
+
+                referrerpolicy="no-referrer-when-downgrade"
+
+                allowfullscreen>
+
+            </iframe>
+
+        </div>
 
 
-            <div class="category">
+        <div class="note">
 
-                <div class="category-number">
-                    01
-                </div>
+            <strong>
+                Travel information:
+            </strong>
 
-                <h3>
-                    For Authors
-                </h3>
-
-                <p>
-
-                    Abstract guidelines, paper templates,
-                    submission instructions and publication
-                    information.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="category">
-
-                <div class="category-number">
-                    02
-                </div>
-
-                <h3>
-                    For Participants
-                </h3>
-
-                <p>
-
-                    Programme, registration information,
-                    venue details and participant resources.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="category">
-
-                <div class="category-number">
-                    03
-                </div>
-
-                <h3>
-                    Official Documents
-                </h3>
-
-                <p>
-
-                    Conference notification, brochure,
-                    announcements and other official
-                    documents.
-
-                </p>
-
-            </div>
-
+            Detailed information regarding travel,
+            accommodation and local arrangements may be
+            added here once the conference arrangements
+            are finalised.
 
         </div>
 
@@ -1231,13 +1232,14 @@ footer a:hover{
     <div class="container">
 
         <h2>
-            Stay updated.
+            Be part of CIDSESRF-2027.
         </h2>
 
         <p>
 
-            Important conference documents and announcements
-            will be added to this page as they become available.
+            We look forward to welcoming researchers,
+            faculty members, students, scientists,
+            engineers and professionals to Jorhat.
 
         </p>
 
