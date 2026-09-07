@@ -3,1094 +3,875 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CIDSESRF-2027 | H.R.H. The P.O.W.I.E.T., Jorhat</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           GENERAL
+        ===================================================== */
+
+        :root {
+            --navy: #10243e;
+            --dark-navy: #071522;
+            --gold: #c69b45;
+            --cream: #f6f2e9;
+            --white: #ffffff;
+            --text: #263342;
+            --muted: #697586;
+            --border: #e5dfd3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 20;
+
+            padding: 22px 5%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            color: white;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand img {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
+            background: rgba(255,255,255,0.96);
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+        .brand-text {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: 0.045em;
+        }
+
+        .brand-text span {
+            display: block;
+            font-size: 11px;
+            font-weight: 500;
+            opacity: 0.75;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 500;
+            color: white;
+            transition: 0.25s ease;
+        }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        .nav-links a:hover {
+            color: var(--gold);
+        }
 
-<title>CIDSESRF-2027 | H.R.H. The P.O.W.I.E.T., Jorhat</title>
+        .nav-register {
+            border: 1px solid rgba(255,255,255,0.65);
+            padding: 9px 18px;
+            border-radius: 30px;
+        }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        .nav-register:hover {
+            background: white;
+            color: var(--navy) !important;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-<style>
+        /* =====================================================
+           HERO
+        ===================================================== */
 
-/* =====================================================
-   GENERAL
-===================================================== */
+        .hero {
+            min-height: 100vh;
 
-:root{
-    --navy:#10243e;
-    --dark-navy:#071522;
-    --gold:#c69b45;
-    --gold-light:#d9b76b;
-    --cream:#f6f2e9;
-    --white:#ffffff;
-    --text:#263342;
-    --muted:#697586;
-    --border:#e5dfd3;
-}
+            position: relative;
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+            display: flex;
+            align-items: center;
 
-html{
-    scroll-behavior:smooth;
-}
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(4,17,29,0.97) 0%,
+                    rgba(4,17,29,0.91) 40%,
+                    rgba(4,17,29,0.63) 70%,
+                    rgba(4,17,29,0.74) 100%
+                ),
+                url("college-photo.jpg");
 
-body{
-    font-family:"DM Sans",sans-serif;
-    color:var(--text);
-    background:white;
-    line-height:1.7;
-}
+            background-size: cover;
+            background-position: center;
+        }
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
+        .hero-content {
+            position: relative;
+            z-index: 2;
 
-img{
-    max-width:100%;
-    display:block;
-}
+            padding-top: 105px;
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
+            max-width: 950px;
+        }
 
 
-/* =====================================================
-   NAVIGATION
-===================================================== */
+        /* =====================================================
+           CONFERENCE IDENTITY AT TOP
+        ===================================================== */
 
-.navbar{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:20;
+        .conference-id {
+            display: flex;
+            align-items: center;
+            gap: 22px;
 
-    padding:18px 5%;
+            margin-bottom: 25px;
+        }
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+        .centenary-logo {
+            width: 125px;
+            height: 125px;
+            object-fit: contain;
 
-    color:white;
-}
+            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.30));
+        }
 
-.brand{
-    display:flex;
-    align-items:center;
-    gap:16px;
-}
+        .conference-id-text {
+            border-left: 1px solid rgba(255,255,255,0.30);
+            padding-left: 22px;
+        }
 
-.brand img{
-    width:78px;
-    height:78px;
+        .conference-shortname {
+            color: var(--gold);
 
-    object-fit:contain;
+            font-size: 18px;
+            font-weight: 700;
 
-    background:rgba(255,255,255,.96);
+            letter-spacing: 0.12em;
 
-    padding:5px;
+            margin-bottom: 5px;
+        }
 
-    border-radius:50%;
+        .conference-label {
+            color: rgba(255,255,255,0.72);
 
-    box-shadow:0 5px 18px rgba(0,0,0,.22);
-}
+            font-size: 12px;
+            font-weight: 600;
 
-.brand-text{
-    font-family:"Playfair Display",serif;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+        }
 
-    font-size:15px;
 
-    font-weight:600;
+        /* =====================================================
+           HERO TITLE
+        ===================================================== */
 
-    line-height:1.35;
+        .hero h1 {
+            font-family: "Playfair Display", serif;
 
-    letter-spacing:.045em;
+            color: white;
 
-    color:white;
-}
+            font-size: clamp(40px, 5vw, 68px);
 
-.brand-text span{
-    font-family:"DM Sans",sans-serif;
+            line-height: 1.08;
 
-    font-size:11px;
+            margin-bottom: 24px;
 
-    font-weight:500;
+            max-width: 930px;
+        }
 
-    letter-spacing:.08em;
+        .hero h1 span {
+            color: var(--gold);
+        }
 
-    text-transform:uppercase;
+        .hero-description {
+            color: rgba(255,255,255,0.82);
 
-    color:rgba(255,255,255,.72);
-}
+            max-width: 780px;
 
-.nav-links{
-    display:flex;
+            font-size: 16px;
 
-    align-items:center;
+            margin-bottom: 32px;
+        }
 
-    gap:24px;
-}
 
-.nav-links a{
-    font-size:13px;
+        /* =====================================================
+           HERO DETAILS
+        ===================================================== */
 
-    font-weight:500;
+        .hero-details {
+            display: flex;
+            flex-wrap: wrap;
 
-    color:white;
+            gap: 30px;
 
-    transition:.25s ease;
-}
+            margin-bottom: 36px;
+        }
 
-.nav-links a:hover{
-    color:var(--gold-light);
-}
+        .hero-detail {
+            border-left: 2px solid var(--gold);
 
-.nav-register{
-    border:1px solid rgba(255,255,255,.7);
+            padding-left: 15px;
+        }
 
-    padding:9px 18px;
+        .hero-detail strong {
+            display: block;
 
-    border-radius:30px;
-}
+            color: white;
 
-.nav-register:hover{
-    background:white;
+            font-size: 17px;
+        }
 
-    color:var(--navy)!important;
-}
+        .hero-detail small {
+            display: block;
 
+            color: rgba(255,255,255,0.58);
 
-/* =====================================================
-   HERO
-===================================================== */
+            font-size: 11px;
 
-.hero{
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
 
-    min-height:100vh;
 
-    position:relative;
+        /* =====================================================
+           BUTTONS
+        ===================================================== */
 
-    display:flex;
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
 
-    align-items:center;
+        .btn {
+            display: inline-block;
 
-    background:
+            padding: 12px 24px;
 
-    linear-gradient(
-        90deg,
-        rgba(4,17,29,.97) 0%,
-        rgba(4,17,29,.91) 40%,
-        rgba(4,17,29,.60) 72%,
-        rgba(4,17,29,.72) 100%
-    ),
+            border-radius: 30px;
 
-    url("college-photo.jpg");
+            font-size: 14px;
+            font-weight: 600;
 
-    background-size:cover;
+            transition: 0.25s ease;
+        }
 
-    background-position:center;
-}
+        .btn-primary {
+            background: var(--gold);
+            color: #101b26;
+        }
 
-.hero-content{
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: #d4ad5d;
+        }
 
-    position:relative;
+        .btn-outline {
+            color: white;
 
-    z-index:2;
+            border: 1px solid rgba(255,255,255,0.65);
+        }
 
-    padding-top:115px;
+        .btn-outline:hover {
+            background: white;
+            color: var(--navy);
+        }
 
-    padding-bottom:70px;
 
-    max-width:930px;
-}
+        /* =====================================================
+           CENTENARY STRIP
+        ===================================================== */
 
+        .centenary-strip {
+            background: var(--cream);
 
-/* =====================================================
-   CENTENARY AREA
-===================================================== */
+            padding: 32px 0;
 
-.hero-top{
+            border-bottom: 1px solid var(--border);
+        }
 
-    display:flex;
+        .centenary-strip-inner {
+            display: flex;
 
-    align-items:center;
+            justify-content: center;
+            align-items: center;
 
-    gap:30px;
+            gap: 22px;
 
-    margin-bottom:30px;
-}
+            text-align: center;
+        }
 
-.centenary-logo{
+        .centenary-years {
+            font-family: "Playfair Display", serif;
 
-    width:155px;
+            color: var(--navy);
 
-    height:155px;
+            font-size: 29px;
+            font-weight: 600;
+        }
 
-    object-fit:contain;
+        .centenary-divider {
+            width: 55px;
+            height: 1px;
 
-    filter:
-        drop-shadow(0 10px 25px rgba(0,0,0,.40));
-}
+            background: var(--gold);
+        }
 
-.conference-label{
+        .centenary-caption {
+            color: var(--muted);
 
-    color:var(--gold-light);
+            font-size: 12px;
+            font-weight: 600;
 
-    font-size:13px;
+            text-transform: uppercase;
+            letter-spacing: 0.13em;
+        }
 
-    font-weight:700;
 
-    text-transform:uppercase;
+        /* =====================================================
+           INTRODUCTION
+        ===================================================== */
 
-    letter-spacing:.18em;
-}
+        .intro {
+            background: var(--cream);
 
+            padding: 85px 0;
+        }
 
-/* =====================================================
-   HERO TITLE
-===================================================== */
+        .intro-grid {
+            display: grid;
 
-.hero h1{
+            grid-template-columns: 1.2fr 0.8fr;
 
-    font-family:"Playfair Display",serif;
+            gap: 70px;
 
-    color:white;
+            align-items: center;
+        }
 
-    font-size:clamp(40px,5vw,70px);
+        .section-label {
+            color: var(--gold);
 
-    line-height:1.08;
+            font-size: 12px;
+            font-weight: 700;
 
-    margin-bottom:25px;
-}
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
 
-.hero h1 span{
+            margin-bottom: 10px;
+        }
 
-    color:var(--gold-light);
-}
+        .section-title {
+            font-family: "Playfair Display", serif;
 
-.hero-description{
+            color: var(--navy);
 
-    color:rgba(255,255,255,.82);
+            font-size: 42px;
 
-    max-width:780px;
+            line-height: 1.2;
 
-    font-size:16px;
+            margin-bottom: 20px;
+        }
 
-    margin-bottom:32px;
-}
+        .intro-text p {
+            color: var(--muted);
 
+            margin-bottom: 16px;
+        }
 
-/* =====================================================
-   HERO DETAILS
-===================================================== */
+        .intro-highlight {
+            margin-top: 25px;
 
-.hero-details{
+            padding: 18px 22px;
 
-    display:flex;
+            background: white;
 
-    flex-wrap:wrap;
+            border-left: 3px solid var(--gold);
 
-    gap:30px;
+            color: var(--navy);
 
-    margin-bottom:36px;
-}
+            font-weight: 600;
+        }
 
-.hero-detail{
+        .intro-card {
+            background: var(--navy);
 
-    border-left:2px solid var(--gold);
+            color: white;
 
-    padding-left:15px;
-}
+            padding: 42px;
 
-.hero-detail strong{
+            position: relative;
+        }
 
-    display:block;
+        .intro-card::before {
+            content: "";
 
-    color:white;
+            position: absolute;
 
-    font-size:17px;
-}
+            width: 60px;
+            height: 3px;
 
-.hero-detail small{
+            background: var(--gold);
 
-    display:block;
+            top: 28px;
+            left: 42px;
+        }
 
-    color:rgba(255,255,255,.58);
+        .intro-card h3 {
+            font-family: "Playfair Display", serif;
 
-    font-size:11px;
+            font-size: 27px;
 
-    text-transform:uppercase;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
 
-    letter-spacing:.1em;
-}
+        .intro-card p {
+            color: rgba(255,255,255,0.68);
 
+            font-size: 14px;
 
-/* =====================================================
-   BUTTONS
-===================================================== */
+            margin-bottom: 22px;
+        }
 
-.hero-buttons{
 
-    display:flex;
+        /* =====================================================
+           CONFERENCE HIGHLIGHTS
+        ===================================================== */
 
-    gap:14px;
+        .highlights {
+            background: var(--navy);
 
-    flex-wrap:wrap;
-}
+            padding: 75px 0;
 
-.btn{
+            color: white;
+        }
 
-    display:inline-block;
+        .highlights .section-label {
+            color: var(--gold);
+        }
 
-    padding:12px 24px;
+        .highlights .section-title {
+            color: white;
+        }
 
-    border-radius:30px;
+        .highlight-grid {
+            display: grid;
 
-    font-size:14px;
+            grid-template-columns: repeat(4, 1fr);
 
-    font-weight:600;
+            margin-top: 35px;
 
-    transition:.25s ease;
-}
+            border-top: 1px solid rgba(255,255,255,0.15);
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
 
-.btn-primary{
+        .highlight-box {
+            padding: 30px 22px;
 
-    background:var(--gold);
+            border-right: 1px solid rgba(255,255,255,0.15);
+        }
 
-    color:#101b26;
-}
+        .highlight-box:last-child {
+            border-right: none;
+        }
 
-.btn-primary:hover{
+        .highlight-box strong {
+            display: block;
 
-    transform:translateY(-2px);
+            color: white;
 
-    background:#d4ad5d;
-}
+            font-size: 17px;
 
-.btn-outline{
+            margin-bottom: 5px;
+        }
 
-    color:white;
+        .highlight-box span {
+            color: rgba(255,255,255,0.55);
 
-    border:1px solid rgba(255,255,255,.65);
-}
+            font-size: 12px;
+        }
 
-.btn-outline:hover{
 
-    background:white;
+        /* =====================================================
+           CENTENARY MESSAGE
+        ===================================================== */
 
-    color:var(--navy);
-}
+        .centenary-message {
+            padding: 90px 0;
 
+            background: white;
+        }
 
-/* =====================================================
-   CENTENARY STRIP
-===================================================== */
+        .centenary-message-grid {
+            display: grid;
 
-.centenary-strip{
+            grid-template-columns: 0.35fr 1.65fr;
 
-    background:var(--cream);
+            gap: 55px;
 
-    padding:30px 0;
+            align-items: center;
+        }
 
-    border-bottom:1px solid var(--border);
-}
+        .message-emblem {
+            width: 180px;
+            height: 180px;
 
-.centenary-inner{
+            object-fit: contain;
 
-    display:flex;
+            margin: auto;
 
-    justify-content:center;
+            filter: drop-shadow(0 8px 18px rgba(0,0,0,0.12));
+        }
 
-    align-items:center;
+        .centenary-message h2 {
+            font-family: "Playfair Display", serif;
 
-    gap:22px;
+            color: var(--navy);
 
-    text-align:center;
-}
+            font-size: 43px;
 
-.centenary-inner strong{
+            line-height: 1.2;
 
-    font-family:"Playfair Display",serif;
+            margin-bottom: 17px;
+        }
 
-    color:var(--navy);
+        .centenary-message p {
+            color: var(--muted);
 
-    font-size:28px;
-}
+            max-width: 760px;
 
-.centenary-inner span{
+            font-size: 15px;
+        }
 
-    color:var(--gold);
 
-    font-size:12px;
+        /* =====================================================
+           CALL TO ACTION
+        ===================================================== */
 
-    font-weight:700;
+        .cta {
+            padding: 90px 0;
 
-    letter-spacing:.12em;
+            text-align: center;
 
-    text-transform:uppercase;
-}
+            background:
+                linear-gradient(
+                    rgba(8,22,36,0.93),
+                    rgba(8,22,36,0.93)
+                ),
+                url("college-photo.jpg");
 
+            background-size: cover;
+            background-position: center;
+        }
 
-/* =====================================================
-   INTRODUCTION
-===================================================== */
+        .cta h2 {
+            font-family: "Playfair Display", serif;
 
-.intro{
+            color: white;
 
-    background:var(--cream);
+            font-size: 43px;
 
-    padding:90px 0;
-}
+            margin-bottom: 15px;
+        }
 
-.intro-grid{
+        .cta p {
+            max-width: 650px;
 
-    display:grid;
+            margin: auto;
 
-    grid-template-columns:1.2fr .8fr;
+            color: rgba(255,255,255,0.68);
 
-    gap:70px;
+            font-size: 14px;
 
-    align-items:center;
-}
+            margin-bottom: 28px;
+        }
 
-.section-label{
 
-    color:var(--gold);
+        /* =====================================================
+           FOOTER
+        ===================================================== */
 
-    font-size:12px;
+        footer {
+            background: var(--dark-navy);
 
-    font-weight:700;
+            color: white;
 
-    text-transform:uppercase;
+            padding: 55px 0 25px;
+        }
 
-    letter-spacing:.18em;
+        .footer-grid {
+            display: grid;
 
-    margin-bottom:10px;
-}
+            grid-template-columns: 1.5fr 1fr 1fr;
 
-.section-title{
+            gap: 50px;
+        }
 
-    font-family:"Playfair Display",serif;
+        .footer-brand {
+            display: flex;
 
-    color:var(--navy);
+            align-items: flex-start;
 
-    font-size:42px;
+            gap: 15px;
+        }
 
-    line-height:1.2;
+        .footer-brand img {
+            width: 72px;
+            height: 72px;
 
-    margin-bottom:20px;
-}
+            object-fit: contain;
+        }
 
-.intro-text p{
+        footer h3 {
+            font-family: "Playfair Display", serif;
 
-    color:var(--muted);
+            font-size: 21px;
 
-    margin-bottom:16px;
-}
+            margin-bottom: 14px;
+        }
 
-.intro-highlight{
+        footer p,
+        footer li {
+            color: rgba(255,255,255,0.52);
 
-    margin-top:25px;
+            font-size: 13px;
+        }
 
-    padding:18px 22px;
+        footer ul {
+            list-style: none;
+        }
 
-    background:white;
+        footer li {
+            margin-bottom: 8px;
+        }
 
-    border-left:3px solid var(--gold);
+        footer a:hover {
+            color: var(--gold);
+        }
 
-    color:var(--navy);
+        .official-link {
+            color: var(--gold);
+            font-weight: 600;
+        }
 
-    font-weight:600;
-}
+        .copyright {
+            margin-top: 40px;
 
-.intro-card{
+            padding-top: 20px;
 
-    background:var(--navy);
+            border-top: 1px solid rgba(255,255,255,0.1);
 
-    color:white;
+            text-align: center;
 
-    padding:42px;
+            color: rgba(255,255,255,0.35);
 
-    position:relative;
-}
+            font-size: 11px;
+        }
 
-.intro-card::before{
 
-    content:"";
+        /* =====================================================
+           MOBILE
+        ===================================================== */
 
-    position:absolute;
+        @media (max-width: 900px) {
 
-    width:60px;
+            .nav-links {
+                display: none;
+            }
 
-    height:3px;
+            .hero {
+                min-height: 900px;
+            }
 
-    background:var(--gold);
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
 
-    top:28px;
+            .highlight-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-    left:42px;
-}
+            .highlight-box:nth-child(2) {
+                border-right: none;
+            }
 
-.intro-card h3{
+            .centenary-message-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
 
-    font-family:"Playfair Display",serif;
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
-    font-size:27px;
 
-    margin-top:20px;
+        @media (max-width: 600px) {
 
-    margin-bottom:15px;
-}
+            .navbar {
+                padding: 15px 5%;
+            }
 
-.intro-card p{
+            .brand img {
+                width: 55px;
+                height: 55px;
+            }
 
-    color:rgba(255,255,255,.68);
+            .brand-text {
+                font-size: 11px;
+            }
 
-    font-size:14px;
+            .brand-text span {
+                font-size: 9px;
+            }
 
-    margin-bottom:22px;
-}
+            .hero {
+                min-height: 950px;
+            }
 
+            .hero-content {
+                padding-top: 115px;
+            }
 
-/* =====================================================
-   PREVIEWS
-===================================================== */
+            .conference-id {
+                align-items: flex-start;
+                gap: 15px;
+            }
 
-.previews{
+            .centenary-logo {
+                width: 88px;
+                height: 88px;
+            }
 
-    padding:90px 0;
+            .conference-id-text {
+                padding-left: 15px;
+            }
 
-    background:white;
-}
+            .conference-shortname {
+                font-size: 15px;
+            }
 
-.preview-heading{
+            .conference-label {
+                font-size: 9px;
+            }
 
-    display:flex;
+            .hero h1 {
+                font-size: 38px;
+            }
 
-    justify-content:space-between;
+            .hero-description {
+                font-size: 14px;
+            }
 
-    align-items:end;
+            .centenary-strip-inner {
+                flex-direction: column;
+                gap: 8px;
+            }
 
-    gap:30px;
+            .centenary-divider {
+                width: 45px;
+            }
 
-    margin-bottom:40px;
-}
+            .section-title {
+                font-size: 34px;
+            }
 
-.preview-heading p{
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
 
-    max-width:560px;
+            .highlight-box {
+                border-right: none;
 
-    color:var(--muted);
+                border-bottom: 1px solid rgba(255,255,255,0.15);
+            }
 
-    font-size:14px;
-}
+            .highlight-box:last-child {
+                border-bottom: none;
+            }
 
-.view-link{
+            .centenary-message h2 {
+                font-size: 34px;
+            }
 
-    color:var(--navy);
+            .message-emblem {
+                width: 140px;
+                height: 140px;
+            }
 
-    font-size:13px;
+            .cta h2 {
+                font-size: 34px;
+            }
+        }
 
-    font-weight:700;
-
-    white-space:nowrap;
-}
-
-.view-link:hover{
-
-    color:var(--gold);
-}
-
-.preview-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:20px;
-}
-
-.preview-card{
-
-    border:1px solid var(--border);
-
-    padding:30px;
-
-    transition:.3s ease;
-}
-
-.preview-card:hover{
-
-    transform:translateY(-5px);
-
-    border-color:var(--gold);
-}
-
-.preview-number{
-
-    font-family:"Playfair Display",serif;
-
-    color:var(--gold);
-
-    font-size:30px;
-
-    margin-bottom:10px;
-}
-
-.preview-card h3{
-
-    font-family:"Playfair Display",serif;
-
-    color:var(--navy);
-
-    font-size:23px;
-
-    margin-bottom:10px;
-}
-
-.preview-card p{
-
-    color:var(--muted);
-
-    font-size:13px;
-
-    margin-bottom:18px;
-}
-
-.card-link{
-
-    color:var(--navy);
-
-    font-size:12px;
-
-    font-weight:700;
-
-    text-transform:uppercase;
-
-    letter-spacing:.08em;
-}
-
-
-/* =====================================================
-   HIGHLIGHTS
-===================================================== */
-
-.highlights{
-
-    background:var(--navy);
-
-    padding:75px 0;
-
-    color:white;
-}
-
-.highlights .section-label{
-
-    color:var(--gold);
-}
-
-.highlights .section-title{
-
-    color:white;
-}
-
-.highlight-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    margin-top:35px;
-
-    border-top:1px solid rgba(255,255,255,.15);
-
-    border-bottom:1px solid rgba(255,255,255,.15);
-}
-
-.highlight-box{
-
-    padding:30px 22px;
-
-    border-right:1px solid rgba(255,255,255,.15);
-}
-
-.highlight-box:last-child{
-
-    border-right:none;
-}
-
-.highlight-box strong{
-
-    display:block;
-
-    color:white;
-
-    font-size:17px;
-
-    margin-bottom:5px;
-}
-
-.highlight-box span{
-
-    color:rgba(255,255,255,.55);
-
-    font-size:12px;
-}
-
-
-/* =====================================================
-   CENTENARY MESSAGE
-===================================================== */
-
-.cent-message{
-
-    padding:90px 0;
-
-    background:white;
-
-    text-align:center;
-}
-
-.cent-message .cent-emblem{
-
-    width:125px;
-
-    height:125px;
-
-    object-fit:contain;
-
-    margin:0 auto 25px;
-}
-
-.cent-message h2{
-
-    font-family:"Playfair Display",serif;
-
-    color:var(--navy);
-
-    font-size:43px;
-
-    margin-bottom:15px;
-}
-
-.cent-message p{
-
-    max-width:720px;
-
-    margin:auto;
-
-    color:var(--muted);
-
-    font-size:15px;
-}
-
-
-/* =====================================================
-   CTA
-===================================================== */
-
-.cta{
-
-    padding:90px 0;
-
-    text-align:center;
-
-    background:
-
-    linear-gradient(
-        rgba(8,22,36,.94),
-        rgba(8,22,36,.94)
-    ),
-
-    url("college-photo.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-}
-
-.cta h2{
-
-    font-family:"Playfair Display",serif;
-
-    color:white;
-
-    font-size:43px;
-
-    margin-bottom:15px;
-}
-
-.cta p{
-
-    max-width:650px;
-
-    margin:auto;
-
-    color:rgba(255,255,255,.68);
-
-    font-size:14px;
-
-    margin-bottom:28px;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer{
-
-    background:var(--dark-navy);
-
-    color:white;
-
-    padding:55px 0 25px;
-}
-
-.footer-grid{
-
-    display:grid;
-
-    grid-template-columns:1.5fr 1fr 1fr;
-
-    gap:50px;
-}
-
-.footer-brand{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:15px;
-}
-
-.footer-brand img{
-
-    width:68px;
-
-    height:68px;
-
-    object-fit:contain;
-}
-
-footer h3{
-
-    font-family:"Playfair Display",serif;
-
-    font-size:21px;
-
-    margin-bottom:14px;
-}
-
-footer p,
-footer li{
-
-    color:rgba(255,255,255,.52);
-
-    font-size:13px;
-}
-
-footer ul{
-
-    list-style:none;
-}
-
-footer li{
-
-    margin-bottom:8px;
-}
-
-footer a:hover{
-
-    color:var(--gold);
-}
-
-.copyright{
-
-    margin-top:40px;
-
-    padding-top:20px;
-
-    border-top:1px solid rgba(255,255,255,.1);
-
-    text-align:center;
-
-    color:rgba(255,255,255,.35);
-
-    font-size:11px;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:900px){
-
-    .nav-links{
-
-        display:none;
-    }
-
-    .hero{
-
-        min-height:850px;
-    }
-
-    .intro-grid{
-
-        grid-template-columns:1fr;
-
-        gap:40px;
-    }
-
-    .preview-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .highlight-grid{
-
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .highlight-box:nth-child(2){
-
-        border-right:none;
-    }
-
-    .footer-grid{
-
-        grid-template-columns:1fr;
-    }
-}
-
-
-@media(max-width:600px){
-
-    .navbar{
-
-        padding:15px 5%;
-    }
-
-    .brand img{
-
-        width:55px;
-
-        height:55px;
-    }
-
-    .brand-text{
-
-        font-size:11px;
-    }
-
-    .brand-text span{
-
-        font-size:9px;
-    }
-
-    .hero{
-
-        min-height:980px;
-    }
-
-    .hero-content{
-
-        padding-top:125px;
-    }
-
-    .hero-top{
-
-        align-items:flex-start;
-
-        gap:18px;
-    }
-
-    .centenary-logo{
-
-        width:100px;
-
-        height:100px;
-    }
-
-    .hero h1{
-
-        font-size:38px;
-    }
-
-    .hero-description{
-
-        font-size:14px;
-    }
-
-    .section-title{
-
-        font-size:34px;
-    }
-
-    .preview-heading{
-
-        display:block;
-    }
-
-    .preview-heading .view-link{
-
-        display:inline-block;
-
-        margin-top:15px;
-    }
-
-    .highlight-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .highlight-box{
-
-        border-right:none;
-
-        border-bottom:1px solid rgba(255,255,255,.15);
-    }
-
-    .highlight-box:last-child{
-
-        border-bottom:none;
-    }
-
-    .centenary-inner{
-
-        flex-direction:column;
-
-        gap:5px;
-    }
-
-    .cent-message h2{
-
-        font-size:34px;
-    }
-
-    .cta h2{
-
-        font-size:34px;
-    }
-
-}
-
-</style>
+    </style>
 
 </head>
 
@@ -1098,31 +879,24 @@ footer a:hover{
 <body>
 
 
-<!-- =====================================================
+<!-- =========================================================
      NAVIGATION
-===================================================== -->
+========================================================= -->
 
 <header class="navbar">
 
     <a href="index.html" class="brand">
 
         <!-- COLLEGE LOGO -->
-
         <img
             src="college-logo.png"
-            alt="H.R.H. The P.O.W.I.E.T. College Logo"
+            alt="H.R.H. The P.O.W.I.E.T. Logo"
         >
 
         <div class="brand-text">
-
             H.R.H. THE P.O.W.I.E.T.<br>
-
-            JORHAT, ASSAM<br>
-
-            <span>
-                Government of Assam Institution
-            </span>
-
+            JORHAT, ASSAM
+            <span>Government of Assam Institution</span>
         </div>
 
     </a>
@@ -1130,33 +904,19 @@ footer a:hover{
 
     <nav class="nav-links">
 
-        <a href="index.html">
-            Home
-        </a>
+        <a href="index.html">Home</a>
 
-        <a href="about.html">
-            About
-        </a>
+        <a href="about.html">About</a>
 
-        <a href="themes.html">
-            Themes
-        </a>
+        <a href="themes.html">Themes</a>
 
-        <a href="committee.html">
-            Committee
-        </a>
+        <a href="committee.html">Committee</a>
 
-        <a href="speakers.html">
-            Speakers
-        </a>
+        <a href="speakers.html">Speakers</a>
 
-        <a href="programme.html">
-            Programme
-        </a>
+        <a href="programme.html">Programme</a>
 
-        <a href="call-for-papers.html">
-            Papers
-        </a>
+        <a href="call-for-papers.html">Papers</a>
 
         <a href="registration.html" class="nav-register">
             Registration
@@ -1168,9 +928,9 @@ footer a:hover{
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      HERO
-===================================================== -->
+========================================================= -->
 
 <section class="hero">
 
@@ -1179,34 +939,37 @@ footer a:hover{
         <div class="hero-content">
 
 
-            <div class="hero-top">
+            <!-- CENTENARY EMBLEM + SHORT NAME -->
 
-                <!-- 100 YEAR EMBLEM -->
+            <div class="conference-id">
 
                 <img
-                    src="png1.png"
+                    src="centenary.png"
                     alt="H.R.H. The P.O.W.I.E.T. Centenary Emblem 1927–2027"
                     class="centenary-logo"
                 >
 
+                <div class="conference-id-text">
 
-                <div class="conference-label">
+                    <div class="conference-shortname">
+                        CIDSESRF-2027
+                    </div>
 
-                    CENTENARY YEAR · 1927–2027
+                    <div class="conference-label">
+                        National Conference · Centenary Year 1927–2027
+                    </div>
 
                 </div>
 
             </div>
 
 
+            <!-- MAIN CONFERENCE HEADING -->
+
             <h1>
 
                 Convergence, Innovation and Development of
-
-                <span>
-                    Science, Engineering and Society
-                </span>
-
+                <span>Science, Engineering and Society</span>
                 for a Resilient Future
 
             </h1>
@@ -1214,26 +977,24 @@ footer a:hover{
 
             <p class="hero-description">
 
-                A national conference bringing together
-                researchers, educators, young scholars,
-                scientists, engineers and professionals to
-                exchange ideas and explore interdisciplinary
-                approaches towards a resilient future.
+                A national conference bringing together researchers,
+                educators, young scholars, scientists, engineers and
+                professionals to exchange ideas and explore
+                interdisciplinary approaches towards a resilient future.
 
             </p>
 
 
-            <div class="hero-details">
+            <!-- CONFERENCE DETAILS -->
 
+            <div class="hero-details">
 
                 <div class="hero-detail">
 
-                    <strong>
-                        2027
-                    </strong>
+                    <strong>2027</strong>
 
                     <small>
-                        Conference Year
+                        Centenary Conference Year
                     </small>
 
                 </div>
@@ -1241,9 +1002,7 @@ footer a:hover{
 
                 <div class="hero-detail">
 
-                    <strong>
-                        Jorhat, Assam
-                    </strong>
+                    <strong>Jorhat, Assam</strong>
 
                     <small>
                         Venue
@@ -1254,9 +1013,7 @@ footer a:hover{
 
                 <div class="hero-detail">
 
-                    <strong>
-                        National Conference
-                    </strong>
+                    <strong>National Conference</strong>
 
                     <small>
                         Academic Event
@@ -1264,9 +1021,10 @@ footer a:hover{
 
                 </div>
 
-
             </div>
 
+
+            <!-- BUTTONS -->
 
             <div class="hero-buttons">
 
@@ -1295,27 +1053,25 @@ footer a:hover{
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      CENTENARY STRIP
-===================================================== -->
+========================================================= -->
 
 <section class="centenary-strip">
 
     <div class="container">
 
-        <div class="centenary-inner">
+        <div class="centenary-strip-inner">
 
-            <span>
-                H.R.H. The P.O.W.I.E.T.
-            </span>
-
-            <strong>
+            <div class="centenary-years">
                 1927 — 2027
-            </strong>
+            </div>
 
-            <span>
+            <div class="centenary-divider"></div>
+
+            <div class="centenary-caption">
                 Celebrating 100 Years of Technical Education
-            </span>
+            </div>
 
         </div>
 
@@ -1325,9 +1081,9 @@ footer a:hover{
 
 
 
-<!-- =====================================================
-     SHORT ABOUT
-===================================================== -->
+<!-- =========================================================
+     ABOUT THE CONFERENCE
+========================================================= -->
 
 <section class="intro">
 
@@ -1359,8 +1115,8 @@ footer a:hover{
                         platform for researchers, faculty members,
                         scientists, engineers, students and
                         professionals to exchange knowledge and
-                        explore emerging developments across
-                        science, engineering and society.
+                        explore emerging developments across science,
+                        engineering and society.
 
                     </p>
 
@@ -1368,10 +1124,10 @@ footer a:hover{
                     <p>
 
                         Organised during the centenary year of
-                        H.R.H. The P.O.W.I.E.T., Jorhat, the
-                        conference celebrates a century of technical
-                        education while looking towards the
-                        challenges and opportunities of the future.
+                        H.R.H. The P.O.W.I.E.T., Jorhat, the conference
+                        celebrates a century of technical education
+                        while looking towards the challenges and
+                        opportunities of the future.
 
                     </p>
 
@@ -1390,19 +1146,16 @@ footer a:hover{
             <div class="intro-card">
 
                 <h3>
-
                     A century behind us.
                     A resilient future ahead.
-
                 </h3>
 
 
                 <p>
 
-                    The centenary of H.R.H. The P.O.W.I.E.T.
-                    provides a meaningful backdrop for a
-                    national dialogue on innovation, knowledge
-                    and sustainable development.
+                    The centenary of H.R.H. The P.O.W.I.E.T. provides
+                    a meaningful backdrop for a national dialogue on
+                    innovation, knowledge and sustainable development.
 
                 </p>
 
@@ -1425,158 +1178,9 @@ footer a:hover{
 
 
 
-<!-- =====================================================
-     CONFERENCE INFORMATION
-===================================================== -->
-
-<section class="previews">
-
-    <div class="container">
-
-
-        <div class="preview-heading">
-
-            <div>
-
-                <div class="section-label">
-                    Explore
-                </div>
-
-                <h2 class="section-title">
-                    Conference Information
-                </h2>
-
-                <p>
-
-                    Explore the major sections of the conference
-                    website, including its themes, organising
-                    committee and participation information.
-
-                </p>
-
-            </div>
-
-
-            <a
-                href="about.html"
-                class="view-link"
-            >
-                Explore All →
-
-            </a>
-
-        </div>
-
-
-
-        <div class="preview-grid">
-
-
-            <!-- THEMES -->
-
-            <div class="preview-card">
-
-                <div class="preview-number">
-                    01
-                </div>
-
-                <h3>
-                    Conference Themes
-                </h3>
-
-                <p>
-
-                    Explore the thematic areas covering science,
-                    emerging technologies, materials, mathematics,
-                    sustainability, engineering and society.
-
-                </p>
-
-                <a
-                    href="themes.html"
-                    class="card-link"
-                >
-                    View Themes →
-
-                </a>
-
-            </div>
-
-
-
-            <!-- COMMITTEE -->
-
-            <div class="preview-card">
-
-                <div class="preview-number">
-                    02
-                </div>
-
-                <h3>
-                    Organising Committee
-                </h3>
-
-                <p>
-
-                    Meet the patron, chair, convenors and members
-                    responsible for organising CIDSESRF-2027.
-
-                </p>
-
-                <a
-                    href="committee.html"
-                    class="card-link"
-                >
-                    View Committee →
-
-                </a>
-
-            </div>
-
-
-
-            <!-- SPEAKERS -->
-
-            <div class="preview-card">
-
-                <div class="preview-number">
-                    03
-                </div>
-
-                <h3>
-                    Speakers
-                </h3>
-
-                <p>
-
-                    Information about keynote and invited speakers
-                    will be added as the conference programme is
-                    finalised.
-
-                </p>
-
-                <a
-                    href="speakers.html"
-                    class="card-link"
-                >
-                    View Speakers →
-
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     HIGHLIGHTS
-===================================================== -->
+<!-- =========================================================
+     CONFERENCE HIGHLIGHTS
+========================================================= -->
 
 <section class="highlights">
 
@@ -1597,11 +1201,11 @@ footer a:hover{
             <div class="highlight-box">
 
                 <strong>
-                    2027
+                    1927–2027
                 </strong>
 
                 <span>
-                    Centenary Conference Year
+                    Centenary Year
                 </span>
 
             </div>
@@ -1654,44 +1258,54 @@ footer a:hover{
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      CENTENARY MESSAGE
-===================================================== -->
+========================================================= -->
 
-<section class="cent-message">
+<section class="centenary-message">
 
     <div class="container">
 
-
-        <img
-            src="png1.png"
-            alt="100 Years Centenary Emblem"
-            class="cent-emblem"
-        >
+        <div class="centenary-message-grid">
 
 
-        <div class="section-label">
-            1927 — 2027
+            <div>
+
+                <img
+                    src="centenary.png"
+                    alt="100 Years Centenary Emblem"
+                    class="message-emblem"
+                >
+
+            </div>
+
+
+            <div>
+
+                <div class="section-label">
+                    1927 — 2027
+                </div>
+
+                <h2>
+                    Celebrating a Century.
+                    Shaping the Future.
+                </h2>
+
+                <p>
+
+                    As H.R.H. The P.O.W.I.E.T. marks 100 years of
+                    technical education and service, CIDSESRF-2027
+                    looks forward to bringing together diverse
+                    perspectives to build knowledge, encourage
+                    innovation and contribute towards a resilient
+                    future.
+
+                </p>
+
+            </div>
+
+
         </div>
-
-
-        <h2>
-
-            Celebrating a Century.
-            Shaping the Future.
-
-        </h2>
-
-
-        <p>
-
-            As H.R.H. The P.O.W.I.E.T. marks 100 years of
-            technical education and service, CIDSESRF-2027
-            looks forward to bringing together diverse
-            perspectives to build knowledge, encourage
-            innovation and contribute towards a resilient future.
-
-        </p>
 
     </div>
 
@@ -1699,9 +1313,9 @@ footer a:hover{
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      CALL TO ACTION
-===================================================== -->
+========================================================= -->
 
 <section class="cta">
 
@@ -1734,9 +1348,9 @@ footer a:hover{
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
 <footer>
 
@@ -1779,9 +1393,16 @@ footer a:hover{
                 </p>
 
 
-                <p style="margin-top:8px;">
+                <p style="margin-top:10px;">
 
-                    1927 — 2027
+                    <a
+                        href="https://powietjrt.in/index.php"
+                        target="_blank"
+                        rel="noopener"
+                        class="official-link"
+                    >
+                        Visit Official College Website →
+                    </a>
 
                 </p>
 
@@ -1886,7 +1507,6 @@ footer a:hover{
         <div class="copyright">
 
             © 2027 H.R.H. The P.O.W.I.E.T., Jorhat, Assam
-            · CIDSESRF-2027
             · Centenary Celebration 1927–2027
 
         </div>
