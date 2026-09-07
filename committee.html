@@ -1,0 +1,1260 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Committee | CIDSESRF-2027</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+:root{
+    --navy:#10243e;
+    --dark-navy:#071522;
+    --gold:#c69b45;
+    --cream:#f6f2e9;
+    --white:#ffffff;
+    --text:#263342;
+    --muted:#697586;
+    --border:#e5dfd3;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    color:var(--text);
+    background:white;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:20;
+
+    padding:20px 5%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:white;
+}
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:13px;
+}
+
+.brand img{
+
+    width:58px;
+    height:58px;
+
+    object-fit:contain;
+
+    background:rgba(255,255,255,.94);
+
+    padding:4px;
+
+    border-radius:50%;
+}
+
+.brand-text{
+
+    font-size:12px;
+
+    font-weight:600;
+
+    line-height:1.35;
+
+    letter-spacing:.04em;
+}
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+}
+
+.nav-links a{
+
+    font-size:13px;
+
+    font-weight:500;
+
+    color:white;
+
+    transition:.25s ease;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.nav-links a.active{
+    color:var(--gold);
+}
+
+.nav-register{
+
+    border:1px solid rgba(255,255,255,.65);
+
+    padding:9px 18px;
+
+    border-radius:30px;
+}
+
+.nav-register:hover{
+
+    background:white;
+
+    color:var(--navy)!important;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.page-hero{
+
+    min-height:470px;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(5,18,31,.97),
+        rgba(5,18,31,.78),
+        rgba(5,18,31,.64)
+    ),
+
+    url("college-photo.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+.hero-content{
+
+    padding-top:75px;
+
+    max-width:800px;
+}
+
+.eyebrow{
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.18em;
+
+    margin-bottom:15px;
+}
+
+.page-hero h1{
+
+    font-family:"Playfair Display",serif;
+
+    color:white;
+
+    font-size:clamp(44px,5vw,64px);
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+}
+
+.page-hero p{
+
+    color:rgba(255,255,255,.73);
+
+    font-size:16px;
+
+    max-width:720px;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro{
+
+    padding:80px 0 55px;
+
+    text-align:center;
+}
+
+.intro h2{
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--navy);
+
+    font-size:40px;
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+}
+
+.intro p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    font-size:15px;
+}
+
+
+/* =====================================================
+   COMMITTEE
+===================================================== */
+
+.committee-section{
+
+    padding:20px 0 100px;
+}
+
+
+/* Section heading */
+
+.committee-group{
+
+    margin-bottom:65px;
+}
+
+.group-heading{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:25px;
+}
+
+.group-heading .number{
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--gold);
+
+    font-size:27px;
+}
+
+.group-heading h2{
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--navy);
+
+    font-size:30px;
+}
+
+.group-line{
+
+    height:1px;
+
+    background:var(--border);
+
+    flex:1;
+}
+
+
+/* =====================================================
+   LEADERSHIP CARDS
+===================================================== */
+
+.leadership-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.person-card{
+
+    background:var(--cream);
+
+    padding:30px;
+
+    border-top:3px solid var(--gold);
+
+    transition:.25s ease;
+}
+
+.person-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(16,36,62,.08);
+}
+
+.person-role{
+
+    color:var(--gold);
+
+    font-size:11px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.12em;
+
+    margin-bottom:9px;
+}
+
+.person-name{
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--navy);
+
+    font-size:23px;
+
+    margin-bottom:6px;
+}
+
+.person-affiliation{
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   GENERAL COMMITTEE
+===================================================== */
+
+.committee-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    border-top:1px solid var(--border);
+
+    border-left:1px solid var(--border);
+}
+
+.committee-member{
+
+    padding:22px 25px;
+
+    border-right:1px solid var(--border);
+
+    border-bottom:1px solid var(--border);
+
+    background:white;
+
+    transition:.2s ease;
+}
+
+.committee-member:hover{
+
+    background:var(--cream);
+}
+
+.member-name{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:19px;
+
+    color:var(--navy);
+
+    margin-bottom:3px;
+}
+
+.member-role{
+
+    font-size:13px;
+
+    color:var(--muted);
+}
+
+
+/* =====================================================
+   PLACEHOLDER NOTICE
+===================================================== */
+
+.update-note{
+
+    margin-top:20px;
+
+    padding:25px 30px;
+
+    background:#faf8f2;
+
+    border-left:3px solid var(--gold);
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:var(--dark-navy);
+
+    color:white;
+
+    padding:55px 0 25px;
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:1.5fr 1fr 1fr;
+
+    gap:50px;
+}
+
+.footer-brand{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+}
+
+.footer-brand img{
+
+    width:60px;
+    height:60px;
+
+    object-fit:contain;
+}
+
+footer h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:21px;
+
+    margin-bottom:14px;
+}
+
+footer p,
+footer li{
+
+    color:rgba(255,255,255,.52);
+
+    font-size:13px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:8px;
+}
+
+footer a:hover{
+    color:var(--gold);
+}
+
+.copyright{
+
+    margin-top:40px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    text-align:center;
+
+    color:rgba(255,255,255,.35);
+
+    font-size:11px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .leadership-grid{
+        grid-template-columns:1fr;
+    }
+
+    .committee-list{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .navbar{
+        padding:15px 5%;
+    }
+
+    .brand img{
+        width:45px;
+        height:45px;
+    }
+
+    .brand-text{
+        font-size:10px;
+    }
+
+    .page-hero{
+        min-height:430px;
+    }
+
+    .page-hero h1{
+        font-size:40px;
+    }
+
+    .intro{
+        padding:65px 0 40px;
+    }
+
+    .intro h2{
+        font-size:34px;
+    }
+
+    .group-heading h2{
+        font-size:25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="navbar">
+
+    <a href="index.html" class="brand">
+
+        <img
+            src="college-logo.png"
+            alt="H.R.H. The P.O.W.I.E.T. Logo"
+        >
+
+        <div class="brand-text">
+
+            H.R.H. THE P.O.W.I.E.T.<br>
+            JORHAT, ASSAM
+
+        </div>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="themes.html">
+            Themes
+        </a>
+
+        <a href="committee.html" class="active">
+            Committee
+        </a>
+
+        <a href="speakers.html">
+            Speakers
+        </a>
+
+        <a href="programme.html">
+            Programme
+        </a>
+
+        <a href="call-for-papers.html">
+            Papers
+        </a>
+
+        <a href="registration.html" class="nav-register">
+            Registration
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="page-hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                CIDSESRF-2027 · 1927–2027
+            </div>
+
+            <h1>
+                Organising Committee
+            </h1>
+
+            <p>
+                The team responsible for bringing CIDSESRF-2027
+                together as part of the centenary celebrations
+                of H.R.H. The P.O.W.I.E.T.
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            Conference Organisation
+        </div>
+
+        <h2>
+            People behind the conference
+        </h2>
+
+        <p>
+
+            CIDSESRF-2027 is being organised through a
+            collaborative team of faculty members,
+            academic leaders and professionals of
+            H.R.H. The P.O.W.I.E.T., Jorhat.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COMMITTEE SECTION
+===================================================== -->
+
+<section class="committee-section">
+
+    <div class="container">
+
+
+        <!-- =================================================
+             PATRON / LEADERSHIP
+        ================================================== -->
+
+        <div class="committee-group">
+
+            <div class="group-heading">
+
+                <div class="number">
+                    01
+                </div>
+
+                <h2>
+                    Leadership
+                </h2>
+
+                <div class="group-line"></div>
+
+            </div>
+
+
+            <div class="leadership-grid">
+
+
+                <div class="person-card">
+
+                    <div class="person-role">
+                        Chief Patron
+                    </div>
+
+                    <div class="person-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="person-affiliation">
+                        H.R.H. The P.O.W.I.E.T., Jorhat
+                    </div>
+
+                </div>
+
+
+                <div class="person-card">
+
+                    <div class="person-role">
+                        Patron
+                    </div>
+
+                    <div class="person-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="person-affiliation">
+                        H.R.H. The P.O.W.I.E.T., Jorhat
+                    </div>
+
+                </div>
+
+
+                <div class="person-card">
+
+                    <div class="person-role">
+                        Conference Chair
+                    </div>
+
+                    <div class="person-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="person-affiliation">
+                        H.R.H. The P.O.W.I.E.T., Jorhat
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ORGANISING COMMITTEE
+        ================================================== -->
+
+        <div class="committee-group">
+
+            <div class="group-heading">
+
+                <div class="number">
+                    02
+                </div>
+
+                <h2>
+                    Organising Committee
+                </h2>
+
+                <div class="group-line"></div>
+
+            </div>
+
+
+            <div class="committee-list">
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="member-role">
+                        Organising Secretary
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="member-role">
+                        Joint Organising Secretary
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="member-role">
+                        Treasurer
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="member-role">
+                        Programme Coordinator
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TECHNICAL COMMITTEE
+        ================================================== -->
+
+        <div class="committee-group">
+
+            <div class="group-heading">
+
+                <div class="number">
+                    03
+                </div>
+
+                <h2>
+                    Technical Committee
+                </h2>
+
+                <div class="group-line"></div>
+
+            </div>
+
+
+            <div class="committee-list">
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="member-role">
+                        Technical Chair
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="member-role">
+                        Technical Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="member-role">
+                        Technical Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="member-role">
+                        Technical Committee Member
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ADVISORY COMMITTEE
+        ================================================== -->
+
+        <div class="committee-group">
+
+            <div class="group-heading">
+
+                <div class="number">
+                    04
+                </div>
+
+                <h2>
+                    Advisory Committee
+                </h2>
+
+                <div class="group-line"></div>
+
+            </div>
+
+
+            <div class="committee-list">
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="member-role">
+                        Advisory Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="member-role">
+                        Advisory Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="member-role">
+                        Advisory Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Name to be announced
+                    </div>
+
+                    <div class="member-role">
+                        Advisory Committee Member
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="update-note">
+
+                <strong>
+                    Committee information will be updated.
+                </strong>
+
+                Names, affiliations and committee positions
+                can be added or modified as the conference
+                organisation progresses.
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <div class="footer-brand">
+
+                    <img
+                        src="college-logo.png"
+                        alt="College Logo"
+                    >
+
+                    <div>
+
+                        <h3>
+                            H.R.H. The P.O.W.I.E.T.
+                        </h3>
+
+                        <p>
+                            Jorhat, Assam
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <p style="margin-top:20px;max-width:470px;">
+
+                    National Conference on Convergence,
+                    Innovation and Development of Science,
+                    Engineering and Society for a Resilient Future.
+
+                </p>
+
+
+                <p style="margin-top:10px;">
+
+                    Celebrating 100 years of technical education
+                    and service —
+                    <strong style="color:var(--gold)">
+                        1927–2027
+                    </strong>.
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h3>
+                    Conference
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="themes.html">
+                            Themes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="committee.html">
+                            Committee
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="speakers.html">
+                            Speakers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="programme.html">
+                            Programme
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div>
+
+                <h3>
+                    Participate
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="call-for-papers.html">
+                            Call for Papers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="registration.html">
+                            Registration
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="important-dates.html">
+                            Important Dates
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2027 H.R.H. The P.O.W.I.E.T., Jorhat, Assam
+            · CIDSESRF-2027
+            · Centenary 1927–2027
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
+```
