@@ -77,7 +77,7 @@ img{
     width:100%;
     z-index:20;
 
-    padding:20px 5%;
+    padding:18px 5%;
 
     display:flex;
     justify-content:space-between;
@@ -89,33 +89,55 @@ img{
 .brand{
     display:flex;
     align-items:center;
-    gap:13px;
+    gap:16px;
 }
 
 .brand img{
-    width:58px;
-    height:58px;
+    width:78px;
+    height:78px;
 
     object-fit:contain;
 
-    background:rgba(255,255,255,.94);
+    background:rgba(255,255,255,.96);
 
-    padding:4px;
+    padding:5px;
 
     border-radius:50%;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.22);
 }
 
 .brand-text{
-    font-size:12px;
+    font-family:"Playfair Display",serif;
+
+    font-size:15px;
+
     font-weight:600;
 
     line-height:1.35;
 
-    letter-spacing:.04em;
+    letter-spacing:.045em;
+
+    color:white;
+}
+
+.brand-text span{
+    font-family:"DM Sans",sans-serif;
+
+    font-size:11px;
+
+    font-weight:500;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.72);
 }
 
 .nav-links{
     display:flex;
+
     align-items:center;
 
     gap:24px;
@@ -123,6 +145,7 @@ img{
 
 .nav-links a{
     font-size:13px;
+
     font-weight:500;
 
     color:white;
@@ -135,7 +158,7 @@ img{
 }
 
 .nav-register{
-    border:1px solid rgba(255,255,255,.65);
+    border:1px solid rgba(255,255,255,.7);
 
     padding:9px 18px;
 
@@ -160,6 +183,7 @@ img{
     position:relative;
 
     display:flex;
+
     align-items:center;
 
     background:
@@ -167,9 +191,9 @@ img{
     linear-gradient(
         90deg,
         rgba(4,17,29,.97) 0%,
-        rgba(4,17,29,.90) 40%,
-        rgba(4,17,29,.58) 72%,
-        rgba(4,17,29,.70) 100%
+        rgba(4,17,29,.91) 40%,
+        rgba(4,17,29,.60) 72%,
+        rgba(4,17,29,.72) 100%
     ),
 
     url("college-photo.jpg");
@@ -185,14 +209,16 @@ img{
 
     z-index:2;
 
-    padding-top:90px;
+    padding-top:115px;
 
-    max-width:920px;
+    padding-bottom:70px;
+
+    max-width:930px;
 }
 
 
 /* =====================================================
-   CENTENARY / LOGO AREA
+   CENTENARY AREA
 ===================================================== */
 
 .hero-top{
@@ -201,21 +227,21 @@ img{
 
     align-items:center;
 
-    gap:25px;
+    gap:30px;
 
-    margin-bottom:28px;
+    margin-bottom:30px;
 }
 
 .centenary-logo{
 
-    width:125px;
+    width:155px;
 
-    height:125px;
+    height:155px;
 
     object-fit:contain;
 
     filter:
-        drop-shadow(0 8px 20px rgba(0,0,0,.35));
+        drop-shadow(0 10px 25px rgba(0,0,0,.40));
 }
 
 .conference-label{
@@ -233,7 +259,7 @@ img{
 
 
 /* =====================================================
-   HERO TEXT
+   HERO TITLE
 ===================================================== */
 
 .hero h1{
@@ -376,7 +402,7 @@ img{
 
     background:var(--cream);
 
-    padding:28px 0;
+    padding:30px 0;
 
     border-bottom:1px solid var(--border);
 }
@@ -389,7 +415,7 @@ img{
 
     align-items:center;
 
-    gap:20px;
+    gap:22px;
 
     text-align:center;
 }
@@ -400,14 +426,14 @@ img{
 
     color:var(--navy);
 
-    font-size:25px;
+    font-size:28px;
 }
 
 .centenary-inner span{
 
     color:var(--gold);
 
-    font-size:13px;
+    font-size:12px;
 
     font-weight:700;
 
@@ -539,7 +565,7 @@ img{
 
 
 /* =====================================================
-   PREVIEW SECTION
+   PREVIEWS
 ===================================================== */
 
 .previews{
@@ -739,9 +765,9 @@ img{
 
 .cent-message .cent-emblem{
 
-    width:115px;
+    width:125px;
 
-    height:115px;
+    height:125px;
 
     object-fit:contain;
 
@@ -772,7 +798,7 @@ img{
 
 
 /* =====================================================
-   CALL TO ACTION
+   CTA
 ===================================================== */
 
 .cta{
@@ -853,9 +879,9 @@ footer{
 
 .footer-brand img{
 
-    width:60px;
+    width:68px;
 
-    height:60px;
+    height:68px;
 
     object-fit:contain;
 }
@@ -962,24 +988,29 @@ footer a:hover{
 
     .brand img{
 
-        width:45px;
+        width:55px;
 
-        height:45px;
+        height:55px;
     }
 
     .brand-text{
 
-        font-size:10px;
+        font-size:11px;
+    }
+
+    .brand-text span{
+
+        font-size:9px;
     }
 
     .hero{
 
-        min-height:950px;
+        min-height:980px;
     }
 
     .hero-content{
 
-        padding-top:120px;
+        padding-top:125px;
     }
 
     .hero-top{
@@ -991,9 +1022,9 @@ footer a:hover{
 
     .centenary-logo{
 
-        width:85px;
+        width:100px;
 
-        height:85px;
+        height:100px;
     }
 
     .hero h1{
@@ -1075,6 +1106,8 @@ footer a:hover{
 
     <a href="index.html" class="brand">
 
+        <!-- COLLEGE LOGO -->
+
         <img
             src="college-logo.png"
             alt="H.R.H. The P.O.W.I.E.T. College Logo"
@@ -1083,7 +1116,12 @@ footer a:hover{
         <div class="brand-text">
 
             H.R.H. THE P.O.W.I.E.T.<br>
-            JORHAT, ASSAM
+
+            JORHAT, ASSAM<br>
+
+            <span>
+                Government of Assam Institution
+            </span>
 
         </div>
 
@@ -1301,9 +1339,7 @@ footer a:hover{
             <div>
 
                 <div class="section-label">
-
                     About the Conference
-
                 </div>
 
 
@@ -1376,7 +1412,6 @@ footer a:hover{
                     class="btn btn-primary"
                 >
                     Read More
-
                 </a>
 
             </div>
@@ -1408,9 +1443,7 @@ footer a:hover{
                 </div>
 
                 <h2 class="section-title">
-
                     Conference Information
-
                 </h2>
 
                 <p>
@@ -1629,6 +1662,7 @@ footer a:hover{
 
     <div class="container">
 
+
         <img
             src="png1.png"
             alt="100 Years Centenary Emblem"
@@ -1642,8 +1676,10 @@ footer a:hover{
 
 
         <h2>
+
             Celebrating a Century.
             Shaping the Future.
+
         </h2>
 
 
@@ -1737,16 +1773,15 @@ footer a:hover{
 
                 <p style="margin-top:20px; max-width:450px;">
 
-                    National Conference on Convergence,
-                    Innovation and Development of Science,
-                    Engineering and Society for a Resilient Future.
+                    Celebrating 100 years of technical education
+                    and service.
 
                 </p>
 
 
-                <p style="margin-top:10px;">
+                <p style="margin-top:8px;">
 
-                    Celebrating 100 Years · 1927–2027
+                    1927 — 2027
 
                 </p>
 
@@ -1851,7 +1886,8 @@ footer a:hover{
         <div class="copyright">
 
             © 2027 H.R.H. The P.O.W.I.E.T., Jorhat, Assam
-            · CIDSESRF-2027 · Centenary Celebration 1927–2027
+            · CIDSESRF-2027
+            · Centenary Celebration 1927–2027
 
         </div>
 
