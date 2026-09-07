@@ -4,834 +4,699 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CIDSESRF-2027 | H.R.H. The P.O.W.I.E.T.</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-      rel="stylesheet">
-
-
-<style>
-
-/* =====================================================
-   GENERAL
-===================================================== */
-
-:root {
-    --navy: #10243e;
-    --dark-navy: #071522;
-    --gold: #c69b45;
-    --cream: #f6f2e9;
-    --white: #ffffff;
-    --text: #263342;
-    --muted: #697586;
-    --border: #e5dfd3;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "DM Sans", sans-serif;
-    color: var(--text);
-    background: var(--white);
-    line-height: 1.7;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CIDSESRF-2027 | H.R.H. The P.O.W.I.E.T.</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
 
-/* =====================================================
-   NAVIGATION
-===================================================== */
+    <style>
+
+        /* =====================================================
+           GENERAL
+        ===================================================== */
+
+        :root {
+            --navy: #10243e;
+            --dark-navy: #071522;
+            --gold: #c69b45;
+            --cream: #f6f2e9;
+            --white: #ffffff;
+            --text: #263342;
+            --muted: #697586;
+            --border: #e5dfd3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+        }
 
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 20;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    padding: 22px 5%;
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-    color: white;
-}
 
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 17px;
-}
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
 
-.brand img {
-    width: 72px;
-    height: 72px;
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 20;
 
-    object-fit: contain;
+            padding: 22px 5%;
 
-    background: rgba(255,255,255,0.96);
-    padding: 5px;
-    border-radius: 50%;
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-.brand-text {
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 1.45;
-    letter-spacing: 0.045em;
-}
+            color: white;
+        }
 
-.brand-text span {
-    display: block;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
 
-    font-size: 12px;
-    font-weight: 500;
+        .brand img {
+            width: 78px;
+            height: 78px;
 
-    opacity: 0.78;
-    letter-spacing: 0.03em;
-}
+            object-fit: contain;
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
+            background: rgba(255,255,255,0.96);
+            padding: 5px;
 
-.nav-links a {
-    font-size: 14px;
-    font-weight: 600;
-    color: white;
+            border-radius: 50%;
+        }
 
-    transition: 0.25s ease;
-}
+        .brand-text {
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.45;
 
-.nav-links a:hover {
-    color: var(--gold);
-}
+            letter-spacing: 0.045em;
 
-.nav-register {
-    border: 1px solid rgba(255,255,255,0.7);
+            color: white;
+        }
 
-    padding: 10px 20px;
+        .brand-text span {
+            font-size: 12px;
+            font-weight: 500;
+            opacity: 0.72;
+        }
 
-    border-radius: 30px;
-}
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
 
-.nav-register:hover {
-    background: white;
-    color: var(--navy) !important;
-}
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
 
+            color: white;
 
-/* =====================================================
-   HERO
-===================================================== */
+            transition: 0.25s ease;
+        }
 
-.hero {
-    min-height: 100vh;
+        .nav-links a:hover {
+            color: var(--gold);
+        }
 
-    position: relative;
+        .nav-register {
+            border: 1px solid rgba(255,255,255,0.7);
 
-    display: flex;
-    align-items: center;
+            padding: 10px 20px;
 
-    background:
+            border-radius: 30px;
+        }
 
-        linear-gradient(
-            90deg,
-            rgba(4,17,29,0.96) 0%,
-            rgba(4,17,29,0.88) 42%,
-            rgba(4,17,29,0.55) 70%,
-            rgba(4,17,29,0.72) 100%
-        ),
+        .nav-register:hover {
+            background: white;
+            color: var(--navy) !important;
+        }
 
-        url("college-photo.jpg");
 
-    background-size: cover;
+        /* =====================================================
+           HERO
+        ===================================================== */
 
-    background-position: center;
-}
+        .hero {
+            min-height: 100vh;
 
-.hero-content {
-    position: relative;
+            position: relative;
 
-    z-index: 2;
+            display: flex;
+            align-items: center;
 
-    padding-top: 105px;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(4,17,29,0.97) 0%,
+                    rgba(4,17,29,0.91) 40%,
+                    rgba(4,17,29,0.60) 72%,
+                    rgba(4,17,29,0.76) 100%
+                ),
+                url("college-photo.jpg");
 
-    max-width: 930px;
-}
+            background-size: cover;
+            background-position: center;
+        }
 
+        .hero-content {
+            position: relative;
+            z-index: 2;
 
-/* =====================================================
-   CENTENARY EMBLEM
-===================================================== */
+            padding-top: 125px;
 
-.conference-id {
-    display: flex;
+            max-width: 1000px;
+        }
 
-    align-items: center;
 
-    margin-bottom: 28px;
-}
+        /* =====================================================
+           CENTENARY EMBLEM
+        ===================================================== */
 
-.centenary-logo {
-    width: 125px;
-    height: 125px;
+        .conference-id {
+            display: flex;
 
-    object-fit: contain;
+            align-items: center;
 
-    filter: drop-shadow(
-        0 8px 20px rgba(0,0,0,0.30)
-    );
-}
+            margin-bottom: 30px;
+        }
 
+        .centenary-logo {
+            width: 125px;
+            height: 125px;
 
-/* =====================================================
-   MAIN HEADING
-===================================================== */
+            object-fit: contain;
 
-.hero h1 {
-    font-family: "Playfair Display", serif;
+            filter: drop-shadow(
+                0 8px 20px rgba(0,0,0,0.30)
+            );
+        }
 
-    color: white;
+        .centenary-text {
+            margin-left: 22px;
 
-    font-size: clamp(40px, 5vw, 70px);
+            color: white;
+        }
 
-    line-height: 1.08;
+        .centenary-text strong {
+            display: block;
 
-    margin-bottom: 14px;
-}
+            color: var(--gold);
 
-.hero h1 span {
-    color: var(--gold);
-}
+            font-size: 15px;
 
+            line-height: 1.5;
 
-/* =====================================================
-   SHORT NAME — BELOW MAIN TITLE
-===================================================== */
+            letter-spacing: 0.12em;
 
-.conference-shortname {
-    color: var(--gold);
+            font-weight: 700;
+        }
 
-    font-size: 21px;
+        .centenary-text span {
+            display: block;
 
-    font-weight: 700;
+            margin-top: 6px;
 
-    letter-spacing: 0.15em;
+            color: rgba(255,255,255,0.65);
 
-    margin-bottom: 24px;
-}
+            font-size: 13px;
 
+            letter-spacing: 0.18em;
+        }
 
-/* =====================================================
-   DESCRIPTION
-===================================================== */
 
-.hero-description {
-    color: rgba(255,255,255,0.82);
+        /* =====================================================
+           CONFERENCE HEADING
+        ===================================================== */
 
-    max-width: 760px;
+        .conference-label {
+            color: var(--gold);
 
-    font-size: 16px;
+            font-size: 13px;
 
-    margin-bottom: 30px;
-}
+            font-weight: 700;
 
+            text-transform: uppercase;
 
-/* =====================================================
-   DATE
-===================================================== */
+            letter-spacing: 0.18em;
 
-.hero-action {
-    display: flex;
+            margin-bottom: 15px;
+        }
 
-    align-items: center;
+        .hero h1 {
+            font-family: "Playfair Display", serif;
 
-    gap: 25px;
+            color: white;
 
-    margin-bottom: 30px;
-}
+            font-size: clamp(40px, 5vw, 70px);
 
-.conference-date {
-    border-left: 2px solid var(--gold);
+            line-height: 1.08;
 
-    padding-left: 16px;
-}
+            margin-bottom: 17px;
+        }
 
-.conference-date strong {
-    display: block;
+        .hero h1 span {
+            color: var(--gold);
+        }
 
-    color: white;
+        .conference-shortname {
+            color: var(--gold);
 
-    font-size: 18px;
-}
+            font-size: 20px;
 
+            font-weight: 700;
 
-/* =====================================================
-   BUTTON
-===================================================== */
+            letter-spacing: 0.18em;
 
-.hero-buttons {
-    display: flex;
+            margin-bottom: 22px;
+        }
 
-    gap: 14px;
+        .hero-description {
+            color: rgba(255,255,255,0.82);
 
-    flex-wrap: wrap;
-}
+            max-width: 760px;
 
-.btn {
-    display: inline-block;
+            font-size: 16px;
 
-    padding: 12px 25px;
+            margin-bottom: 30px;
+        }
 
-    border-radius: 30px;
 
-    font-size: 14px;
+        /* =====================================================
+           DATE + REGISTER
+        ===================================================== */
 
-    font-weight: 600;
+        .hero-actions {
+            display: flex;
 
-    transition: 0.25s ease;
-}
+            align-items: center;
 
-.btn-primary {
-    background: var(--gold);
+            gap: 20px;
 
-    color: #101b26;
-}
+            flex-wrap: wrap;
+        }
 
-.btn-primary:hover {
-    transform: translateY(-2px);
+        .conference-date {
+            border-left: 2px solid var(--gold);
 
-    background: #d4ad5d;
-}
+            padding-left: 15px;
 
+            margin-right: 8px;
+        }
 
-/* =====================================================
-   INTRODUCTION
-===================================================== */
+        .conference-date strong {
+            display: block;
 
-.intro {
-    background: var(--cream);
+            color: white;
 
-    padding: 90px 0;
-}
+            font-size: 18px;
+        }
 
-.intro-grid {
-    display: grid;
+        .conference-date small {
+            display: block;
 
-    grid-template-columns: 1.2fr 0.8fr;
+            color: rgba(255,255,255,0.58);
 
-    gap: 70px;
+            font-size: 11px;
 
-    align-items: center;
-}
+            text-transform: uppercase;
 
-.section-label {
-    color: var(--gold);
+            letter-spacing: 0.1em;
+        }
 
-    font-size: 12px;
 
-    font-weight: 700;
+        /* =====================================================
+           BUTTONS
+        ===================================================== */
 
-    text-transform: uppercase;
+        .btn {
+            display: inline-block;
 
-    letter-spacing: 0.18em;
+            padding: 13px 25px;
 
-    margin-bottom: 10px;
-}
+            border-radius: 30px;
 
-.section-title {
-    font-family: "Playfair Display", serif;
+            font-size: 14px;
 
-    color: var(--navy);
+            font-weight: 600;
 
-    font-size: 42px;
+            transition: 0.25s ease;
+        }
 
-    line-height: 1.2;
+        .btn-primary {
+            background: var(--gold);
 
-    margin-bottom: 20px;
-}
+            color: #101b26;
+        }
 
-.intro-text p {
-    color: var(--muted);
+        .btn-primary:hover {
+            transform: translateY(-2px);
 
-    margin-bottom: 16px;
-}
+            background: #d4ad5d;
+        }
 
-.intro-highlight {
-    margin-top: 25px;
+        .btn-outline {
+            color: white;
 
-    padding: 18px 22px;
+            border: 1px solid rgba(255,255,255,0.65);
+        }
 
-    background: white;
+        .btn-outline:hover {
+            background: white;
 
-    border-left: 3px solid var(--gold);
+            color: var(--navy);
+        }
 
-    color: var(--navy);
 
-    font-weight: 600;
-}
+        /* =====================================================
+           INTRODUCTION
+        ===================================================== */
 
-.intro-card {
-    background: var(--navy);
+        .intro {
+            background: var(--cream);
 
-    color: white;
+            padding: 90px 0;
+        }
 
-    padding: 42px;
+        .intro-grid {
+            display: grid;
 
-    position: relative;
-}
+            grid-template-columns: 1.2fr 0.8fr;
 
-.intro-card::before {
-    content: "";
+            gap: 70px;
 
-    position: absolute;
+            align-items: center;
+        }
 
-    width: 60px;
-    height: 3px;
+        .section-label {
+            color: var(--gold);
 
-    background: var(--gold);
+            font-size: 12px;
 
-    top: 28px;
-    left: 42px;
-}
+            font-weight: 700;
 
-.intro-card h3 {
-    font-family: "Playfair Display", serif;
+            text-transform: uppercase;
 
-    font-size: 27px;
+            letter-spacing: 0.18em;
 
-    margin-top: 20px;
+            margin-bottom: 10px;
+        }
 
-    margin-bottom: 15px;
-}
+        .section-title {
+            font-family: "Playfair Display", serif;
 
-.intro-card p {
-    color: rgba(255,255,255,0.68);
+            color: var(--navy);
 
-    font-size: 14px;
+            font-size: 42px;
 
-    margin-bottom: 22px;
-}
+            line-height: 1.2;
 
+            margin-bottom: 20px;
+        }
 
-/* =====================================================
-   CONFERENCE INFORMATION
-===================================================== */
+        .intro-text p {
+            color: var(--muted);
 
-.previews {
-    padding: 90px 0;
+            margin-bottom: 16px;
+        }
 
-    background: white;
-}
+        .intro-highlight {
+            margin-top: 25px;
 
-.preview-heading {
-    margin-bottom: 40px;
-}
+            padding: 18px 22px;
 
-.preview-heading p {
-    max-width: 650px;
+            background: white;
 
-    color: var(--muted);
+            border-left: 3px solid var(--gold);
 
-    font-size: 14px;
-}
+            color: var(--navy);
 
-.preview-grid {
-    display: grid;
+            font-weight: 600;
+        }
 
-    grid-template-columns: repeat(3, 1fr);
+        .intro-card {
+            background: var(--navy);
 
-    gap: 20px;
-}
+            color: white;
 
-.preview-card {
-    border: 1px solid var(--border);
+            padding: 42px;
 
-    padding: 30px;
+            position: relative;
+        }
 
-    transition: 0.3s ease;
-}
+        .intro-card::before {
+            content: "";
 
-.preview-card:hover {
-    transform: translateY(-5px);
+            position: absolute;
 
-    border-color: var(--gold);
-}
+            width: 60px;
+            height: 3px;
 
-.preview-number {
-    font-family: "Playfair Display", serif;
+            background: var(--gold);
 
-    color: var(--gold);
+            top: 28px;
+            left: 42px;
+        }
 
-    font-size: 30px;
+        .intro-card h3 {
+            font-family: "Playfair Display", serif;
 
-    margin-bottom: 10px;
-}
+            font-size: 27px;
 
-.preview-card h3 {
-    font-family: "Playfair Display", serif;
+            margin-top: 20px;
 
-    color: var(--navy);
+            margin-bottom: 15px;
+        }
 
-    font-size: 23px;
+        .intro-card p {
+            color: rgba(255,255,255,0.68);
 
-    margin-bottom: 10px;
-}
+            font-size: 14px;
 
-.preview-card p {
-    color: var(--muted);
+            margin-bottom: 22px;
+        }
 
-    font-size: 13px;
 
-    margin-bottom: 18px;
-}
+        /* =====================================================
+           FOOTER
+        ===================================================== */
 
-.card-link {
-    color: var(--navy);
+        footer {
+            background: var(--dark-navy);
 
-    font-size: 12px;
+            color: white;
 
-    font-weight: 700;
+            padding: 55px 0 25px;
+        }
 
-    text-transform: uppercase;
+        .footer-grid {
+            display: grid;
 
-    letter-spacing: 0.08em;
-}
+            grid-template-columns: 1.5fr 1fr 1fr;
 
-.card-link:hover {
-    color: var(--gold);
-}
+            gap: 50px;
+        }
 
+        .footer-brand {
+            display: flex;
 
-/* =====================================================
-   HIGHLIGHTS
-===================================================== */
+            align-items: flex-start;
 
-.highlights {
-    background: var(--navy);
+            gap: 15px;
+        }
 
-    padding: 75px 0;
+        .footer-brand img {
+            width: 70px;
+            height: 70px;
 
-    color: white;
-}
+            object-fit: contain;
+        }
 
-.highlights .section-label {
-    color: var(--gold);
-}
+        footer h3 {
+            font-family: "Playfair Display", serif;
 
-.highlights .section-title {
-    color: white;
-}
+            font-size: 21px;
 
-.highlight-grid {
-    display: grid;
+            margin-bottom: 14px;
+        }
 
-    grid-template-columns: repeat(4, 1fr);
+        footer p,
+        footer li {
+            color: rgba(255,255,255,0.52);
 
-    margin-top: 35px;
+            font-size: 13px;
+        }
 
-    border-top: 1px solid rgba(255,255,255,0.15);
+        footer ul {
+            list-style: none;
+        }
 
-    border-bottom: 1px solid rgba(255,255,255,0.15);
-}
+        footer li {
+            margin-bottom: 8px;
+        }
 
-.highlight-box {
-    padding: 30px 22px;
+        footer a:hover {
+            color: var(--gold);
+        }
 
-    border-right: 1px solid rgba(255,255,255,0.15);
-}
+        .copyright {
+            margin-top: 40px;
 
-.highlight-box:last-child {
-    border-right: none;
-}
+            padding-top: 20px;
 
-.highlight-box strong {
-    display: block;
+            border-top: 1px solid rgba(255,255,255,0.1);
 
-    color: white;
+            text-align: center;
 
-    font-size: 17px;
+            color: rgba(255,255,255,0.35);
 
-    margin-bottom: 5px;
-}
+            font-size: 11px;
+        }
 
-.highlight-box span {
-    color: rgba(255,255,255,0.55);
 
-    font-size: 12px;
-}
+        /* =====================================================
+           MOBILE
+        ===================================================== */
 
+        @media (max-width: 1000px) {
 
-/* =====================================================
-   CTA
-===================================================== */
+            .nav-links {
+                gap: 15px;
+            }
 
-.cta {
-    padding: 90px 0;
+            .nav-links a {
+                font-size: 12px;
+            }
 
-    text-align: center;
+            .brand img {
+                width: 65px;
+                height: 65px;
+            }
 
-    background:
+            .brand-text {
+                font-size: 12px;
+            }
 
-        linear-gradient(
-            rgba(8,22,36,0.93),
-            rgba(8,22,36,0.93)
-        ),
+        }
 
-        url("college-photo.jpg");
 
-    background-size: cover;
+        @media (max-width: 900px) {
 
-    background-position: center;
-}
+            .nav-links {
+                display: none;
+            }
 
-.cta h2 {
-    font-family: "Playfair Display", serif;
+            .hero {
+                min-height: 850px;
+            }
 
-    color: white;
+            .intro-grid {
+                grid-template-columns: 1fr;
 
-    font-size: 43px;
+                gap: 40px;
+            }
 
-    margin-bottom: 15px;
-}
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
 
-.cta p {
-    max-width: 650px;
+        }
 
-    margin: auto;
 
-    color: rgba(255,255,255,0.68);
+        @media (max-width: 600px) {
 
-    font-size: 14px;
+            .navbar {
+                padding: 15px 5%;
+            }
 
-    margin-bottom: 28px;
-}
+            .brand img {
+                width: 55px;
+                height: 55px;
+            }
 
+            .brand-text {
+                font-size: 10px;
+            }
 
-/* =====================================================
-   FOOTER
-===================================================== */
+            .hero {
+                min-height: 900px;
+            }
 
-footer {
-    background: var(--dark-navy);
+            .hero-content {
+                padding-top: 115px;
+            }
 
-    color: white;
+            .conference-id {
+                align-items: flex-start;
+            }
 
-    padding: 55px 0 25px;
-}
+            .centenary-logo {
+                width: 85px;
+                height: 85px;
+            }
 
-.footer-grid {
-    display: grid;
+            .centenary-text {
+                margin-left: 14px;
+            }
 
-    grid-template-columns: 1.5fr 1fr 1fr;
+            .centenary-text strong {
+                font-size: 10px;
+            }
 
-    gap: 50px;
-}
+            .centenary-text span {
+                font-size: 9px;
+            }
 
-.footer-brand {
-    display: flex;
+            .hero h1 {
+                font-size: 38px;
+            }
 
-    align-items: flex-start;
+            .conference-shortname {
+                font-size: 16px;
+            }
 
-    gap: 15px;
-}
+            .hero-description {
+                font-size: 14px;
+            }
 
-.footer-brand img {
-    width: 68px;
-    height: 68px;
+            .hero-actions {
+                align-items: flex-start;
 
-    object-fit: contain;
-}
+                flex-direction: column;
+            }
 
-footer h3 {
-    font-family: "Playfair Display", serif;
+            .section-title {
+                font-size: 34px;
+            }
 
-    font-size: 21px;
+            .intro-card {
+                padding: 32px;
+            }
 
-    margin-bottom: 14px;
-}
+        }
 
-footer p,
-footer li {
-    color: rgba(255,255,255,0.52);
-
-    font-size: 13px;
-}
-
-footer ul {
-    list-style: none;
-}
-
-footer li {
-    margin-bottom: 8px;
-}
-
-footer a:hover {
-    color: var(--gold);
-}
-
-.copyright {
-    margin-top: 40px;
-
-    padding-top: 20px;
-
-    border-top: 1px solid rgba(255,255,255,0.1);
-
-    text-align: center;
-
-    color: rgba(255,255,255,0.35);
-
-    font-size: 11px;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 1000px) {
-
-    .nav-links {
-        display: none;
-    }
-
-    .intro-grid {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-    .preview-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .highlight-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .highlight-box:nth-child(2) {
-        border-right: none;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .navbar {
-        padding: 15px 5%;
-    }
-
-    .brand img {
-        width: 52px;
-        height: 52px;
-    }
-
-    .brand-text {
-        font-size: 11px;
-    }
-
-    .hero {
-        min-height: 900px;
-    }
-
-    .hero-content {
-        padding-top: 120px;
-    }
-
-    .conference-id {
-        margin-bottom: 20px;
-    }
-
-    .centenary-logo {
-        width: 90px;
-        height: 90px;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .conference-shortname {
-        font-size: 16px;
-
-        margin-bottom: 20px;
-    }
-
-    .hero-description {
-        font-size: 14px;
-    }
-
-    .hero-action {
-        align-items: flex-start;
-
-        gap: 15px;
-
-        flex-wrap: wrap;
-    }
-
-    .section-title {
-        font-size: 34px;
-    }
-
-    .highlight-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .highlight-box {
-        border-right: none;
-
-        border-bottom: 1px solid rgba(255,255,255,0.15);
-    }
-
-    .highlight-box:last-child {
-        border-bottom: none;
-    }
-
-    .cta h2 {
-        font-size: 34px;
-    }
-
-}
-
-</style>
+    </style>
 
 </head>
 
@@ -847,6 +712,7 @@ footer a:hover {
 
     <a href="index.html" class="brand">
 
+        <!-- COLLEGE LOGO -->
         <img
             src="college-logo.png"
             alt="H.R.H. The P.O.W.I.E.T. College Logo"
@@ -857,10 +723,6 @@ footer a:hover {
             H.R.H. THE P.O.W.I.E.T.<br>
             JORHAT, ASSAM
 
-            <span>
-                Government of Assam Institution
-            </span>
-
         </div>
 
     </a>
@@ -868,25 +730,36 @@ footer a:hover {
 
     <nav class="nav-links">
 
-        <a href="index.html">Home</a>
+        <a href="index.html">
+            Home
+        </a>
 
-        <a href="about.html">About</a>
+        <a href="about.html">
+            About
+        </a>
 
-        <a href="themes.html">Themes</a>
+        <a href="themes.html">
+            Themes
+        </a>
 
-        <a href="committee.html">Committee</a>
+        <a href="committee.html">
+            Committee
+        </a>
 
-        <a href="speakers.html">Speakers</a>
+        <a href="speakers.html">
+            Speakers
+        </a>
 
-        <a href="programme.html">Programme</a>
+        <a href="programme.html">
+            Programme
+        </a>
 
-        <a href="call-for-papers.html">Papers</a>
+        <a href="call-for-papers.html">
+            Papers
+        </a>
 
-        <a href="registration.html"
-           class="nav-register">
-
+        <a href="registration.html" class="nav-register">
             Registration
-
         </a>
 
     </nav>
@@ -906,7 +779,7 @@ footer a:hover {
         <div class="hero-content">
 
 
-            <!-- 100 YEAR EMBLEM -->
+            <!-- CENTENARY EMBLEM -->
 
             <div class="conference-id">
 
@@ -916,30 +789,47 @@ footer a:hover {
                     class="centenary-logo"
                 >
 
+                <div class="centenary-text">
+
+                    <strong>
+                        CELEBRATING A CENTURY OF<br>
+                        TECHNICAL EDUCATION
+                    </strong>
+
+                    <span>
+                        1927–2027
+                    </span>
+
+                </div>
+
             </div>
 
 
-            <!-- MAIN CONFERENCE TITLE -->
+
+            <!-- CONFERENCE NAME -->
+
+            <div class="conference-label">
+                NATIONAL CONFERENCE
+            </div>
+
 
             <h1>
 
                 Convergence, Innovation and Development of
-                <span>Science, Engineering and Society</span>
+                <span>
+                    Science, Engineering and Society
+                </span>
                 for a Resilient Future
 
             </h1>
 
 
-            <!-- SHORT NAME DIRECTLY BELOW TITLE -->
+            <!-- SHORT NAME BELOW LONG NAME -->
 
             <div class="conference-shortname">
-
                 CIDSESRF-2027
-
             </div>
 
-
-            <!-- DESCRIPTION -->
 
             <p class="hero-description">
 
@@ -951,9 +841,10 @@ footer a:hover {
             </p>
 
 
-            <!-- DATE ONLY -->
 
-            <div class="hero-action">
+            <!-- DATE + REGISTER ONLY -->
+
+            <div class="hero-actions">
 
                 <div class="conference-date">
 
@@ -961,22 +852,18 @@ footer a:hover {
                         09 January 2027
                     </strong>
 
+                    <small>
+                        Conference Date
+                    </small>
+
                 </div>
 
-            </div>
-
-
-            <!-- REGISTER -->
-
-            <div class="hero-buttons">
 
                 <a
                     href="registration.html"
                     class="btn btn-primary"
                 >
-
                     Register Now
-
                 </a>
 
             </div>
@@ -1004,9 +891,7 @@ footer a:hover {
             <div>
 
                 <div class="section-label">
-
                     About the Conference
-
                 </div>
 
 
@@ -1055,10 +940,8 @@ footer a:hover {
             <div class="intro-card">
 
                 <h3>
-
                     A platform for
                     emerging ideas
-
                 </h3>
 
 
@@ -1076,316 +959,13 @@ footer a:hover {
                     href="about.html"
                     class="btn btn-primary"
                 >
-
                     Read More
-
                 </a>
 
             </div>
 
 
         </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CONFERENCE INFORMATION
-========================================================= -->
-
-<section class="previews">
-
-    <div class="container">
-
-
-        <div class="preview-heading">
-
-            <div>
-
-                <div class="section-label">
-
-                    Explore
-
-                </div>
-
-
-                <h2 class="section-title">
-
-                    Conference Information
-
-                </h2>
-
-
-                <p>
-
-                    Explore the major academic and organisational
-                    sections of CIDSESRF-2027.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="preview-grid">
-
-
-            <!-- THEMES -->
-
-            <div class="preview-card">
-
-                <div class="preview-number">
-
-                    01
-
-                </div>
-
-                <h3>
-
-                    Conference Themes
-
-                </h3>
-
-                <p>
-
-                    Explore the broad thematic areas covering
-                    science, emerging technologies, materials,
-                    mathematics, sustainability, engineering
-                    and society.
-
-                </p>
-
-                <a
-                    href="themes.html"
-                    class="card-link"
-                >
-
-                    View Themes →
-
-                </a>
-
-            </div>
-
-
-
-            <!-- COMMITTEE -->
-
-            <div class="preview-card">
-
-                <div class="preview-number">
-
-                    02
-
-                </div>
-
-                <h3>
-
-                    Conference Committee
-
-                </h3>
-
-                <p>
-
-                    Meet the patron, chair, convenors and members
-                    responsible for organising the conference.
-
-                </p>
-
-                <a
-                    href="committee.html"
-                    class="card-link"
-                >
-
-                    View Committee →
-
-                </a>
-
-            </div>
-
-
-
-            <!-- SPEAKERS -->
-
-            <div class="preview-card">
-
-                <div class="preview-number">
-
-                    03
-
-                </div>
-
-                <h3>
-
-                    Speakers
-
-                </h3>
-
-                <p>
-
-                    Information about keynote and invited speakers
-                    will be available here as the programme is
-                    finalised.
-
-                </p>
-
-                <a
-                    href="speakers.html"
-                    class="card-link"
-                >
-
-                    View Speakers →
-
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CONFERENCE HIGHLIGHTS
-========================================================= -->
-
-<section class="highlights">
-
-    <div class="container">
-
-        <div class="section-label">
-
-            At a Glance
-
-        </div>
-
-
-        <h2 class="section-title">
-
-            Conference Highlights
-
-        </h2>
-
-
-        <div class="highlight-grid">
-
-
-            <div class="highlight-box">
-
-                <strong>
-
-                    09 January 2027
-
-                </strong>
-
-                <span>
-
-                    Conference Date
-
-                </span>
-
-            </div>
-
-
-            <div class="highlight-box">
-
-                <strong>
-
-                    National Conference
-
-                </strong>
-
-                <span>
-
-                    Academic Event
-
-                </span>
-
-            </div>
-
-
-            <div class="highlight-box">
-
-                <strong>
-
-                    Young Researchers
-
-                </strong>
-
-                <span>
-
-                    Early-Career Participation
-
-                </span>
-
-            </div>
-
-
-            <div class="highlight-box">
-
-                <strong>
-
-                    Interdisciplinary
-
-                </strong>
-
-                <span>
-
-                    Science · Engineering · Society
-
-                </span>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CALL TO ACTION
-========================================================= -->
-
-<section class="cta">
-
-    <div class="container">
-
-        <h2>
-
-            Be part of the conversation.
-
-        </h2>
-
-
-        <p>
-
-            Present your research, exchange ideas and connect
-            with researchers and young scholars working across
-            disciplines.
-
-        </p>
-
-
-        <a
-            href="registration.html"
-            class="btn btn-primary"
-        >
-
-            Registration & Submission
-
-        </a>
 
     </div>
 
@@ -1412,22 +992,17 @@ footer a:hover {
 
                     <img
                         src="college-logo.png"
-                        alt="College Logo"
+                        alt="H.R.H. The P.O.W.I.E.T. Logo"
                     >
-
 
                     <div>
 
                         <h3>
-
                             H.R.H. The P.O.W.I.E.T.
-
                         </h3>
 
                         <p>
-
                             Jorhat, Assam
-
                         </p>
 
                     </div>
@@ -1437,32 +1012,44 @@ footer a:hover {
 
                 <p style="margin-top:20px; max-width:450px;">
 
-                    HRH The Prince of Wales Institute of Engineering
-                    & Technology, Jorhat, Assam.
+                    A premier technical institution in Assam,
+                    celebrating a century of technical education,
+                    innovation and service.
 
                 </p>
 
-
-                <p style="margin-top:10px;">
-
-                    Celebrating 100 years of technical education,
-                    1927–2027.
-
-                </p>
+            </div>
 
 
-                <p style="margin-top:10px;">
 
-                    <a
-                        href="https://powietjrt.in/"
-                        target="_blank"
-                    >
+            <!-- COLLEGE -->
 
-                        Visit College Website →
+            <div>
 
-                    </a>
+                <h3>
+                    Institution
+                </h3>
 
-                </p>
+                <ul>
+
+                    <li>
+                        <a
+                            href="https://powietjrt.in/"
+                            target="_blank"
+                        >
+                            College Website
+                        </a>
+                    </li>
+
+                    <li>
+                        Gar Ali, Jorhat
+                    </li>
+
+                    <li>
+                        Assam – 785001
+                    </li>
+
+                </ul>
 
             </div>
 
@@ -1473,9 +1060,7 @@ footer a:hover {
             <div>
 
                 <h3>
-
                     Conference
-
                 </h3>
 
                 <ul>
@@ -1499,36 +1084,6 @@ footer a:hover {
                     </li>
 
                     <li>
-                        <a href="speakers.html">
-                            Speakers
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="programme.html">
-                            Programme
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-
-            <!-- PARTICIPATE -->
-
-            <div>
-
-                <h3>
-
-                    Participate
-
-                </h3>
-
-                <ul>
-
-                    <li>
                         <a href="call-for-papers.html">
                             Call for Papers
                         </a>
@@ -1537,18 +1092,6 @@ footer a:hover {
                     <li>
                         <a href="registration.html">
                             Registration
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="important-dates.html">
-                            Important Dates
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            Contact
                         </a>
                     </li>
 
@@ -1563,7 +1106,6 @@ footer a:hover {
         <div class="copyright">
 
             © 2027 H.R.H. The P.O.W.I.E.T., Jorhat, Assam
-            · All Rights Reserved
 
         </div>
 
