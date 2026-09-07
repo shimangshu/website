@@ -1,104 +1,1302 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About the Conference | CIDSESRF-2027</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About the Conference | CIDSESRF-2027</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           ROOT
+        ===================================================== */
+
+        :root {
+            --navy: #10243e;
+            --dark-navy: #071522;
+            --gold: #c69b45;
+            --cream: #f6f2e9;
+            --white: #ffffff;
+            --text: #263342;
+            --muted: #697586;
+            --border: #e5dfd3;
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.75;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        .navbar {
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 20;
+
+            padding: 20px 5%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            color: white;
+        }
+
+
+        .brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+        }
+
+
+        .brand img {
+
+            width: 58px;
+            height: 58px;
+
+            object-fit: contain;
+
+            background: rgba(255,255,255,0.94);
+
+            padding: 4px;
+
+            border-radius: 50%;
+        }
+
+
+        .brand-text {
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            line-height: 1.35;
+
+            letter-spacing: 0.04em;
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+        }
+
+
+        .nav-links a {
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            color: white;
+
+            transition: 0.25s ease;
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--gold);
+        }
+
+
+        .nav-links a.active {
+
+            color: var(--gold);
+        }
+
+
+        .nav-register {
+
+            border: 1px solid rgba(255,255,255,0.65);
+
+            padding: 9px 18px;
+
+            border-radius: 30px;
+        }
+
+
+        .nav-register:hover {
+
+            background: white;
+
+            color: var(--navy) !important;
+        }
+
+
+
+        /* =====================================================
+           PAGE HERO
+        ===================================================== */
+
+        .page-hero {
+
+            min-height: 500px;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(5,18,31,0.96) 0%,
+                    rgba(5,18,31,0.82) 50%,
+                    rgba(5,18,31,0.68) 100%
+                ),
+
+                url("college-photo.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+        .page-hero-content {
+
+            padding-top: 75px;
+
+            max-width: 820px;
+        }
+
+
+        .eyebrow {
+
+            display: inline-block;
+
+            color: var(--gold);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.18em;
+
+            margin-bottom: 15px;
+        }
+
+
+        .page-hero h1 {
+
+            font-family: "Playfair Display", serif;
+
+            color: white;
+
+            font-size: clamp(42px, 5vw, 64px);
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+        }
+
+
+        .page-hero p {
+
+            color: rgba(255,255,255,0.75);
+
+            font-size: 17px;
+
+            max-width: 720px;
+        }
+
+
+
+        /* =====================================================
+           ABOUT SECTION
+        ===================================================== */
+
+        .about-section {
+
+            padding: 95px 0;
+        }
+
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns: 1.25fr 0.75fr;
+
+            gap: 75px;
+
+            align-items: start;
+        }
+
+
+        .section-label {
+
+            color: var(--gold);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.18em;
+
+            margin-bottom: 11px;
+        }
+
+
+        .section-title {
+
+            font-family: "Playfair Display", serif;
+
+            color: var(--navy);
+
+            font-size: 42px;
+
+            line-height: 1.2;
+
+            margin-bottom: 27px;
+        }
+
+
+        .about-text p {
+
+            color: var(--muted);
+
+            font-size: 15px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .about-text strong {
+
+            color: var(--navy);
+        }
+
+
+
+        /* =====================================================
+           CENTENARY NOTE
+        ===================================================== */
+
+        .centenary-note {
+
+            background: var(--navy);
+
+            color: white;
+
+            padding: 34px;
+
+            margin-bottom: 20px;
+
+            position: relative;
+        }
+
+
+        .centenary-note::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 55px;
+
+            height: 3px;
+
+            background: var(--gold);
+
+            top: 25px;
+
+            left: 34px;
+        }
+
+
+        .centenary-note h3 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 28px;
+
+            margin-top: 20px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .centenary-note .years {
+
+            color: var(--gold);
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.12em;
+
+            margin-bottom: 14px;
+        }
+
+
+        .centenary-note p {
+
+            color: rgba(255,255,255,0.67);
+
+            font-size: 14px;
+        }
+
+
+
+        /* =====================================================
+           VISION / MISSION
+        ===================================================== */
+
+        .side-card {
+
+            background: var(--cream);
+
+            padding: 34px;
+
+            margin-bottom: 20px;
+
+            border-top: 3px solid var(--gold);
+        }
+
+
+        .side-card h3 {
+
+            font-family: "Playfair Display", serif;
+
+            color: var(--navy);
+
+            font-size: 27px;
+
+            margin-bottom: 14px;
+        }
+
+
+        .side-card p {
+
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        .side-card ul {
+
+            padding-left: 19px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        .side-card li {
+
+            margin-bottom: 9px;
+        }
+
+
+
+        /* =====================================================
+           CONFERENCE PURPOSE
+        ===================================================== */
+
+        .purpose {
+
+            background: var(--navy);
+
+            padding: 85px 0;
+
+            color: white;
+        }
+
+
+        .purpose .section-label {
+
+            color: var(--gold);
+        }
+
+
+        .purpose .section-title {
+
+            color: white;
+
+            max-width: 750px;
+        }
+
+
+        .purpose-intro {
+
+            max-width: 820px;
+
+            color: rgba(255,255,255,0.69);
+
+            font-size: 15px;
+
+            margin-bottom: 40px;
+        }
+
+
+        .purpose-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .purpose-card {
+
+            border: 1px solid rgba(255,255,255,0.15);
+
+            padding: 30px;
+
+            transition: 0.25s ease;
+        }
+
+
+        .purpose-card:hover {
+
+            border-color: var(--gold);
+
+            transform: translateY(-4px);
+        }
+
+
+        .purpose-number {
+
+            color: var(--gold);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 31px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .purpose-card h3 {
+
+            color: white;
+
+            font-size: 18px;
+
+            margin-bottom: 9px;
+        }
+
+
+        .purpose-card p {
+
+            color: rgba(255,255,255,0.57);
+
+            font-size: 13px;
+        }
+
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            background: var(--dark-navy);
+
+            color: white;
+
+            padding: 55px 0 25px;
+        }
+
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns: 1.5fr 1fr 1fr;
+
+            gap: 50px;
+        }
+
+
+        .footer-brand {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 15px;
+        }
+
+
+        .footer-brand img {
+
+            width: 60px;
+            height: 60px;
+
+            object-fit: contain;
+        }
+
+
+        footer h3 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 21px;
+
+            margin-bottom: 14px;
+        }
+
+
+        footer p,
+        footer li {
+
+            color: rgba(255,255,255,0.52);
+
+            font-size: 13px;
+        }
+
+
+        footer ul {
+
+            list-style: none;
+        }
+
+
+        footer li {
+
+            margin-bottom: 8px;
+        }
+
+
+        footer a:hover {
+
+            color: var(--gold);
+        }
+
+
+        .copyright {
+
+            margin-top: 40px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid rgba(255,255,255,0.1);
+
+            text-align: center;
+
+            color: rgba(255,255,255,0.35);
+
+            font-size: 11px;
+        }
+
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .purpose-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 15px 5%;
+            }
+
+            .brand img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .brand-text {
+                font-size: 10px;
+            }
+
+            .page-hero {
+                min-height: 440px;
+            }
+
+            .page-hero h1 {
+                font-size: 40px;
+            }
+
+            .page-hero p {
+                font-size: 14px;
+            }
+
+            .about-section {
+                padding: 65px 0;
+            }
+
+            .section-title {
+                font-size: 34px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
-<input type="checkbox" id="navtoggle-cb" class="navtoggle-cb" style="display:none;">
-<nav>
-  <div class="navrow">
-    <div class="brandmark">
-      <svg class="crest" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="21" cy="21" r="20" fill="#340B0B" stroke="#AD7F2E" stroke-width="1"/>
-  <circle cx="21" cy="21" r="16.5" fill="none" stroke="#AD7F2E" stroke-width="0.6" stroke-dasharray="1.2 3"/>
-  <path d="M15 27V16.5L21 12L27 16.5V27" stroke="#D9B76B" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
-  <rect x="18.3" y="20" width="5.4" height="7" stroke="#D9B76B" stroke-width="1.1" fill="none"/>
-  <line x1="12.5" y1="27" x2="29.5" y2="27" stroke="#D9B76B" stroke-width="1.3"/>
-  <line x1="21" y1="12" x2="21" y2="9" stroke="#D9B76B" stroke-width="1.1"/>
-  <circle cx="21" cy="8" r="1.1" fill="#D9B76B"/>
-</svg>
-      <div class="brandtext"><strong>HRH The P.O.W.I.E.T., Jorhat</strong>Government of Assam Institution</div>
-    </div>
-    <div class="navtoggle"><label for="navtoggle-cb">Menu</label></div>
-    <div class="navlinks">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="themes.html">Themes</a>
-      <a href="dates.html">Important Dates</a>
-      <a href="call-for-papers.html">Call for Papers</a>
-      <a href="registration.html">Registration</a>
-      <a href="keynote.html" class="soon">Keynote Speaker <span class="dot"></span></a>
-      <a href="programme.html" class="soon">Programme <span class="dot"></span></a>
-      <a href="downloads.html" class="soon">Downloads <span class="dot"></span></a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
-</nav>
-<header class="pagehero">
-  <div class="wrap">
-    <span class="eyebrow">CIDSESRF-2027</span>
-    <h1>About the Conference</h1>
-    <p>A century of technical education, and a new conversation for the next one.</p>
-  </div>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="brand">
+
+        <!-- COLLEGE LOGO -->
+        <img
+            src="college-logo.png"
+            alt="H.R.H. The P.O.W.I.E.T. Logo"
+        >
+
+        <div class="brand-text">
+
+            H.R.H. THE P.O.W.I.E.T.<br>
+            JORHAT, ASSAM
+
+        </div>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html" class="active">
+            About
+        </a>
+
+        <a href="themes.html">
+            Themes
+        </a>
+
+        <a href="committee.html">
+            Committee
+        </a>
+
+        <a href="speakers.html">
+            Speakers
+        </a>
+
+        <a href="programme.html">
+            Programme
+        </a>
+
+        <a href="call-for-papers.html">
+            Papers
+        </a>
+
+        <a
+            href="registration.html"
+            class="nav-register"
+        >
+            Registration
+        </a>
+
+    </nav>
+
 </header>
 
-<section>
-  <div class="wrap about-grid">
-    <div>
-      <p>HRH The Prince of Wales Institute of Engineering & Technology (POWIET), Jorhat, traces its origins to a wartime technical school and was formally established in 1927 with the generous support of the Assamese timber merchant, Late Bholanath Boruah. Academic instruction commenced on 16 January 1928, placing POWIET among the oldest technical institutions in North East India. Today, the institute stands at the threshold of its centenary year.</p>
-      <p>Over the decades, POWIET has continued to broaden its academic and technical horizons, with Civil Engineering introduced in 1948, Electrical and Mechanical Engineering in 1957, Automobile and Agricultural Engineering in 1976 and 1978, and Electronics & Telecommunication and Instrumentation Engineering in 1986.</p>
-      <p>As the institute commemorates 100 years of technical education and service, <strong>CIDSESRF-2027</strong> provides a platform for researchers, faculty members, scientists, engineers, students, and industry professionals to explore the convergence of science, engineering, and society in shaping a more resilient future. The conference seeks to foster original research, applied innovation, and meaningful interdisciplinary exchange in addressing emerging challenges and opportunities</p>
+
+
+<!-- =========================================================
+     PAGE HERO
+========================================================= -->
+
+<header class="page-hero">
+
+    <div class="container">
+
+        <div class="page-hero-content">
+
+            <div class="eyebrow">
+                CIDSESRF-2027 · 1927–2027
+            </div>
+
+            <h1>
+                About the Conference
+            </h1>
+
+            <p>
+                Celebrating a century of technical education
+                while opening a new conversation on science,
+                engineering and society.
+            </p>
+
+        </div>
+
     </div>
-    <div>
-      <div class="mission-card">
-        <div class="rule"></div>
-        <h3>Vision</h3>
-        <p style="color:var(--ink-soft); font-size:14.5px; margin:0;">To become an institution of repute in technical education, continuously improving to keep pace with a changing global scenario.</p>
-      </div>
-      <div class="mission-card">
-        <div class="rule"></div>
-        <h3>Mission</h3>
-        <ul>
-          <li>Impart quality, state-of-the-art technical education</li>
-          <li>Develop industry-relevant, employable and entrepreneurial skills</li>
-          <li>Provide value-based education rooted in ethics</li>
-          <li>Stay current with rapidly changing technology</li>
-        </ul>
-      </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     INSTITUTION & CONFERENCE
+========================================================= -->
+
+<section class="about-section">
+
+    <div class="container about-grid">
+
+
+        <div class="about-text">
+
+            <div class="section-label">
+                The Institution & The Conference
+            </div>
+
+
+            <h2 class="section-title">
+
+                A century of technical
+                education and innovation.
+
+            </h2>
+
+
+            <p>
+
+                HRH The Prince of Wales Institute of Engineering
+                & Technology (POWIET), Jorhat, traces its origins
+                to a wartime technical school and was formally
+                established in <strong>1927</strong> with the
+                generous support of the Assamese timber merchant,
+                Late Bholanath Boruah.
+
+            </p>
+
+
+            <p>
+
+                Academic instruction commenced on
+                <strong>16 January 1928</strong>, placing POWIET
+                among the oldest technical institutions in
+                North East India. Over the decades, the institute
+                has continued to contribute to technical education
+                and human resource development in the region.
+
+            </p>
+
+
+            <p>
+
+                POWIET has progressively broadened its academic
+                and technical horizons. Civil Engineering was
+                introduced in 1948, followed by Electrical and
+                Mechanical Engineering in 1957. Automobile and
+                Agricultural Engineering were introduced in
+                1976 and 1978 respectively, while Electronics &
+                Telecommunication and Instrumentation Engineering
+                were introduced in 1986.
+
+            </p>
+
+
+            <p>
+
+                As the institute approaches its
+                <strong>centenary, 1927–2027</strong>,
+                <strong>CIDSESRF-2027</strong> provides a platform
+                for researchers, faculty members, scientists,
+                engineers, students and industry professionals to
+                explore the convergence of science, engineering
+                and society in shaping a more resilient future.
+
+            </p>
+
+
+            <p>
+
+                The conference seeks to foster original research,
+                applied innovation and meaningful interdisciplinary
+                exchange while encouraging new perspectives on
+                emerging challenges and opportunities.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- RIGHT COLUMN -->
+
+        <div>
+
+
+            <!-- CENTENARY -->
+
+            <div class="centenary-note">
+
+                <h3>
+                    POWIET Centenary
+                </h3>
+
+                <div class="years">
+                    1927 — 2027
+                </div>
+
+                <p>
+
+                    One hundred years of technical education,
+                    service and institutional legacy in Assam
+                    and North East India.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- VISION -->
+
+            <div class="side-card">
+
+                <h3>
+                    Vision
+                </h3>
+
+                <p>
+
+                    To become an institution of repute in
+                    technical education, continuously improving
+                    to keep pace with a changing global scenario.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- MISSION -->
+
+            <div class="side-card">
+
+                <h3>
+                    Mission
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Impart quality, state-of-the-art
+                        technical education.
+                    </li>
+
+                    <li>
+                        Develop industry-relevant, employable
+                        and entrepreneurial skills.
+                    </li>
+
+                    <li>
+                        Provide value-based education rooted
+                        in ethics.
+                    </li>
+
+                    <li>
+                        Stay current with rapidly changing
+                        technology.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
+
 </section>
-<footer id="contact">
-  <div class="wrap foot-grid">
-    <div>
-      <h4>CIDSESRF-2027</h4>
-      <p>National Conference on Convergence, Innovation and Development of Science, Engineering and Society for a Resilient Future.</p>
-      <p>HRH The P.O.W.I.E.T., Jorhat — celebrating 100 years, 1926–2026.</p>
+
+
+
+<!-- =========================================================
+     CONFERENCE PURPOSE
+========================================================= -->
+
+<section class="purpose">
+
+    <div class="container">
+
+
+        <div class="section-label">
+            The Conference
+        </div>
+
+
+        <h2 class="section-title">
+
+            Connecting knowledge,
+            innovation and society.
+
+        </h2>
+
+
+        <p class="purpose-intro">
+
+            CIDSESRF-2027 is conceived as an interdisciplinary
+            forum where ideas from different domains can interact,
+            creating new perspectives on scientific advancement,
+            technological innovation and societal resilience.
+
+            The conference welcomes contributions that connect
+            fundamental knowledge with applications and broader
+            societal needs.
+
+        </p>
+
+
+
+        <div class="purpose-grid">
+
+
+            <!-- CARD 1 -->
+
+            <div class="purpose-card">
+
+                <div class="purpose-number">
+                    01
+                </div>
+
+                <h3>
+                    Original Research
+                </h3>
+
+                <p>
+
+                    Provide a platform for researchers, scholars
+                    and students to present emerging scientific,
+                    technological and interdisciplinary work.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- CARD 2 -->
+
+            <div class="purpose-card">
+
+                <div class="purpose-number">
+                    02
+                </div>
+
+                <h3>
+                    Interdisciplinary Exchange
+                </h3>
+
+                <p>
+
+                    Encourage dialogue across science, engineering,
+                    technology, humanities and society, creating
+                    opportunities for new collaborations.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- CARD 3 -->
+
+            <div class="purpose-card">
+
+                <div class="purpose-number">
+                    03
+                </div>
+
+                <h3>
+                    Resilient Future
+                </h3>
+
+                <p>
+
+                    Explore innovative approaches to emerging
+                    environmental, technological and societal
+                    challenges.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
     </div>
-    <div>
-      <h4>Contact</h4>
-      <p>HRH The P.O.W.I.E.T.<br>Gar Ali, Jorhat – 785001, Assam</p>
-      <p class="foot-line"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 7399232471 <span class="edit-flag">— add more numbers</span></p>
-      <p class="foot-line"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="m2 7 10 6 10-6"/></svg> <a href="mailto:hrhpowiet@gmail.com">hrhpowiet@gmail.com</a></p>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <!-- INSTITUTION -->
+
+            <div>
+
+                <div class="footer-brand">
+
+                    <img
+                        src="college-logo.png"
+                        alt="College Logo"
+                    >
+
+                    <div>
+
+                        <h3>
+                            H.R.H. The P.O.W.I.E.T.
+                        </h3>
+
+                        <p>
+                            Jorhat, Assam
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <p style="margin-top:20px; max-width:470px;">
+
+                    National Conference on Convergence,
+                    Innovation and Development of Science,
+                    Engineering and Society for a Resilient Future.
+
+                </p>
+
+
+                <p style="margin-top:10px;">
+
+                    Celebrating 100 years of technical education
+                    and service — <strong style="color:var(--gold);">
+                    1927–2027</strong>.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- CONFERENCE -->
+
+            <div>
+
+                <h3>
+                    Conference
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="themes.html">
+                            Themes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="committee.html">
+                            Committee
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="speakers.html">
+                            Speakers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="programme.html">
+                            Programme
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- PARTICIPATE -->
+
+            <div>
+
+                <h3>
+                    Participate
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="call-for-papers.html">
+                            Call for Papers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="registration.html">
+                            Registration
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="important-dates.html">
+                            Important Dates
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="copyright">
+
+            © 2027 H.R.H. The P.O.W.I.E.T., Jorhat, Assam
+            · CIDSESRF-2027
+            · Centenary 1927–2027
+
+        </div>
+
+
     </div>
-    <div>
-      <h4>Links</h4>
-      <p><a href="https://powietjrt.in/index.php">Institute website</a></p>
-      <p><a href="call-for-papers.html">Submit abstract</a></p>
-      <p><a href="dates.html">Important dates</a></p>
-    </div>
-  </div>
-  <div class="wrap foot-bottom">
-    <span>© 2026 HRH The P.O.W.I.E.T., Jorhat</span>
-    <span>Website built for CIDSESRF-2027</span>
-  </div>
+
 </footer>
 
+
 </body>
+
 </html>
+```
