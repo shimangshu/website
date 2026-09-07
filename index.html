@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CIDSESRF-2027 | H.R.H. The P.O.W.I.E.T., Jorhat</title>
+<title>CIDSESRF-2027 | H.R.H. The P.O.W.I.E.T.</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +72,6 @@ img {
 
 .navbar {
     position: absolute;
-
     top: 0;
     left: 0;
 
@@ -83,7 +82,6 @@ img {
     padding: 22px 4%;
 
     display: flex;
-
     justify-content: space-between;
     align-items: center;
 
@@ -95,17 +93,16 @@ img {
 
 .brand {
     display: flex;
-
     align-items: center;
 
-    gap: 17px;
+    gap: 18px;
 
     flex-shrink: 0;
 }
 
 .brand img {
-    width: 82px;
-    height: 82px;
+    width: 92px;
+    height: 92px;
 
     object-fit: contain;
 
@@ -115,11 +112,11 @@ img {
 
     border-radius: 50%;
 
-    box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
 }
 
 .brand-text {
-    font-size: 16px;
+    font-size: 18px;
 
     font-weight: 700;
 
@@ -131,16 +128,18 @@ img {
 }
 
 .brand-text .location {
-    font-size: 14px;
+    font-size: 15px;
 
-    font-weight: 500;
+    font-weight: 600;
 
     letter-spacing: 0.08em;
 
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 .brand-text .institution {
+    display: block;
+
     font-size: 11px;
 
     font-weight: 400;
@@ -149,11 +148,11 @@ img {
 
     opacity: 0.65;
 
-    margin-top: 3px;
+    margin-top: 4px;
 }
 
 
-/* NAVIGATION LINKS */
+/* NAVIGATION */
 
 .nav-links {
     display: flex;
@@ -180,9 +179,9 @@ img {
 }
 
 .nav-register {
-    border: 1px solid rgba(255,255,255,0.75);
+    border: 1px solid rgba(255,255,255,0.8);
 
-    padding: 11px 20px;
+    padding: 11px 21px;
 
     border-radius: 30px;
 }
@@ -213,9 +212,9 @@ img {
         linear-gradient(
             90deg,
             rgba(4,17,29,0.97) 0%,
-            rgba(4,17,29,0.92) 38%,
-            rgba(4,17,29,0.67) 70%,
-            rgba(4,17,29,0.76) 100%
+            rgba(4,17,29,0.92) 40%,
+            rgba(4,17,29,0.68) 72%,
+            rgba(4,17,29,0.75) 100%
         ),
 
         url("college-photo.jpg");
@@ -232,14 +231,14 @@ img {
 
     z-index: 2;
 
-    padding-top: 105px;
+    padding-top: 115px;
 
-    max-width: 1000px;
+    max-width: 1050px;
 }
 
 
 /* =====================================================
-   CONFERENCE IDENTITY
+   CENTENARY / CONFERENCE ID
 ===================================================== */
 
 .conference-id {
@@ -248,7 +247,7 @@ img {
 
     align-items: center;
 
-    gap: 24px;
+    gap: 26px;
 
     margin-bottom: 28px;
 }
@@ -256,22 +255,23 @@ img {
 
 .centenary-logo {
 
-    width: 135px;
-    height: 135px;
+    width: 155px;
+
+    height: 155px;
 
     object-fit: contain;
 
     filter:
-        drop-shadow(0 8px 20px rgba(0,0,0,0.35));
+        drop-shadow(0 9px 22px rgba(0,0,0,0.4));
 }
 
 
 .conference-id-text {
 
     border-left:
-        1px solid rgba(255,255,255,0.35);
+        1px solid rgba(255,255,255,0.4);
 
-    padding-left: 23px;
+    padding-left: 25px;
 }
 
 
@@ -279,19 +279,19 @@ img {
 
     color: var(--gold);
 
-    font-size: 22px;
+    font-size: 25px;
 
     font-weight: 700;
 
-    letter-spacing: 0.12em;
+    letter-spacing: 0.13em;
 
-    margin-bottom: 6px;
+    margin-bottom: 7px;
 }
 
 
 .conference-label {
 
-    color: rgba(255,255,255,0.78);
+    color: rgba(255,255,255,0.8);
 
     font-size: 13px;
 
@@ -304,7 +304,7 @@ img {
 
 
 /* =====================================================
-   MAIN CONFERENCE HEADING
+   MAIN HEADING
 ===================================================== */
 
 .hero h1 {
@@ -313,13 +313,13 @@ img {
 
     color: white;
 
-    font-size: clamp(42px, 5vw, 70px);
+    font-size: clamp(43px, 5vw, 72px);
 
-    line-height: 1.08;
+    line-height: 1.07;
 
     margin-bottom: 25px;
 
-    max-width: 970px;
+    max-width: 1020px;
 }
 
 .hero h1 span {
@@ -327,82 +327,82 @@ img {
 }
 
 
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
 .hero-description {
 
-    color: rgba(255,255,255,0.83);
+    color: rgba(255,255,255,0.84);
 
-    max-width: 800px;
+    max-width: 820px;
 
     font-size: 16px;
 
-    margin-bottom: 34px;
+    margin-bottom: 30px;
 }
 
 
 /* =====================================================
-   DETAILS
+   DATE + REGISTER BUTTON
 ===================================================== */
 
-.hero-details {
+.hero-action {
 
     display: flex;
 
+    align-items: center;
+
+    gap: 24px;
+
     flex-wrap: wrap;
 
-    gap: 32px;
-
-    margin-bottom: 38px;
+    margin-top: 5px;
 }
 
-.hero-detail {
+
+.conference-date {
 
     border-left:
-        2px solid var(--gold);
+        3px solid var(--gold);
 
-    padding-left: 15px;
-}
-
-.hero-detail strong {
-
-    display: block;
+    padding-left: 17px;
 
     color: white;
-
-    font-size: 18px;
 }
 
-.hero-detail small {
+
+.conference-date strong {
 
     display: block;
 
-    color: rgba(255,255,255,0.60);
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+.conference-date span {
+
+    display: block;
+
+    color: rgba(255,255,255,0.58);
 
     font-size: 11px;
 
     text-transform: uppercase;
 
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
 }
 
 
-/* =====================================================
-   BUTTONS
-===================================================== */
-
-.hero-buttons {
-
-    display: flex;
-
-    gap: 14px;
-
-    flex-wrap: wrap;
-}
+/* BUTTON */
 
 .btn {
 
     display: inline-block;
 
-    padding: 13px 26px;
+    padding: 13px 28px;
 
     border-radius: 30px;
 
@@ -425,21 +425,6 @@ img {
     transform: translateY(-2px);
 
     background: #d4ad5d;
-}
-
-.btn-outline {
-
-    color: white;
-
-    border:
-        1px solid rgba(255,255,255,0.7);
-}
-
-.btn-outline:hover {
-
-    background: white;
-
-    color: var(--navy);
 }
 
 
@@ -627,7 +612,7 @@ img {
 
 
 /* =====================================================
-   HIGHLIGHTS
+   CONFERENCE HIGHLIGHTS
 ===================================================== */
 
 .highlights {
@@ -836,9 +821,9 @@ footer {
 
 .footer-brand img {
 
-    width: 70px;
+    width: 75px;
 
-    height: 70px;
+    height: 75px;
 
     object-fit: contain;
 }
@@ -913,7 +898,7 @@ footer a:hover {
 
 
 /* =====================================================
-   MOBILE
+   TABLET
 ===================================================== */
 
 @media (max-width: 1100px) {
@@ -927,15 +912,20 @@ footer a:hover {
     }
 
     .brand img {
-        width: 70px;
-        height: 70px;
+        width: 75px;
+        height: 75px;
     }
 
     .brand-text {
-        font-size: 13px;
+        font-size: 14px;
     }
+
 }
 
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 900px) {
 
@@ -996,9 +986,9 @@ footer a:hover {
 
     .brand img {
 
-        width: 55px;
+        width: 58px;
 
-        height: 55px;
+        height: 58px;
     }
 
     .brand-text {
@@ -1018,7 +1008,7 @@ footer a:hover {
 
     .hero {
 
-        min-height: 950px;
+        min-height: 900px;
     }
 
     .hero-content {
@@ -1035,9 +1025,9 @@ footer a:hover {
 
     .centenary-logo {
 
-        width: 90px;
+        width: 95px;
 
-        height: 90px;
+        height: 95px;
     }
 
     .conference-id-text {
@@ -1047,7 +1037,7 @@ footer a:hover {
 
     .conference-shortname {
 
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .conference-label {
@@ -1065,9 +1055,13 @@ footer a:hover {
         font-size: 14px;
     }
 
-    .hero-details {
+    .hero-action {
 
-        gap: 20px;
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 18px;
     }
 
     .centenary-strip-inner {
@@ -1121,6 +1115,7 @@ footer a:hover {
 
         font-size: 34px;
     }
+
 }
 
 </style>
@@ -1140,6 +1135,7 @@ footer a:hover {
     <a href="index.html" class="brand">
 
         <!-- COLLEGE LOGO -->
+
         <img
             src="college-logo.png"
             alt="H.R.H. The P.O.W.I.E.T. College Logo"
@@ -1216,9 +1212,13 @@ footer a:hover {
         <div class="hero-content">
 
 
-            <!-- 100 YEAR EMBLEM -->
+            <!-- CENTENARY EMBLEM + SHORT NAME -->
 
             <div class="conference-id">
+
+                <!-- IMPORTANT:
+                     100 YEAR EMBLEM FILE NAME = png1.png
+                -->
 
                 <img
                     src="png1.png"
@@ -1226,19 +1226,26 @@ footer a:hover {
                     class="centenary-logo"
                 >
 
+
                 <div class="conference-id-text">
 
                     <div class="conference-shortname">
+
                         CIDSESRF-2027
+
                     </div>
 
+
                     <div class="conference-label">
+
                         National Conference · Centenary Year 1927–2027
+
                     </div>
 
                 </div>
 
             </div>
+
 
 
             <!-- MAIN CONFERENCE HEADING -->
@@ -1252,81 +1259,50 @@ footer a:hover {
             </h1>
 
 
+
+            <!-- SHORT DESCRIPTION -->
+
             <p class="hero-description">
 
-                A national conference bringing together researchers,
-                educators, young scholars, scientists, engineers and
-                professionals to exchange ideas and explore
-                interdisciplinary approaches towards a resilient future.
+                A national platform for researchers, educators,
+                young scholars and professionals to exchange ideas,
+                present emerging research and explore interdisciplinary
+                approaches towards a resilient future.
 
             </p>
 
 
-            <!-- CONFERENCE DETAILS -->
 
-            <div class="hero-details">
+            <!-- DATE + REGISTER -->
 
-                <div class="hero-detail">
+            <div class="hero-action">
+
+
+                <div class="conference-date">
 
                     <strong>
-                        2027
+                        09 January 2027
                     </strong>
 
-                    <small>
-                        Centenary Conference Year
-                    </small>
+                    <span>
+                        Conference Date
+                    </span>
 
                 </div>
 
-
-                <div class="hero-detail">
-
-                    <strong>
-                        Jorhat, Assam
-                    </strong>
-
-                    <small>
-                        Venue
-                    </small>
-
-                </div>
-
-
-                <div class="hero-detail">
-
-                    <strong>
-                        National Conference
-                    </strong>
-
-                    <small>
-                        Academic Event
-                    </small>
-
-                </div>
-
-            </div>
-
-
-            <!-- BUTTONS -->
-
-            <div class="hero-buttons">
 
                 <a
                     href="registration.html"
                     class="btn btn-primary"
                 >
+
                     Register Now
+
                 </a>
 
-
-                <a
-                    href="about.html"
-                    class="btn btn-outline"
-                >
-                    Explore Conference
-                </a>
 
             </div>
+
 
         </div>
 
@@ -1347,13 +1323,17 @@ footer a:hover {
         <div class="centenary-strip-inner">
 
             <div class="centenary-years">
+
                 1927 — 2027
+
             </div>
 
             <div class="centenary-divider"></div>
 
             <div class="centenary-caption">
+
                 Celebrating 100 Years of Technical Education
+
             </div>
 
         </div>
@@ -1378,7 +1358,9 @@ footer a:hover {
             <div>
 
                 <div class="section-label">
+
                     About the Conference
+
                 </div>
 
 
@@ -1426,6 +1408,7 @@ footer a:hover {
             </div>
 
 
+
             <div class="intro-card">
 
                 <h3>
@@ -1450,7 +1433,9 @@ footer a:hover {
                     href="about.html"
                     class="btn btn-primary"
                 >
+
                     Read More
+
                 </a>
 
             </div>
@@ -1473,11 +1458,16 @@ footer a:hover {
     <div class="container">
 
         <div class="section-label">
+
             At a Glance
+
         </div>
 
+
         <h2 class="section-title">
+
             Conference Highlights
+
         </h2>
 
 
@@ -1500,11 +1490,11 @@ footer a:hover {
             <div class="highlight-box">
 
                 <strong>
-                    Jorhat, Assam
+                    National Conference
                 </strong>
 
                 <span>
-                    Conference Venue
+                    Academic Event
                 </span>
 
             </div>
@@ -1569,8 +1559,11 @@ footer a:hover {
             <div>
 
                 <div class="section-label">
+
                     1927 — 2027
+
                 </div>
+
 
                 <h2>
 
@@ -1578,6 +1571,7 @@ footer a:hover {
                     Shaping the Future.
 
                 </h2>
+
 
                 <p>
 
@@ -1610,7 +1604,9 @@ footer a:hover {
     <div class="container">
 
         <h2>
+
             Be part of the conversation.
+
         </h2>
 
 
@@ -1627,7 +1623,9 @@ footer a:hover {
             href="registration.html"
             class="btn btn-primary"
         >
+
             Registration & Submission
+
         </a>
 
     </div>
@@ -1637,7 +1635,7 @@ footer a:hover {
 
 
 <!-- =========================================================
-     CLEAN FOOTER
+     FOOTER
 ========================================================= -->
 
 <footer>
@@ -1741,7 +1739,7 @@ footer a:hover {
 
 
 
-            <!-- PARTICIPATION -->
+            <!-- PARTICIPATE -->
 
             <div>
 
