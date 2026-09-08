@@ -573,6 +573,14 @@ rgba(4,17,29,0.76) 100%
 
             font-size: 11px;
         }
+        .menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+}
 
 
         /* =====================================================
@@ -601,11 +609,41 @@ rgba(4,17,29,0.76) 100%
         }
 
 
-        @media (max-width: 900px) {
+        @media (max-width:900px){
 
-            .nav-links {
-                display: none;
-            }
+    .menu-toggle{
+        display:block;
+    }
+
+
+    .nav-links{
+
+        display:none;
+
+        position:absolute;
+
+        top:90px;
+        right:5%;
+
+        background:#071522;
+
+        width:230px;
+
+        padding:25px;
+
+        flex-direction:column;
+
+        gap:18px;
+
+        border-radius:8px;
+    }
+
+
+    .nav-links.active{
+        display:flex;
+    }
+
+}
 
             .hero {
                 min-height: 850px;
@@ -726,7 +764,9 @@ rgba(4,17,29,0.76) 100%
         </div>
 
     </a>
-
+<button class="menu-toggle" id="menu-toggle">
+    ☰
+</button>
 
     <nav class="nav-links">
 
