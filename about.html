@@ -174,7 +174,21 @@
 
             color: var(--gold);
         }
+.menu-toggle{
 
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
 
         .nav-register {
 
@@ -672,9 +686,57 @@
 
         @media (max-width: 900px) {
 
-            .nav-links {
-                display: none;
-            }
+          .menu-toggle{
+
+    display:block;
+              .footer-grid{
+
+    grid-template-columns:1fr;
+
+    gap:35px;
+
+}
+
+
+.footer-brand{
+
+    align-items:center;
+
+}
+
+}
+
+
+.nav-links{
+
+    display:none;
+
+    position:absolute;
+
+    top:80px;
+
+    right:5%;
+
+    background:#071522;
+
+    width:230px;
+
+    padding:25px;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    border-radius:8px;
+
+}
+
+
+.nav-links.active{
+
+    display:flex;
+
+}
 
             .about-grid {
                 grid-template-columns: 1fr;
@@ -708,7 +770,7 @@
             }
 
             .page-hero {
-                min-height: 440px;
+                min-height: 420px;
             }
 
             .page-hero h1 {
@@ -724,7 +786,7 @@
             }
 
             .section-title {
-                font-size: 34px;
+                font-size: 32px;
             }
 
         }
@@ -762,6 +824,9 @@
 
 
     <nav class="nav-links">
+        <button class="menu-toggle" id="menu-toggle">
+    ☰
+</button>
 
         <a href="index.html">
             Home
@@ -1294,6 +1359,21 @@
     </div>
 
 </footer>
+    <script>
+
+const menuToggle = document.getElementById("menu-toggle");
+
+const navLinks = document.querySelector(".nav-links");
+
+
+menuToggle.onclick = function(){
+
+    navLinks.classList.toggle("active");
+
+};
+
+</script>
+
 
 
 </body>
