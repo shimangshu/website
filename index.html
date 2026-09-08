@@ -1145,7 +1145,16 @@ rgba(4,17,29,0.76) 100%
     </div>
 
 </footer>
+<script>
 
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.onclick = function(){
+    navLinks.classList.toggle("active");
+};
+
+</script>
 
 </body>
 
