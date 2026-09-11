@@ -553,29 +553,61 @@ footer a:hover{
    MOBILE
 ===================================================== */
 
-@media(max-width:900px){
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+@media (max-width:900px){
+
+    .menu-toggle{
+        display:block;
+    }
 
     .nav-links{
         display:none;
+
+        position:absolute;
+
+        top:80px;
+        right:5%;
+
+        background:#071522;
+
+        width:230px;
+
+        padding:25px;
+
+        flex-direction:column;
+
+        gap:18px;
+
+        border-radius:8px;
     }
 
-    .leadership-grid{
-        grid-template-columns:1fr;
-    }
-
-    .committee-list{
-        grid-template-columns:1fr;
+    .nav-links.active{
+        display:flex;
     }
 
     .footer-grid{
         grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .footer-brand{
+        align-items:center;
     }
 
 }
 
-@media(max-width:600px){
 
-    .navbar{
+        @media (max-width: 600px) {
+
+             .navbar{
         padding:15px 5%;
     }
 
@@ -588,29 +620,44 @@ footer a:hover{
         font-size:10px;
     }
 
+    .eyebrow{
+        font-size:15px;
+    }
+
+    .eyebrow span{
+        font-size:11px;
+    }
+
     .page-hero{
-        min-height:430px;
+        min-height:420px;
     }
 
     .page-hero h1{
         font-size:40px;
     }
 
+    .page-hero p{
+        font-size:14px;
+    }
+
     .intro{
-        padding:65px 0 40px;
+        padding:65px 0 45px;
     }
 
     .intro h2{
-        font-size:34px;
+        font-size:32px;
     }
 
-    .group-heading h2{
-        font-size:25px;
+    .themes-grid{
+        grid-template-columns:1fr;
+    }
+
+    .theme-card{
+        padding:30px 28px;
     }
 
 }
-
-</style>
+    </style>
 
 </head>
 
@@ -626,6 +673,7 @@ footer a:hover{
 
     <a href="index.html" class="brand">
 
+        <!-- COLLEGE LOGO -->
         <img
             src="college-logo.png"
             alt="H.R.H. The P.O.W.I.E.T. Logo"
@@ -641,43 +689,55 @@ footer a:hover{
     </a>
 
 
-    <nav class="nav-links">
+    <button class="menu-toggle" id="menu-toggle">
+    ☰
+</button>
+
+
+<nav class="nav-links">
 
         <a href="index.html">
             Home
         </a>
 
-        <a href="about.html">
-            About
-        </a>
+       <a href="about.html">
+    About
+</a>
 
-        <a href="themes.html">
-            Themes
-        </a>
+<a href="themes.html" >
+    Themes
+</a>
 
-        <a href="committee.html" class="active">
+        <a href="committee.html"class="active">
             Committee
         </a>
 
-        <a href="speakers.html">
-            Speakers
+        <a href="keynote.html">
+            Keynote
         </a>
 
         <a href="programme.html">
             Programme
+        </a>
+         <a href="contact.html">
+            Contact
         </a>
 
         <a href="call-for-papers.html">
             Papers
         </a>
 
-        <a href="registration.html" class="nav-register">
+        <a
+            href="registration.html"
+            class="nav-register"
+        >
             Registration
         </a>
 
     </nav>
 
 </header>
+
 
 
 
