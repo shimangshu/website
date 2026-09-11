@@ -512,7 +512,7 @@ footer a:hover{
     cursor:pointer;
 }
 
-@media (max-width: 900px) {
+@media (max-width:900px){
 
     .menu-toggle{
         display:block;
@@ -520,135 +520,93 @@ footer a:hover{
 
     .nav-links{
         display:none;
+
         position:absolute;
+
         top:80px;
         right:5%;
+
         background:#071522;
+
         width:230px;
+
         padding:25px;
+
         flex-direction:column;
+
         gap:18px;
+
         border-radius:8px;
     }
 
-
     .nav-links.active{
-
         display:flex;
-
     }
 
-
-    .about-grid {
-
+    .footer-grid{
         grid-template-columns:1fr;
-
-        gap:45px;
-
-    }
-
-
-    .purpose-grid {
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .footer-grid {
-
-        grid-template-columns:1fr;
-
         gap:35px;
-
     }
 
-
-    .footer-brand {
-
+    .footer-brand{
         align-items:center;
-
     }
 
-
 }
-
-
-.footer-brand{
-
-    align-items:center;
-
-}
-
-}
-
-
-
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 45px;
-            }
-
-            .purpose-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-        }
 
 
         @media (max-width: 600px) {
 
-            .navbar {
-                padding: 15px 5%;
-            }
+             .navbar{
+        padding:15px 5%;
+    }
 
-            .brand img {
-                width: 45px;
-                height: 45px;
-            }
-            .eyebrow{
+    .brand img{
+        width:45px;
+        height:45px;
+    }
 
-    font-size:15px;
+    .brand-text{
+        font-size:10px;
+    }
+
+    .eyebrow{
+        font-size:15px;
+    }
+
+    .eyebrow span{
+        font-size:11px;
+    }
+
+    .page-hero{
+        min-height:420px;
+    }
+
+    .page-hero h1{
+        font-size:40px;
+    }
+
+    .page-hero p{
+        font-size:14px;
+    }
+
+    .intro{
+        padding:65px 0 45px;
+    }
+
+    .intro h2{
+        font-size:32px;
+    }
+
+    .themes-grid{
+        grid-template-columns:1fr;
+    }
+
+    .theme-card{
+        padding:30px 28px;
+    }
 
 }
-
-.eyebrow span{
-
-    font-size:11px;
-
-}
-
-            .brand-text {
-                font-size: 10px;
-            }
-
-            .page-hero {
-                min-height: 420px;
-            }
-
-            .page-hero h1 {
-                font-size: 40px;
-            }
-
-            .page-hero p {
-                font-size: 14px;
-            }
-
-            .about-section {
-                padding: 65px 0;
-            }
-
-            .section-title {
-                font-size: 32px;
-            }
-
-        }
-
     </style>
 
 </head>
