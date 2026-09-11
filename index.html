@@ -120,11 +120,26 @@
             opacity: 0.72;
         }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
+       .nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-links a{
+    font-size:13px;
+    font-weight:500;
+    color:white;
+    transition:.25s ease;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.nav-links a.active{
+    color:var(--gold);
+}
 
         .nav-links a {
             font-size: 14px;
@@ -151,7 +166,76 @@
             background: white;
             color: var(--navy) !important;
         }
+.nav-dropdown{
+    position:relative;
+}
 
+.nav-dropdown > a{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.dropdown-arrow{
+    font-size:10px;
+}
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:100%;
+    left:50%;
+
+    transform:translateX(-50%) translateY(8px);
+
+    min-width:190px;
+
+    background:white;
+
+    padding:10px 0;
+
+    border-radius:7px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.2s ease;
+
+}
+
+.nav-dropdown:hover .dropdown-menu{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:translateX(-50%) translateY(0);
+
+}
+
+
+.dropdown-menu a{
+
+    display:block;
+
+    padding:10px 20px;
+
+    color:var(--navy)!important;
+
+    font-size:13px;
+
+}
+
+
+.dropdown-menu a:hover{
+
+    background:var(--cream);
+
+    color:var(--gold)!important;
+
+}
 
         /* =====================================================
            HERO
@@ -608,59 +692,84 @@ rgba(4,17,29,0.76) 100%
         }
 
 
-        @media (max-width:900px){
+     @media(max-width:900px){
 
-    .menu-toggle{
-        display:block;
-    }
-
-
-    .nav-links{
-
-        display:none;
-
-        position:absolute;
-
-        top:90px;
-        right:5%;
-
-        background:#071522;
-
-        width:230px;
-
-        padding:25px;
-
-        flex-direction:column;
-
-        gap:18px;
-
-        border-radius:8px;
-    }
+.menu-toggle{
+    display:block;
+}
 
 
-    .nav-links.active{
-        display:flex;
-    }
+.nav-links{
+
+    display:none;
+
+    position:absolute;
+
+    top:80px;
+    right:5%;
+
+    background:#071522;
+
+    width:230px;
+
+    padding:25px;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    border-radius:8px;
 
 }
 
-            .hero {
-                min-height: 850px;
-            }
 
-            .intro-grid {
-                grid-template-columns: 1fr;
-
-                gap: 40px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-        }
+.nav-links.active{
+    display:flex;
+}
 
 
+.nav-dropdown{
+    width:100%;
+}
+
+
+.dropdown-menu{
+
+    position:static;
+
+    transform:none;
+
+    width:100%;
+
+    background:#071522;
+
+    box-shadow:none;
+
+    display:none;
+
+}
+
+
+.nav-dropdown.mobile-open .dropdown-menu{
+
+    display:block;
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+.dropdown-menu a{
+
+    color:rgba(255,255,255,.8)!important;
+
+}
+
+}
         @media (max-width: 600px) {
 
             .navbar {
@@ -773,9 +882,30 @@ rgba(4,17,29,0.76) 100%
             Home
         </a>
 
+      <div class="nav-dropdown">
+
+    <a href="#">
+        Information
+        <span class="dropdown-arrow">▼</span>
+    </a>
+
+    <div class="dropdown-menu">
+
         <a href="about.html">
-            About
+            About Us
         </a>
+
+        <a href="important-dates.html">
+            Important Dates
+        </a>
+
+        <a href="programme.html">
+            Programme
+        </a>
+
+    </div>
+
+</div>
 
         <a href="themes.html">
             Themes
@@ -789,9 +919,7 @@ rgba(4,17,29,0.76) 100%
             Keynote
         </a>
 
-        <a href="programme.html">
-            Programme
-        </a>
+     
 
         <a href="call-for-papers.html">
             Papers
@@ -1149,15 +1277,32 @@ rgba(4,17,29,0.76) 100%
 </footer>
 <script>
 
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+const menuToggle=document.getElementById("menu-toggle");
+const navLinks=document.querySelector(".nav-links");
 
-menuToggle.onclick = function(){
+const navDropdown=document.querySelector(".nav-dropdown");
+const infoLink=navDropdown.querySelector(":scope > a");
+
+
+menuToggle.onclick=function(){
+
     navLinks.classList.toggle("active");
+
 };
 
-</script>
 
+infoLink.onclick=function(e){
+
+    if(window.innerWidth<=900){
+
+        e.preventDefault();
+
+        navDropdown.classList.toggle("mobile-open");
+
+    }
+
+};
+    </script>
 </body>
 
 </html>
