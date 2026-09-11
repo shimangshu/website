@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,78 +62,50 @@ a{
 ===================================================== */
 
 .navbar{
-
     position:absolute;
-
     top:0;
     left:0;
-
     width:100%;
-
     z-index:20;
-
     padding:20px 5%;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     color:white;
 }
 
 .brand{
-
     display:flex;
-
     align-items:center;
-
     gap:13px;
 }
 
 .brand img{
-
     width:58px;
     height:58px;
-
     object-fit:contain;
-
     background:rgba(255,255,255,.94);
-
     padding:4px;
-
     border-radius:50%;
 }
 
 .brand-text{
-
     font-size:12px;
-
     font-weight:600;
-
     line-height:1.35;
-
     letter-spacing:.04em;
 }
 
 .nav-links{
-
     display:flex;
-
     align-items:center;
-
     gap:25px;
 }
 
 .nav-links a{
-
     font-size:13px;
-
     font-weight:500;
-
     color:white;
-
     transition:.25s ease;
 }
 
@@ -145,19 +118,28 @@ a{
 }
 
 .nav-register{
-
     border:1px solid rgba(255,255,255,.65);
-
     padding:9px 18px;
-
     border-radius:30px;
 }
 
 .nav-register:hover{
-
     background:white;
-
     color:var(--navy)!important;
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
 }
 
 
@@ -166,85 +148,57 @@ a{
 ===================================================== */
 
 .page-hero{
-
     min-height:470px;
-
     display:flex;
-
     align-items:center;
-
     position:relative;
 
     background:
-
     linear-gradient(
         90deg,
         rgba(5,18,31,.97),
         rgba(5,18,31,.78),
         rgba(5,18,31,.64)
     ),
-
     url("college-photo.jpg");
 
     background-size:cover;
-
     background-position:center;
 }
 
 .hero-content{
-
     padding-top:75px;
-
     max-width:800px;
 }
 
 .eyebrow{
-
     color:var(--gold);
-
     font-size:12px;
-
     font-weight:700;
-
     text-transform:uppercase;
-
     letter-spacing:.18em;
-
     margin-bottom:15px;
 }
-    .eyebrow span{
 
+.eyebrow span{
     display:block;
-
     font-size:12px;
-
-    letter-spacing:0.12em;
-
+    letter-spacing:.12em;
     margin-top:6px;
-
     color:rgba(255,255,255,.75);
-
 }
 
 .page-hero h1{
-
     font-family:"Playfair Display",serif;
-
     color:white;
-
     font-size:clamp(44px,5vw,64px);
-
     line-height:1.1;
-
     margin-bottom:20px;
 }
 
 .page-hero p{
-
     color:rgba(255,255,255,.73);
-
     font-size:16px;
-
     max-width:720px;
 }
 
@@ -254,33 +208,26 @@ a{
 ===================================================== */
 
 .intro{
-
     padding:80px 0 55px;
-
     text-align:center;
 }
 
+.intro .eyebrow{
+    color:var(--gold);
+}
+
 .intro h2{
-
     font-family:"Playfair Display",serif;
-
     color:var(--navy);
-
     font-size:40px;
-
     line-height:1.2;
-
     margin-bottom:18px;
 }
 
 .intro p{
-
     max-width:760px;
-
     margin:auto;
-
     color:var(--muted);
-
     font-size:15px;
 }
 
@@ -290,119 +237,162 @@ a{
 ===================================================== */
 
 .committee-section{
-
     padding:20px 0 100px;
 }
 
-
-/* Section heading */
-
 .committee-group{
-
-    margin-bottom:65px;
+    margin-bottom:70px;
 }
 
+
+/* =====================================================
+   SECTION HEADINGS
+===================================================== */
+
 .group-heading{
-
     display:flex;
-
     align-items:center;
-
     gap:18px;
-
-    margin-bottom:25px;
+    margin-bottom:28px;
 }
 
 .group-heading .number{
-
     font-family:"Playfair Display",serif;
-
     color:var(--gold);
-
     font-size:27px;
 }
 
 .group-heading h2{
-
     font-family:"Playfair Display",serif;
-
     color:var(--navy);
-
     font-size:30px;
 }
 
 .group-line{
-
     height:1px;
-
     background:var(--border);
-
     flex:1;
 }
 
 
 /* =====================================================
-   LEADERSHIP CARDS
+   FEATURED LEADERSHIP
 ===================================================== */
 
 .leadership-grid{
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:20px;
 }
 
 .person-card{
-
     background:var(--cream);
-
-    padding:30px;
-
+    padding:32px;
     border-top:3px solid var(--gold);
-
     transition:.25s ease;
 }
 
 .person-card:hover{
-
     transform:translateY(-4px);
-
     box-shadow:0 10px 25px rgba(16,36,62,.08);
 }
 
 .person-role{
-
     color:var(--gold);
-
     font-size:11px;
-
     font-weight:700;
-
     text-transform:uppercase;
-
     letter-spacing:.12em;
-
-    margin-bottom:9px;
+    margin-bottom:10px;
 }
 
 .person-name{
-
     font-family:"Playfair Display",serif;
-
     color:var(--navy);
-
-    font-size:23px;
-
-    margin-bottom:6px;
+    font-size:24px;
+    line-height:1.3;
+    margin-bottom:7px;
 }
 
 .person-affiliation{
-
     color:var(--muted);
-
     font-size:13px;
+    line-height:1.55;
+}
+
+
+/* =====================================================
+   ADVISORY BOARD
+===================================================== */
+
+.advisory-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.advisory-card{
+    padding:24px 26px;
+    background:white;
+    border:1px solid var(--border);
+    border-left:3px solid var(--gold);
+    transition:.25s ease;
+}
+
+.advisory-card:hover{
+    background:var(--cream);
+    transform:translateY(-3px);
+}
+
+.advisory-name{
+    font-family:"Playfair Display",serif;
+    color:var(--navy);
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.advisory-role{
+    color:var(--muted);
+    font-size:13px;
+}
+
+
+/* =====================================================
+   CONVENORS
+===================================================== */
+
+.convenor-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.convenor-card{
+    background:var(--cream);
+    padding:28px;
+    text-align:center;
+    border-bottom:2px solid var(--gold);
+    transition:.25s ease;
+}
+
+.convenor-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(16,36,62,.08);
+}
+
+.convenor-name{
+    font-family:"Playfair Display",serif;
+    color:var(--navy);
+    font-size:21px;
+    margin-bottom:6px;
+}
+
+.convenor-role{
+    color:var(--gold);
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.1em;
 }
 
 
@@ -411,70 +401,52 @@ a{
 ===================================================== */
 
 .committee-list{
-
     display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     border-top:1px solid var(--border);
-
     border-left:1px solid var(--border);
 }
 
 .committee-member{
-
     padding:22px 25px;
-
     border-right:1px solid var(--border);
-
     border-bottom:1px solid var(--border);
-
     background:white;
-
     transition:.2s ease;
 }
 
 .committee-member:hover{
-
     background:var(--cream);
 }
 
 .member-name{
-
     font-family:"Playfair Display",serif;
-
-    font-size:19px;
-
+    font-size:18px;
     color:var(--navy);
-
     margin-bottom:3px;
 }
 
 .member-role{
-
-    font-size:13px;
-
+    font-size:12px;
     color:var(--muted);
 }
 
 
 /* =====================================================
-   PLACEHOLDER NOTICE
+   UPDATE NOTE
 ===================================================== */
 
 .update-note{
-
-    margin-top:20px;
-
+    margin-top:22px;
     padding:25px 30px;
-
     background:#faf8f2;
-
     border-left:3px solid var(--gold);
-
     color:var(--muted);
-
     font-size:13px;
+}
+
+.update-note strong{
+    color:var(--navy);
 }
 
 
@@ -483,54 +455,38 @@ a{
 ===================================================== */
 
 footer{
-
     background:var(--dark-navy);
-
     color:white;
-
     padding:55px 0 25px;
 }
 
 .footer-grid{
-
     display:grid;
-
     grid-template-columns:1.5fr 1fr 1fr;
-
     gap:50px;
 }
 
 .footer-brand{
-
     display:flex;
-
     align-items:flex-start;
-
     gap:15px;
 }
 
 .footer-brand img{
-
     width:60px;
     height:60px;
-
     object-fit:contain;
 }
 
 footer h3{
-
     font-family:"Playfair Display",serif;
-
     font-size:21px;
-
     margin-bottom:14px;
 }
 
 footer p,
 footer li{
-
     color:rgba(255,255,255,.52);
-
     font-size:13px;
 }
 
@@ -547,33 +503,18 @@ footer a:hover{
 }
 
 .copyright{
-
     margin-top:40px;
-
     padding-top:20px;
-
     border-top:1px solid rgba(255,255,255,.1);
-
     text-align:center;
-
     color:rgba(255,255,255,.35);
-
     font-size:11px;
 }
 
 
 /* =====================================================
-   MOBILE
+   TABLET / MOBILE
 ===================================================== */
-
-.menu-toggle{
-    display:none;
-    background:none;
-    border:none;
-    color:white;
-    font-size:28px;
-    cursor:pointer;
-}
 
 @media (max-width:900px){
 
@@ -583,15 +524,25 @@ footer a:hover{
 
     .nav-links{
         display:none;
+
         position:absolute;
         top:80px;
         right:5%;
+
         background:#071522;
+
         width:230px;
+
         padding:25px;
+
         flex-direction:column;
+        align-items:flex-start;
+
         gap:18px;
+
         border-radius:8px;
+
+        box-shadow:0 12px 30px rgba(0,0,0,.25);
     }
 
     .nav-links.active{
@@ -602,8 +553,16 @@ footer a:hover{
         grid-template-columns:1fr;
     }
 
-    .committee-list{
+    .advisory-grid{
         grid-template-columns:1fr;
+    }
+
+    .convenor-grid{
+        grid-template-columns:1fr;
+    }
+
+    .committee-list{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .footer-grid{
@@ -614,13 +573,16 @@ footer a:hover{
     .footer-brand{
         align-items:center;
     }
-
 }
 
 
-        @media (max-width: 600px) {
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
 
-             .navbar{
+@media (max-width:600px){
+
+    .navbar{
         padding:15px 5%;
     }
 
@@ -634,11 +596,11 @@ footer a:hover{
     }
 
     .eyebrow{
-        font-size:15px;
+        font-size:13px;
     }
 
     .eyebrow span{
-        font-size:11px;
+        font-size:10px;
     }
 
     .page-hero{
@@ -661,16 +623,58 @@ footer a:hover{
         font-size:32px;
     }
 
-    .themes-grid{
+    .group-heading{
+        gap:12px;
+    }
+
+    .group-heading .number{
+        font-size:23px;
+    }
+
+    .group-heading h2{
+        font-size:25px;
+    }
+
+    .committee-list{
         grid-template-columns:1fr;
     }
 
-    .theme-card{
-        padding:30px 28px;
+    .person-card{
+        padding:26px;
+    }
+
+    .advisory-card{
+        padding:22px;
     }
 
 }
-    </style>
+
+
+/* =====================================================
+   VERY SMALL SCREENS
+===================================================== */
+
+@media (max-width:420px){
+
+    .brand-text{
+        font-size:9px;
+    }
+
+    .page-hero h1{
+        font-size:35px;
+    }
+
+    .intro h2{
+        font-size:29px;
+    }
+
+    .group-heading h2{
+        font-size:22px;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -686,42 +690,39 @@ footer a:hover{
 
     <a href="index.html" class="brand">
 
-        <!-- COLLEGE LOGO -->
         <img
             src="college-logo.png"
             alt="H.R.H. The P.O.W.I.E.T. Logo"
         >
 
         <div class="brand-text">
-
             H.R.H. THE P.O.W.I.E.T.<br>
             JORHAT, ASSAM
-
         </div>
 
     </a>
 
 
-    <button class="menu-toggle" id="menu-toggle">
-    ☰
-</button>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">
+        ☰
+    </button>
 
 
-<nav class="nav-links">
+    <nav class="nav-links">
 
         <a href="index.html">
             Home
         </a>
 
-       <a href="about.html">
-    About
-</a>
+        <a href="about.html">
+            About
+        </a>
 
-<a href="themes.html" >
-    Themes
-</a>
+        <a href="themes.html">
+            Themes
+        </a>
 
-        <a href="committee.html"class="active">
+        <a href="committee.html" class="active">
             Committee
         </a>
 
@@ -732,7 +733,8 @@ footer a:hover{
         <a href="programme.html">
             Programme
         </a>
-         <a href="contact.html">
+
+        <a href="contact.html">
             Contact
         </a>
 
@@ -740,18 +742,13 @@ footer a:hover{
             Papers
         </a>
 
-        <a
-            href="registration.html"
-            class="nav-register"
-        >
+        <a href="registration.html" class="nav-register">
             Registration
         </a>
 
     </nav>
 
 </header>
-
-
 
 
 <!-- =====================================================
@@ -765,20 +762,24 @@ footer a:hover{
         <div class="hero-content">
 
             <div class="eyebrow">
-    CIDSESRF-2027<br>
-    <span>A Centenary Conference · 1927–2027</span>
-</div>
+                CIDSESRF-2027
+                <span>A Centenary Conference · 1927–2027</span>
+            </div>
 
             <h1>
-        Organising Committee
-    </h1>
+                Organising Committee
+            </h1>
 
-</div>
+            <p>
+                The academic and organisational team behind
+                CIDSESRF-2027.
+            </p>
+
+        </div>
 
     </div>
 
 </header>
-
 
 
 <!-- =====================================================
@@ -798,18 +799,15 @@ footer a:hover{
         </h2>
 
         <p>
-
             CIDSESRF-2027 is being organised through a
-            collaborative team of faculty members,
-            academic leaders and professionals of
-            H.R.H. The P.O.W.I.E.T., Jorhat.
-
+            collaborative team of academic leaders,
+            faculty members and professionals associated
+            with H.R.H. The P.O.W.I.E.T., Jorhat.
         </p>
 
     </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -822,7 +820,7 @@ footer a:hover{
 
 
         <!-- =================================================
-             PATRON / LEADERSHIP
+             01 — LEADERSHIP
         ================================================== -->
 
         <div class="committee-group">
@@ -845,22 +843,7 @@ footer a:hover{
             <div class="leadership-grid">
 
 
-                <div class="person-card">
-
-                    <div class="person-role">
-                        Chief Patron
-                    </div>
-
-                    <div class="person-name">
-                        Name to be announced
-                    </div>
-
-                    <div class="person-affiliation">
-                        H.R.H. The P.O.W.I.E.T., Jorhat
-                    </div>
-
-                </div>
-
+                <!-- PATRON -->
 
                 <div class="person-card">
 
@@ -869,7 +852,26 @@ footer a:hover{
                     </div>
 
                     <div class="person-name">
-                        Name to be announced
+                        Shri Narayan Konwar
+                    </div>
+
+                    <div class="person-affiliation">
+                        Director of Technical Education, Assam
+                    </div>
+
+                </div>
+
+
+                <!-- CHAIRPERSON -->
+
+                <div class="person-card">
+
+                    <div class="person-role">
+                        Chairperson
+                    </div>
+
+                    <div class="person-name">
+                        Dr. Gautam Dutta
                     </div>
 
                     <div class="person-affiliation">
@@ -879,14 +881,16 @@ footer a:hover{
                 </div>
 
 
+                <!-- CHIEF CONVENOR -->
+
                 <div class="person-card">
 
                     <div class="person-role">
-                        Conference Chair
+                        Chief Convenor
                     </div>
 
                     <div class="person-name">
-                        Name to be announced
+                        Dr. Rulee Boruah
                     </div>
 
                     <div class="person-affiliation">
@@ -901,9 +905,8 @@ footer a:hover{
         </div>
 
 
-
         <!-- =================================================
-             ORGANISING COMMITTEE
+             02 — ADVISORY BOARD
         ================================================== -->
 
         <div class="committee-group">
@@ -915,7 +918,7 @@ footer a:hover{
                 </div>
 
                 <h2>
-                    Organising Committee
+                    Advisory Board
                 </h2>
 
                 <div class="group-line"></div>
@@ -923,56 +926,56 @@ footer a:hover{
             </div>
 
 
-            <div class="committee-list">
+            <div class="advisory-grid">
 
 
-                <div class="committee-member">
+                <div class="advisory-card">
 
-                    <div class="member-name">
-                        Name to be announced
+                    <div class="advisory-name">
+                        Prof. Jayanta Deka
                     </div>
 
-                    <div class="member-role">
-                        Organising Secretary
-                    </div>
-
-                </div>
-
-
-                <div class="committee-member">
-
-                    <div class="member-name">
-                        Name to be announced
-                    </div>
-
-                    <div class="member-role">
-                        Joint Organising Secretary
+                    <div class="advisory-role">
+                        Chancellor, Girijananda Chowdhury University
                     </div>
 
                 </div>
 
 
-                <div class="committee-member">
+                <div class="advisory-card">
 
-                    <div class="member-name">
-                        Name to be announced
+                    <div class="advisory-name">
+                        Dr. Kalyan Kalita
                     </div>
 
-                    <div class="member-role">
-                        Treasurer
+                    <div class="advisory-role">
+                        Advisory Board Member
                     </div>
 
                 </div>
 
 
-                <div class="committee-member">
+                <div class="advisory-card">
 
-                    <div class="member-name">
-                        Name to be announced
+                    <div class="advisory-name">
+                        Prof. Rita Sharma
                     </div>
 
-                    <div class="member-role">
-                        Programme Coordinator
+                    <div class="advisory-role">
+                        Advisory Board Member
+                    </div>
+
+                </div>
+
+
+                <div class="advisory-card">
+
+                    <div class="advisory-name">
+                        Mr. Rupam Baruah
+                    </div>
+
+                    <div class="advisory-role">
+                        Advisory Board Member
                     </div>
 
                 </div>
@@ -983,9 +986,8 @@ footer a:hover{
         </div>
 
 
-
         <!-- =================================================
-             TECHNICAL COMMITTEE
+             03 — CONVENORS
         ================================================== -->
 
         <div class="committee-group">
@@ -997,7 +999,7 @@ footer a:hover{
                 </div>
 
                 <h2>
-                    Technical Committee
+                    Convenors
                 </h2>
 
                 <div class="group-line"></div>
@@ -1005,56 +1007,43 @@ footer a:hover{
             </div>
 
 
-            <div class="committee-list">
+            <div class="convenor-grid">
 
 
-                <div class="committee-member">
+                <div class="convenor-card">
 
-                    <div class="member-name">
-                        Name to be announced
+                    <div class="convenor-name">
+                        Dr. Himangshu Sekhar Sarmah
                     </div>
 
-                    <div class="member-role">
-                        Technical Chair
-                    </div>
-
-                </div>
-
-
-                <div class="committee-member">
-
-                    <div class="member-name">
-                        Name to be announced
-                    </div>
-
-                    <div class="member-role">
-                        Technical Committee Member
+                    <div class="convenor-role">
+                        Convenor
                     </div>
 
                 </div>
 
 
-                <div class="committee-member">
+                <div class="convenor-card">
 
-                    <div class="member-name">
-                        Name to be announced
+                    <div class="convenor-name">
+                        Dr. Rackcinpha Hatiboruah
                     </div>
 
-                    <div class="member-role">
-                        Technical Committee Member
+                    <div class="convenor-role">
+                        Convenor
                     </div>
 
                 </div>
 
 
-                <div class="committee-member">
+                <div class="convenor-card">
 
-                    <div class="member-name">
-                        Name to be announced
+                    <div class="convenor-name">
+                        Dr. Pranjal Sarmah
                     </div>
 
-                    <div class="member-role">
-                        Technical Committee Member
+                    <div class="convenor-role">
+                        Convenor
                     </div>
 
                 </div>
@@ -1065,9 +1054,8 @@ footer a:hover{
         </div>
 
 
-
         <!-- =================================================
-             ADVISORY COMMITTEE
+             04 — ORGANISING COMMITTEE MEMBERS
         ================================================== -->
 
         <div class="committee-group">
@@ -1079,7 +1067,7 @@ footer a:hover{
                 </div>
 
                 <h2>
-                    Advisory Committee
+                    Organising Committee Members
                 </h2>
 
                 <div class="group-line"></div>
@@ -1090,14 +1078,16 @@ footer a:hover{
             <div class="committee-list">
 
 
+                <!-- CURRENT MEMBERS -->
+
                 <div class="committee-member">
 
                     <div class="member-name">
-                        Name to be announced
+                        Mridushmita Boruah
                     </div>
 
                     <div class="member-role">
-                        Advisory Committee Member
+                        Organising Committee Member
                     </div>
 
                 </div>
@@ -1106,11 +1096,11 @@ footer a:hover{
                 <div class="committee-member">
 
                     <div class="member-name">
-                        Name to be announced
+                        Bharati Borgohain
                     </div>
 
                     <div class="member-role">
-                        Advisory Committee Member
+                        Organising Committee Member
                     </div>
 
                 </div>
@@ -1119,11 +1109,11 @@ footer a:hover{
                 <div class="committee-member">
 
                     <div class="member-name">
-                        Name to be announced
+                        Deexita Paul
                     </div>
 
                     <div class="member-role">
-                        Advisory Committee Member
+                        Organising Committee Member
                     </div>
 
                 </div>
@@ -1132,11 +1122,234 @@ footer a:hover{
                 <div class="committee-member">
 
                     <div class="member-name">
-                        Name to be announced
+                        Kashyap Jyoti Bora
                     </div>
 
                     <div class="member-role">
-                        Advisory Committee Member
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Joyshree Bhuyan
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Manash Goswami
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <!-- FUTURE MEMBERS -->
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member X
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member Y
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member Z
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member A
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member B
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member C
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member D
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member E
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member F
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member G
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member H
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member I
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member J
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member K
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
+                    </div>
+
+                </div>
+
+
+                <div class="committee-member">
+
+                    <div class="member-name">
+                        Member L
+                    </div>
+
+                    <div class="member-role">
+                        Organising Committee Member
                     </div>
 
                 </div>
@@ -1151,9 +1364,9 @@ footer a:hover{
                     Committee information will be updated.
                 </strong>
 
-                Names, affiliations and committee positions
-                can be added or modified as the conference
-                organisation progresses.
+                Additional members, affiliations and
+                specific responsibilities will be added
+                as the conference organisation progresses.
 
             </div>
 
@@ -1165,15 +1378,13 @@ footer a:hover{
 </section>
 
 
-
 <!-- =====================================================
      FOOTER
 ===================================================== -->
 
 <footer>
 
-       <div class="container">
-
+    <div class="container">
 
         <div class="footer-grid">
 
@@ -1206,14 +1417,13 @@ footer a:hover{
 
                 <p style="margin-top:20px; max-width:470px;">
 
-                    A premier technical institution in Assam, celebrating a century of technical education, innovation and service.
+                    A premier technical institution in Assam,
+                    celebrating a century of technical education,
+                    innovation and service.
+
                 </p>
 
-
-              
-
             </div>
-
 
 
             <!-- COLLEGE -->
@@ -1228,29 +1438,28 @@ footer a:hover{
 
                     <li>
                         <a
-                           href="https://powietjrt.in/"
-                target="_blank"
-            >
-                College Website →
-            </a>
-        </li>
+                            href="https://powietjrt.in/"
+                            target="_blank"
+                        >
+                            College Website →
+                        </a>
+                    </li>
 
-        <li>
-            H.R.H. The P.O.W.I.E.T.
-        </li>
+                    <li>
+                        H.R.H. The P.O.W.I.E.T.
+                    </li>
 
-        <li>
-            Gar Ali, Jorhat
-        </li>
+                    <li>
+                        Gar Ali, Jorhat
+                    </li>
 
-        <li>
-            Assam – 785001
-        </li>
+                    <li>
+                        Assam – 785001
+                    </li>
 
-    </ul>
+                </ul>
 
-</div>
-
+            </div>
 
 
             <!-- CONFERENCE -->
@@ -1270,14 +1479,14 @@ footer a:hover{
                     </li>
 
                     <li>
-                        <a href="contact.html">
-                            Contact
+                        <a href="committee.html">
+                            Committee
                         </a>
                     </li>
 
                     <li>
-                        <a href="downloads.html">
-                            Downloads
+                        <a href="contact.html">
+                            Contact
                         </a>
                     </li>
 
@@ -1290,6 +1499,7 @@ footer a:hover{
                 </ul>
 
             </div>
+
         </div>
 
 
@@ -1306,16 +1516,25 @@ footer a:hover{
 </footer>
 
 
+<!-- =====================================================
+     MOBILE NAVIGATION SCRIPT
+===================================================== -->
 
 <script>
+
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
 menuToggle.addEventListener("click", () => {
+
     navLinks.classList.toggle("active");
+
 });
+
 </script>
+
 
 </body>
 
 </html>
+```
