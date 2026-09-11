@@ -503,7 +503,7 @@ footer a:hover{
    MOBILE
 ===================================================== */
 
- @media (max-width: 900px) {
+   @media (max-width: 900px) {
 
 
     .menu-toggle{
@@ -512,83 +512,150 @@ footer a:hover{
 
     }
 
+
     .nav-links{
+
         display:none;
+
         position:absolute;
+
         top:80px;
+
         right:5%;
+
         background:#071522;
+
         width:230px;
+
         padding:25px;
+
         flex-direction:column;
+
         gap:18px;
+
         border-radius:8px;
+
     }
+
 
     .nav-links.active{
+
         display:flex;
+
     }
 
-    .themes-grid{
+
+    .about-grid {
+
         grid-template-columns:1fr;
+
+        gap:45px;
+
     }
 
-    .footer-grid{
+
+    .purpose-grid {
+
         grid-template-columns:1fr;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:1fr;
+
         gap:35px;
+
     }
 
-    .footer-brand{
+
+    .footer-brand {
+
         align-items:center;
+
     }
+
 
 }
 
-@media(max-width:600px){
 
-    .navbar{
-        padding:15px 5%;
-    }
-    .theme-card{
+.footer-brand{
 
-    padding:28px 22px;
+    align-items:center;
 
 }
 
-.theme-card h3{
+}
 
-    font-size:20px;
+
+
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .purpose-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 15px 5%;
+            }
+
+            .brand img {
+                width: 45px;
+                height: 45px;
+            }
+            .eyebrow{
+
+    font-size:15px;
 
 }
 
-    .brand img{
-        width:45px;
-        height:45px;
-    }
+.eyebrow span{
 
-    .brand-text{
-        font-size:10px;
-    }
-
-    .page-hero{
-        min-height:430px;
-    }
-
-    .page-hero h1{
-        font-size:40px;
-    }
-
-    .intro{
-        padding:65px 0 40px;
-    }
-
-    .intro h2{
-        font-size:34px;
-    }
+    font-size:11px;
 
 }
 
-</style>
+            .brand-text {
+                font-size: 10px;
+            }
+
+            .page-hero {
+                min-height: 420px;
+            }
+
+            .page-hero h1 {
+                font-size: 40px;
+            }
+
+            .page-hero p {
+                font-size: 14px;
+            }
+
+            .about-section {
+                padding: 65px 0;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
