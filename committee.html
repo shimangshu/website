@@ -116,6 +116,79 @@ a{
     color:var(--gold);
 }
 
+
+/* =====================================================
+   INFORMATION DROPDOWN
+===================================================== */
+
+.nav-dropdown{
+    position:relative;
+}
+
+.nav-dropdown > a{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+.dropdown-arrow{
+    font-size:10px;
+    transition:.2s ease;
+}
+
+.nav-dropdown:hover .dropdown-arrow{
+    transform:rotate(180deg);
+}
+
+.dropdown-menu{
+    position:absolute;
+    top:100%;
+    left:50%;
+    transform:translateX(-50%) translateY(8px);
+
+    min-width:190px;
+
+    background:white;
+
+    padding:10px 0;
+
+    border-radius:7px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.2s ease;
+
+    z-index:100;
+}
+
+.nav-dropdown:hover .dropdown-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateX(-50%) translateY(0);
+}
+
+.dropdown-menu a{
+    display:block;
+
+    padding:10px 20px;
+
+    color:var(--navy)!important;
+
+    font-size:13px;
+
+    white-space:nowrap;
+}
+
+.dropdown-menu a:hover{
+    background:var(--cream);
+
+    color:var(--gold)!important;
+}
+
+
 .nav-register{
     border:1px solid rgba(255,255,255,.65);
     padding:9px 18px;
@@ -721,45 +794,67 @@ footer a:hover{
     </button>
 
 
-    <nav class="nav-links">
+   <nav class="nav-links">
 
-        <a href="index.html">
-            Home
+    <a href="index.html">
+        Home
+    </a>
+
+   
+    <a href="themes.html">
+        Themes
+    </a>
+
+
+    <!-- INFORMATION DROPDOWN -->
+
+    <div class="nav-dropdown">
+
+        <a href="#">
+            Information
+            <span class="dropdown-arrow">▼</span>
         </a>
 
-        <a href="about.html">
-            About
-        </a>
+        <div class="dropdown-menu">
+    <a href="about.html">
+                About Us
+            </a>
 
-        <a href="themes.html">
-            Themes
-        </a>
+            
+            <a href="important-dates.html">
+                Important Dates
+            </a>
 
-        <a href="committee.html" class="active">
-            Committee
-        </a>
+            <a href="programme.html">
+                Programme
+            </a>
 
-        <a href="keynote.html">
-            Keynote
-        </a>
+        </div>
 
-        <a href="programme.html">
-            Programme
-        </a>
+    </div>
 
-        <a href="contact.html">
-            Contact
-        </a>
 
-        <a href="call-for-papers.html">
-            Papers
-        </a>
+    <a href="committee.html" class="active">
+        Committee
+    </a>
 
-        <a href="registration.html" class="nav-register">
-            Registration
-        </a>
+    <a href="keynote.html">
+        Keynote
+    </a>
 
-    </nav>
+    <a href="contact.html">
+        Contact
+    </a>
+
+    <a href="call-for-papers.html">
+        Papers
+    </a>
+
+    <a href="registration.html" class="nav-register">
+        Registration
+    </a>
+
+</nav>
 
 </header>
 
