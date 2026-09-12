@@ -2478,32 +2478,57 @@ conference dates, are listed below.
 </footer>
 <script>
 
-const menuToggle=document.getElementById("menu-toggle");
-const navLinks=document.querySelector(".nav-links");
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const navDropdown = document.querySelector(".nav-dropdown");
+const infoLink = navDropdown.querySelector(":scope > a");
 
-const navDropdown=document.querySelector(".nav-dropdown");
-const infoLink=navDropdown.querySelector(":scope > a");
 
+/* ==========================================
+   MOBILE MENU
+========================================== */
 
-menuToggle.onclick=function(){
+menuToggle.addEventListener("click", () => {
 
     navLinks.classList.toggle("active");
 
-};
+});
 
 
-infoLink.onclick=function(e){
+/* ==========================================
+   MOBILE INFORMATION DROPDOWN
+========================================== */
 
-    if(window.innerWidth<=900){
+infoLink.addEventListener("click", (event) => {
 
-        e.preventDefault();
+    /* Only activate click behaviour on mobile */
+    if (window.innerWidth <= 900) {
+
+        event.preventDefault();
 
         navDropdown.classList.toggle("mobile-open");
 
     }
 
-};
-    </script>
+});
+
+
+/* ==========================================
+   RESET MOBILE DROPDOWN WHEN RETURNING
+   TO DESKTOP
+========================================== */
+
+window.addEventListener("resize", () => {
+
+    if (window.innerWidth > 900) {
+
+        navDropdown.classList.remove("mobile-open");
+
+    }
+
+});
+
+</script>
 
 
 </body>
