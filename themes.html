@@ -609,14 +609,32 @@ footer a:hover{
 }
 
 
+.dropdown{
+    width:100%;
+}
+
+.dropdown > a{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+}
+
+
 .dropdown-content{
 
     position:static;
     display:none;
+
     width:100%;
+
     background:#071522;
+
     box-shadow:none;
+
     border-radius:0;
+
+    padding-left:10px;
 
 }
 
@@ -631,6 +649,7 @@ footer a:hover{
 .dropdown-content a{
 
     color:white!important;
+
     padding:10px 15px;
 
 }
@@ -1170,8 +1189,6 @@ and promote inclusive development.
 
 
 
-<script>
-
 const menuToggle=document.getElementById("menu-toggle");
 const navLinks=document.querySelector(".nav-links");
 
@@ -1198,7 +1215,18 @@ infoLink.onclick=function(e){
 
 };
 
-</script>
+
+// Close dropdown when another menu item is clicked
+
+document.querySelectorAll(".nav-links > a").forEach(link=>{
+
+    link.onclick=function(){
+
+        navDropdown.classList.remove("mobile-open");
+
+    };
+
+});
 
 </body>
 
