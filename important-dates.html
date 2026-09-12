@@ -1132,13 +1132,15 @@ footer a:hover{
         <div class="footer-grid">
 
 
+            <!-- INSTITUTION -->
+
             <div>
 
                 <div class="footer-brand">
 
                     <img
                         src="college-logo.png"
-                        alt="College Logo"
+                        alt="H.R.H. The P.O.W.I.E.T. Logo"
                     >
 
                     <div>
@@ -1156,28 +1158,56 @@ footer a:hover{
                 </div>
 
 
-                <p style="margin-top:20px;max-width:470px;">
+                <p style="margin-top:20px; max-width:450px;">
 
-                    National Conference on Convergence,
-                    Innovation and Development of Science,
-                    Engineering and Society for a Resilient Future.
-
-                </p>
-
-
-                <p style="margin-top:10px;">
-
-                    Celebrating 100 years of technical education
-                    and service —
-                    <strong style="color:var(--gold)">
-                        1927–2027
-                    </strong>.
+                    A premier technical institution in Assam,
+                    celebrating a century of technical education,
+                    innovation and service.
 
                 </p>
 
             </div>
 
 
+
+            <!-- COLLEGE -->
+
+            <div>
+
+                <h3>
+                    Institution
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a
+                           href="https://powietjrt.in/"
+                target="_blank"
+            >
+                College Website →
+            </a>
+        </li>
+
+        <li>
+            H.R.H. The P.O.W.I.E.T.
+        </li>
+
+        <li>
+            Gar Ali, Jorhat
+        </li>
+
+        <li>
+            Assam – 785001
+        </li>
+
+    </ul>
+
+</div>
+
+
+
+            <!-- CONFERENCE -->
 
             <div>
 
@@ -1194,64 +1224,22 @@ footer a:hover{
                     </li>
 
                     <li>
-                        <a href="themes.html">
-                            Themes
+                        <a href="contact.html">
+                            Contacts
                         </a>
                     </li>
 
                     <li>
-                        <a href="committee.html">
-                            Committee
+                        <a href="downloads.html">
+                            Downloads
                         </a>
                     </li>
 
-                    <li>
-                        <a href="speakers.html">
-                            Speakers
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="programme.html">
-                            Programme
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-
-            <div>
-
-                <h3>
-                    Participate
-                </h3>
-
-                <ul>
-
-                    <li>
-                        <a href="call-for-papers.html">
-                            Call for Papers
-                        </a>
-                    </li>
+                   
 
                     <li>
                         <a href="registration.html">
                             Registration
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="important-dates.html">
-                            Important Dates
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            Contact
                         </a>
                     </li>
 
@@ -1266,15 +1254,41 @@ footer a:hover{
         <div class="copyright">
 
             © 2027 H.R.H. The P.O.W.I.E.T., Jorhat, Assam
-            · CIDSESRF-2027
-            · Centenary 1927–2027
 
         </div>
 
     </div>
 
 </footer>
+<script>
 
+const menuToggle=document.getElementById("menu-toggle");
+const navLinks=document.querySelector(".nav-links");
+
+const navDropdown=document.querySelector(".nav-dropdown");
+const infoLink=navDropdown.querySelector(":scope > a");
+
+
+menuToggle.onclick=function(){
+
+    navLinks.classList.toggle("active");
+
+};
+
+
+infoLink.onclick=function(e){
+
+    if(window.innerWidth<=900){
+
+        e.preventDefault();
+
+        navDropdown.classList.toggle("mobile-open");
+
+    }
+
+};
+    </script>
+<footer>
 
 </body>
 
