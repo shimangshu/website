@@ -118,6 +118,9 @@ a{
     .dropdown{
     position:relative;
 }
+    .dropdown{
+    padding-bottom:10px;
+}
 
 .dropdown-content{
 
@@ -125,7 +128,8 @@ a{
 
     position:absolute;
 
-    top:35px;
+     top:100%;
+     margin-top:10px
 
     left:0;
 
@@ -2480,13 +2484,12 @@ conference dates, are listed below.
 
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.querySelector(".nav-links");
-const navDropdown = document.querySelector(".nav-dropdown");
+
+const navDropdown = document.querySelector(".dropdown");
 const infoLink = navDropdown.querySelector(":scope > a");
 
 
-/* ==========================================
-   MOBILE MENU
-========================================== */
+/* MOBILE MENU */
 
 menuToggle.addEventListener("click", () => {
 
@@ -2495,14 +2498,11 @@ menuToggle.addEventListener("click", () => {
 });
 
 
-/* ==========================================
-   MOBILE INFORMATION DROPDOWN
-========================================== */
+/* INFORMATION DROPDOWN */
 
 infoLink.addEventListener("click", (event) => {
 
-    /* Only activate click behaviour on mobile */
-    if (window.innerWidth <= 900) {
+    if(window.innerWidth <= 900){
 
         event.preventDefault();
 
@@ -2513,16 +2513,28 @@ infoLink.addEventListener("click", (event) => {
 });
 
 
-/* ==========================================
-   RESET MOBILE DROPDOWN WHEN RETURNING
-   TO DESKTOP
-========================================== */
+/* CLOSE DROPDOWN WHEN CLICKING OTHER LINKS */
+
+document.querySelectorAll(".nav-links > a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navDropdown.classList.remove("mobile-open");
+
+    });
+
+});
+
+
+/* RESET WHEN MOVING BACK TO DESKTOP */
 
 window.addEventListener("resize", () => {
 
-    if (window.innerWidth > 900) {
+    if(window.innerWidth > 900){
 
         navDropdown.classList.remove("mobile-open");
+
+        navLinks.classList.remove("active");
 
     }
 
