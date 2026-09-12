@@ -799,7 +799,36 @@ footer a:hover{.menu-toggle{
     padding:25px 15px;
 
 }
+.dropdown{
+    width:100%;
+}
 
+
+.dropdown-content{
+
+    position:static;
+    display:none;
+    width:100%;
+    background:#071522;
+    box-shadow:none;
+    border-radius:0;
+
+}
+
+
+.dropdown.mobile-open .dropdown-content{
+
+    display:block;
+
+}
+
+
+.dropdown-content a{
+
+    color:white!important;
+    padding:10px 15px;
+
+}
 .date{
     margin-bottom:10px;
 }
@@ -984,17 +1013,17 @@ min-height:360px;
             Home
         </a>
 
-      <div class="dropdown">
+    <div class="dropdown">
 
-    <a href="#">
-        Information
-        <span class="dropdown-arrow">▼</span>
-    </a>
+<a href="#">
+    Information
+    <span class="dropdown-arrow">▼</span>
+</a>
 
-    <div class="dropdown-content">
+<div class="dropdown-content">
 
-        <a href="about.html">
-            About Us
+<a href="about.html">
+    About Us
         </a>
 
         <a href="important-dates.html">
