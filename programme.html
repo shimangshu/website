@@ -185,7 +185,36 @@ a{
 
     max-width:800px;
 }
+.conference-title{
+    color:white;
+    margin-bottom:25px;
+}
 
+
+.conference-title strong{
+
+    display:block;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:28px;
+
+    letter-spacing:.02em;
+}
+
+
+.conference-title span{
+
+    display:block;
+
+    color:var(--gold);
+
+    font-size:15px;
+
+    margin-top:6px;
+
+    letter-spacing:.08em;
+}
 .eyebrow{
 
     color:var(--gold);
@@ -731,8 +760,24 @@ footer a:hover{
     }
 
     .page-hero{
-        min-height:430px;
+        min-height:360px;
     }
+
+
+    .conference-title strong{
+        font-size:20px;
+    }
+
+    .conference-title span{
+        font-size:11px;
+    }
+
+
+    .page-hero h1{
+        font-size:34px;
+    }
+
+}
 
     .page-hero h1{
         font-size:40px;
@@ -816,49 +861,63 @@ footer a:hover{
     </a>
 
 
-    <nav class="nav-links">
+ <nav class="nav-links">
 
-        <a href="index.html">
-            Home
-        </a>
+<a href="index.html">
+Home
+</a>
 
-        <a href="about.html">
-            About
-        </a>
+<div class="dropdown">
 
-        <a href="themes.html">
-            Themes
-        </a>
+<a href="#">
+Information
+<span class="dropdown-arrow">▼</span>
+</a>
 
-        <a href="committee.html">
-            Committee
-        </a>
+<div class="dropdown-content">
 
-        <a href="important-dates.html">
-            Dates
-        </a>
+<a href="about.html">
+About Us
+</a>
 
-        <a href="call-for-papers.html">
-            Papers
-        </a>
+<a href="important-dates.html">
+Important Dates
+</a>
 
-        <a href="keynote.html">
-            Keynote
-        </a>
+<a href="programme.html">
+Programme
+</a>
 
-        <a href="programme.html" class="active">
-            Programme
-        </a>
+</div>
 
-        <a
-            href="registration.html"
-            class="nav-register"
-        >
-            Registration
-        </a>
+</div>
 
-    </nav>
 
+<a href="themes.html">
+Themes
+</a>
+
+<a href="committee.html">
+Committee
+</a>
+
+<a href="keynote.html">
+Keynote
+</a>
+
+<a href="call-for-papers.html">
+Papers
+</a>
+
+<a href="contact.html">
+Contacts
+</a>
+
+<a href="registration.html" class="nav-register">
+Registration
+</a>
+
+</nav>
 </header>
 
 
@@ -873,9 +932,19 @@ footer a:hover{
 
         <div class="hero-content">
 
-            <div class="eyebrow">
-                CIDSESRF-2027 · 1927–2027
-            </div>
+            <div class="conference-title">
+
+<strong>
+CIDSESRF-2027
+</strong>
+
+<span>
+A Centenary Conference · 1927–2027
+</span>
+
+</div>
+
+
 
             <h1>
                 Conference Programme
