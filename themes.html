@@ -611,10 +611,11 @@ footer a:hover{
         display:flex;
     }
   
-.nav-links > a{            /* ← add this block */
-        width:100%;
-        text-align:right;
-    }
+.nav-links > a,
+.dropdown > a{
+    width:100%;
+    text-align:left;
+}
 
 
 .dropdown{
@@ -623,7 +624,12 @@ footer a:hover{
     padding:0;
 }
 
-  
+  .dropdown > a{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:8px;
+}
 
 
 .dropdown-content{
