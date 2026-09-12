@@ -2489,7 +2489,7 @@ const navDropdown = document.querySelector(".dropdown");
 const infoLink = navDropdown.querySelector(":scope > a");
 
 
-/* MOBILE MENU */
+/* OPEN MOBILE MENU */
 
 menuToggle.addEventListener("click", () => {
 
@@ -2513,7 +2513,7 @@ infoLink.addEventListener("click", (event) => {
 });
 
 
-/* CLOSE DROPDOWN WHEN CLICKING OTHER LINKS */
+/* CLOSE DROPDOWN */
 
 document.querySelectorAll(".nav-links > a").forEach(link => {
 
@@ -2526,7 +2526,7 @@ document.querySelectorAll(".nav-links > a").forEach(link => {
 });
 
 
-/* RESET WHEN MOVING BACK TO DESKTOP */
+/* RESET ON DESKTOP */
 
 window.addEventListener("resize", () => {
 
