@@ -543,70 +543,199 @@ footer a:hover{
    MOBILE
 ===================================================== */
 
-@media(max-width:900px){
+    @media (max-width: 1000px) {
 
-    .nav-links{
-        display:none;
-    }
+            .nav-links {
+                gap: 15px;
+            }
 
-    .date-item{
+            .nav-links a {
+                font-size: 12px;
+            }
 
+            .brand img {
+                width: 65px;
+                height: 65px;
+            }
+
+            .brand-text {
+                font-size: 12px;
+            }
+
+        }
+
+
+     @media(max-width:900px){
+
+.menu-toggle{
+    display:block;
+}
+
+
+.nav-links{
+
+    display:none;
+
+    position:absolute;
+
+    top:80px;
+    right:5%;
+
+    background:#071522;
+
+    width:230px;
+
+    padding:25px;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    border-radius:8px;
+
+}
+
+
+.nav-links.active{
+    display:flex;
+}
+
+
+.nav-dropdown{
+    width:100%;
+}
+
+
+.dropdown-menu{
+
+    position:static;
+
+    transform:none;
+
+    width:100%;
+
+    background:#071522;
+
+    box-shadow:none;
+
+    display:none;
+
+}
+
+
+.nav-dropdown.mobile-open .dropdown-menu{
+
+    display:block;
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+.dropdown-menu a{
+
+    color:rgba(255,255,255,.8)!important;
+
+}
+             .intro-grid{
         grid-template-columns:1fr;
-
-        gap:6px;
-
-    }
-
-    .date-status{
-
-        justify-self:start;
-
-        margin-top:8px;
-
+        gap:40px;
     }
 
     .footer-grid{
-
         grid-template-columns:1fr;
+    }
 
+    .hero{
+        min-height:750px;
     }
 
 }
+        @media (max-width: 600px) {
 
-@media(max-width:600px){
+            .navbar {
+                padding: 15px 5%;
+            }
 
-    .navbar{
-        padding:15px 5%;
-    }
+            .brand img {
+                width: 55px;
+                height: 55px;
+            }
 
-    .brand img{
-        width:45px;
-        height:45px;
-    }
+            .brand-text {
+                font-size: 10px;
+            }
 
-    .brand-text{
-        font-size:10px;
-    }
+            .hero {
+                min-height: 760px;
+            }
 
-    .page-hero{
-        min-height:430px;
-    }
+            .hero-content {
+                padding-top: 115px;
+            }
 
-    .page-hero h1{
-        font-size:40px;
-    }
+            .conference-id {
+                align-items: flex-start;
+            }
 
-    .intro{
-        padding:65px 0 40px;
-    }
+            .centenary-logo {
+                width: 85px;
+                height: 85px;
+            }
 
-    .intro h2{
-        font-size:34px;
-    }
+            .centenary-text {
+                margin-left: 14px;
+            }
 
+            .centenary-text strong {
+                font-size: 10px;
+            }
+
+            .centenary-text span {
+                font-size: 9px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+                line-height: 1.15;
+            }
+
+            .conference-shortname {
+                font-size: 23px;
+            }
+            .conference-date strong {
+    font-size: 20px;
 }
 
-</style>
+.conference-date small {
+    font-size: 10px;
+}
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .hero-actions {
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 34px;
+            }
+
+            .intro-card {
+                padding: 32px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -614,17 +743,18 @@ footer a:hover{
 <body>
 
 
-<!-- =====================================================
+<!-- =========================================================
      NAVIGATION
-===================================================== -->
+========================================================= -->
 
 <header class="navbar">
 
     <a href="index.html" class="brand">
 
+        <!-- COLLEGE LOGO -->
         <img
             src="college-logo.png"
-            alt="H.R.H. The P.O.W.I.E.T. Logo"
+            alt="H.R.H. The P.O.W.I.E.T. College Logo"
         >
 
         <div class="brand-text">
@@ -635,33 +765,67 @@ footer a:hover{
         </div>
 
     </a>
+<button class="menu-toggle" id="menu-toggle">
+    ☰
+</button>
 
+    <nav class="nav-links">
 
-  <div class="nav-links" id="navLinks">
+        <a href="index.html">
+            Home
+        </a>
 
-<a href="index.html">Home</a>
+      <div class="nav-dropdown">
 
-<div class="dropdown">
-<a href="#">Information ▾</a>
-<div class="dropdown-content">
-<a href="about.html">About Us</a>
-<a href="important-dates.html">Important Dates</a>
-<a href="programme.html">Programme</a>
+    <a href="#">
+        Information
+        <span class="dropdown-arrow">▼</span>
+    </a>
+
+    <div class="dropdown-menu">
+
+        <a href="about.html">
+            About Us
+        </a>
+
+        <a href="important-dates.html">
+            Important Dates
+        </a>
+
+        <a href="programme.html">
+            Programme
+        </a>
+
+    </div>
+
 </div>
-</div>
 
-<a href="themes.html">Themes</a>
-<a href="committee.html">Committee</a>
-<a href="speakers.html">Speakers</a>
-<a href="call-for-papers.html">Call for Papers</a>
-<a href="registration.html">Registration</a>
+        <a href="themes.html">
+            Themes
+        </a>
 
-</div>
+        <a href="committee.html">
+            Committee
+        </a>
 
+        <a href="keynote.html">
+            Keynote
+        </a>
 
-<div class="menu-toggle" id="menuToggle">
-☰
-</div>
+     
+
+        <a href="call-for-papers.html">
+            Papers
+        </a>
+        <a href="contact.html">
+            Contacts
+        </a>
+
+        <a href="registration.html" class="nav-register">
+            Registration
+        </a>
+
+    </nav>
 
 </header>
 
