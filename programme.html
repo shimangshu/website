@@ -694,7 +694,15 @@ footer li{
     margin-bottom:8px;
 }
 
-footer a:hover{
+footer a:hover{.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
     color:var(--gold);
 }
 
@@ -713,56 +721,202 @@ footer a:hover{
     font-size:11px;
 }
 
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
 
 /* =====================================================
    MOBILE
 ===================================================== */
 
-@media(max-width:900px){
+ @media (max-width: 1000px) {
 
-    .nav-links{
-        display:none;
-    }
+            .nav-links {
+                gap: 15px;
+            }
 
-    .schedule:before{
-        left:75px;
-    }
+            .nav-links a {
+                font-size: 12px;
+            }
 
-    .schedule-item{
-        grid-template-columns:55px 40px 1fr;
-        gap:15px;
-    }
+            .brand img {
+                width: 65px;
+                height: 65px;
+            }
 
-    .download-card{
-        flex-direction:column;
-        align-items:flex-start;
+            .brand-text {
+                font-size: 12px;
+            }
+
+        }
+
+
+     @media(max-width:900px){
+
+.menu-toggle{
+    display:block;
+}
+
+
+.nav-links{
+
+    display:none;
+
+    position:absolute;
+
+    top:80px;
+    right:5%;
+
+    background:#071522;
+
+    width:230px;
+
+    padding:25px;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    border-radius:8px;
+
+}
+
+
+.nav-links.active{
+    display:flex;
+}
+
+.date-item{
+
+    display:block;
+    padding:25px 15px;
+
+}
+
+.date{
+    margin-bottom:10px;
+}
+
+.date-status{
+
+    display:inline-block;
+    margin-top:12px;
+
+}
+.dropdown{
+    width:100%;
+}
+
+
+.dropdown-content{
+
+    position:static;
+    display:none;
+    width:100%;
+    background:#071522;
+    box-shadow:none;
+    border-radius:0;
+
+}
+
+
+.dropdown.mobile-open .dropdown-content{
+
+    display:block;
+
+}
+
+
+.dropdown-content a{
+
+    color:white!important;
+    padding:10px 15px;
+
+}
+             .intro-grid{
+        grid-template-columns:1fr;
+        gap:40px;
     }
 
     .footer-grid{
         grid-template-columns:1fr;
     }
 
+    .hero{
+        min-height:750px;
+    }
+
+}
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 15px 5%;
+            }
+
+            .brand img {
+                width: 55px;
+                height: 55px;
+            }
+
+            .brand-text {
+                font-size: 10px;
+            }
+
+           .page-hero{
+min-height:360px;
 }
 
-@media(max-width:600px){
+            .hero-content {
+                padding-top: 100px;
+            }
 
-    .navbar{
-        padding:15px 5%;
+            .conference-id {
+                align-items: flex-start;
+            }
+
+            .centenary-logo {
+                width: 85px;
+                height: 85px;
+            }
+
+            .centenary-text {
+                margin-left: 14px;
+            }
+
+            .centenary-text strong {
+                font-size: 10px;
+            }
+
+            .centenary-text span {
+                font-size: 9px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+                line-height: 1.15;
+            }
+
+            .conference-shortname {
+                font-size: 23px;
+            }
+            .conference-date strong {
+    font-size: 20px;
+}
+
+.conference-date small {
+    font-size: 10px;
+}
+ .page-hero h1{
+        font-size:34px;
+        line-height:1.15;
     }
-
-    .brand img{
-        width:45px;
-        height:45px;
-    }
-
-    .brand-text{
-        font-size:10px;
-    }
-
-    .page-hero{
-        min-height:360px;
-    }
-
 
     .conference-title strong{
         font-size:20px;
@@ -771,72 +925,32 @@ footer a:hover{
     .conference-title span{
         font-size:11px;
     }
+            .hero-description {
+                font-size: 14px;
+            }
 
+            .hero-actions {
+                align-items: flex-start;
 
-    .page-hero h1{
-        font-size:34px;
-    }
+                flex-direction: column;
+            }
 
-}
+            .section-title {
+                font-size: 34px;
+            }
 
-    .page-hero h1{
-        font-size:40px;
-    }
+            .intro-card {
+                padding: 32px;
+            }
 
-    .intro{
-        padding:65px 0 40px;
-    }
+        }
 
-    .intro h2{
-        font-size:34px;
-    }
-
-    .day-header{
-        align-items:flex-start;
-    }
-
-    .day-number{
-        font-size:34px;
-    }
-
-    .day-header h2{
-        font-size:25px;
-    }
-
-    .schedule:before{
-        left:61px;
-    }
-
-    .schedule-item{
-        grid-template-columns:42px 25px 1fr;
-        gap:10px;
-    }
-
-    .time{
-        font-size:10px;
-    }
-
-    .event{
-        padding:17px;
-    }
-
-    .event h3{
-        font-size:18px;
-    }
-
-    .download-card{
-        padding:28px;
-    }
-
-}
-
-</style>
+    </style>
 
 </head>
 
 
 <body>
-
 
 <!-- =====================================================
      NAVIGATION
@@ -846,9 +960,10 @@ footer a:hover{
 
     <a href="index.html" class="brand">
 
+        <!-- COLLEGE LOGO -->
         <img
             src="college-logo.png"
-            alt="H.R.H. The P.O.W.I.E.T. Logo"
+            alt="H.R.H. The P.O.W.I.E.T. College Logo"
         >
 
         <div class="brand-text">
@@ -859,66 +974,70 @@ footer a:hover{
         </div>
 
     </a>
+<button class="menu-toggle" id="menu-toggle">
+    ☰
+</button>
 
+    <nav class="nav-links">
 
- <nav class="nav-links">
+        <a href="index.html">
+            Home
+        </a>
 
-<a href="index.html">
-Home
-</a>
+      <div class="dropdown">
 
-<div class="dropdown">
+    <a href="#">
+        Information
+        <span class="dropdown-arrow">▼</span>
+    </a>
 
-<a href="#">
-Information
-<span class="dropdown-arrow">▼</span>
-</a>
+    <div class="dropdown-content">
 
-<div class="dropdown-content">
+        <a href="about.html">
+            About Us
+        </a>
 
-<a href="about.html">
-About Us
-</a>
+        <a href="important-dates.html">
+            Important Dates
+        </a>
 
-<a href="important-dates.html">
-Important Dates
-</a>
+        <a href="programme.html">
+            Programme
+        </a>
 
-<a href="programme.html">
-Programme
-</a>
+    </div>
 
 </div>
 
-</div>
+        <a href="themes.html">
+            Themes
+        </a>
 
+        <a href="committee.html">
+            Committee
+        </a>
 
-<a href="themes.html">
-Themes
-</a>
+        <a href="keynote.html">
+            Keynote
+        </a>
 
-<a href="committee.html">
-Committee
-</a>
+     
 
-<a href="keynote.html">
-Keynote
-</a>
+        <a href="call-for-papers.html">
+            Papers
+        </a>
+        <a href="contact.html">
+            Contacts
+        </a>
 
-<a href="call-for-papers.html">
-Papers
-</a>
+        <a href="registration.html" class="nav-register">
+            Registration
+        </a>
 
-<a href="contact.html">
-Contacts
-</a>
+    </nav>
 
-<a href="registration.html" class="nav-register">
-Registration
-</a>
-
-</nav>
 </header>
+
 
 
 
@@ -1449,13 +1568,15 @@ A Centenary Conference · 1927–2027
         <div class="footer-grid">
 
 
+            <!-- INSTITUTION -->
+
             <div>
 
                 <div class="footer-brand">
 
                     <img
                         src="college-logo.png"
-                        alt="College Logo"
+                        alt="H.R.H. The P.O.W.I.E.T. Logo"
                     >
 
                     <div>
@@ -1473,28 +1594,56 @@ A Centenary Conference · 1927–2027
                 </div>
 
 
-                <p style="margin-top:20px;max-width:470px;">
+                <p style="margin-top:20px; max-width:450px;">
 
-                    National Conference on Convergence,
-                    Innovation and Development of Science,
-                    Engineering and Society for a Resilient Future.
-
-                </p>
-
-
-                <p style="margin-top:10px;">
-
-                    Celebrating 100 years of technical education
-                    and service —
-                    <strong style="color:var(--gold)">
-                        1927–2027
-                    </strong>.
+                    A premier technical institution in Assam,
+                    celebrating a century of technical education,
+                    innovation and service.
 
                 </p>
 
             </div>
 
 
+
+            <!-- COLLEGE -->
+
+            <div>
+
+                <h3>
+                    Institution
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a
+                           href="https://powietjrt.in/"
+                target="_blank"
+            >
+                College Website →
+            </a>
+        </li>
+
+        <li>
+            H.R.H. The P.O.W.I.E.T.
+        </li>
+
+        <li>
+            Gar Ali, Jorhat
+        </li>
+
+        <li>
+            Assam – 785001
+        </li>
+
+    </ul>
+
+</div>
+
+
+
+            <!-- CONFERENCE -->
 
             <div>
 
@@ -1511,64 +1660,22 @@ A Centenary Conference · 1927–2027
                     </li>
 
                     <li>
-                        <a href="themes.html">
-                            Themes
+                        <a href="contact.html">
+                            Contacts
                         </a>
                     </li>
 
                     <li>
-                        <a href="committee.html">
-                            Committee
+                        <a href="downloads.html">
+                            Downloads
                         </a>
                     </li>
 
-                    <li>
-                        <a href="important-dates.html">
-                            Important Dates
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="programme.html">
-                            Programme
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-
-            <div>
-
-                <h3>
-                    Participate
-                </h3>
-
-                <ul>
-
-                    <li>
-                        <a href="call-for-papers.html">
-                            Call for Papers
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="keynote.html">
-                            Keynote Speaker
-                        </a>
-                    </li>
+                   
 
                     <li>
                         <a href="registration.html">
                             Registration
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            Contact
                         </a>
                     </li>
 
@@ -1583,8 +1690,6 @@ A Centenary Conference · 1927–2027
         <div class="copyright">
 
             © 2027 H.R.H. The P.O.W.I.E.T., Jorhat, Assam
-            · CIDSESRF-2027
-            · Centenary 1927–2027
 
         </div>
 
