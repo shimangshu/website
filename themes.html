@@ -1191,6 +1191,1291 @@ and promote inclusive development.
 
 </footer>
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Important Dates | CIDSESRF-2027</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+:root{
+    --navy:#10243e;
+    --dark-navy:#071522;
+    --gold:#c69b45;
+    --cream:#f6f2e9;
+    --white:#ffffff;
+    --text:#263342;
+    --muted:#697586;
+    --border:#e5dfd3;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    color:var(--text);
+    background:white;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:20;
+
+    padding:20px 5%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:white;
+}
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:13px;
+}
+
+.brand img{
+
+    width:58px;
+    height:58px;
+
+    object-fit:contain;
+
+    background:rgba(255,255,255,.94);
+
+    padding:4px;
+
+    border-radius:50%;
+}
+
+.brand-text{
+
+    font-size:12px;
+
+    font-weight:600;
+
+    line-height:1.35;
+
+    letter-spacing:.04em;
+}
+    .dropdown{
+position:relative;
+}
+
+
+.dropdown{
+    position:relative;
+}
+
+
+.dropdown-content{
+
+    display:none;
+
+    position:absolute;
+
+    top:35px;
+
+    left:0;
+
+    background:white;
+
+    min-width:200px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    z-index:100;
+}
+
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:12px 16px;
+
+    color:#10243e !important;
+
+    font-size:14px;
+
+}
+
+
+.dropdown-content a:hover{
+
+    background:#f3f0e8;
+
+    color:#c69b45 !important;
+
+}
+
+
+.dropdown:hover .dropdown-content{
+
+    display:block;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+}
+
+.nav-links a{
+
+    font-size:13px;
+
+    font-weight:500;
+
+    color:white;
+
+    transition:.25s ease;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.nav-links a.active{
+    color:var(--gold);
+}
+
+.nav-register{
+
+    border:1px solid rgba(255,255,255,.65);
+
+    padding:9px 18px;
+
+    border-radius:30px;
+}
+
+.nav-register:hover{
+
+    background:white;
+
+    color:var(--navy)!important;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.page-hero{
+
+    min-height:470px;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(5,18,31,.97),
+        rgba(5,18,31,.78),
+        rgba(5,18,31,.64)
+    ),
+
+    url("college-photo.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+.hero-content{
+
+    padding-top:75px;
+
+    max-width:800px;
+}
+
+.eyebrow{
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.18em;
+
+    margin-bottom:15px;
+}
+.conference-title{
+    color:white;
+    margin-bottom:25px;
+}
+
+.conference-title strong{
+
+    display:block;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:28px;
+
+    letter-spacing:.02em;
+}
+
+
+.conference-title span{
+
+    display:block;
+
+    color:var(--gold);
+
+    font-size:15px;
+
+    margin-top:6px;
+
+    letter-spacing:.08em;
+}
+.page-hero h1{
+
+    font-family:"Playfair Display",serif;
+
+    color:white;
+
+    font-size:clamp(44px,5vw,64px);
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+}
+
+.page-hero p{
+
+    color:rgba(255,255,255,.73);
+
+    font-size:16px;
+
+    max-width:720px;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro{
+
+    padding:80px 0 45px;
+
+    text-align:center;
+}
+
+.intro h2{
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--navy);
+
+    font-size:40px;
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+}
+
+.intro p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    font-size:15px;
+}
+
+
+/* =====================================================
+   DATES
+===================================================== */
+
+.dates-section{
+
+    padding:20px 0 100px;
+}
+
+.dates-list{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    border-top:1px solid var(--border);
+
+    padding:0 20px;
+}
+
+.date-item{
+
+    display:grid;
+
+    grid-template-columns:220px 1fr 160px;
+
+    align-items:center;
+
+    gap:35px;
+
+    padding:27px 30px;
+
+    border-bottom:1px solid var(--border);
+
+    transition:.2s ease;
+}
+
+.date-item:hover{
+
+    background:var(--cream);
+}
+
+.date{
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--navy);
+
+    font-size:20px;
+
+    font-weight:600;
+}
+
+.date-label{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--text);
+}
+
+.date-description{
+
+    font-size:12.5px;
+
+    color:var(--muted);
+
+    margin-top:3px;
+}
+
+.date-status{
+
+    justify-self:end;
+
+    border:1px solid var(--gold);
+
+    color:var(--gold);
+
+    font-size:10px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.1em;
+
+    padding:6px 11px;
+
+    border-radius:20px;
+}
+
+
+/* =====================================================
+   NOTE
+===================================================== */
+
+.update-note{
+
+    max-width:900px;
+
+    margin:35px auto 0;
+
+    padding:25px 30px;
+
+    background:#faf8f2;
+
+    border-left:3px solid var(--gold);
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta{
+
+    background:var(--navy);
+
+    padding:65px 0;
+
+    text-align:center;
+}
+
+.cta h2{
+
+    font-family:"Playfair Display",serif;
+
+    color:white;
+
+    font-size:35px;
+
+    margin-bottom:14px;
+}
+
+.cta p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:rgba(255,255,255,.63);
+
+    font-size:14px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:var(--dark-navy);
+
+    color:white;
+
+    padding:55px 0 25px;
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:1.5fr 1fr 1fr;
+
+    gap:50px;
+}
+
+.footer-brand{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+}
+
+.footer-brand img{
+
+    width:60px;
+    height:60px;
+
+    object-fit:contain;
+}
+
+footer h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:21px;
+
+    margin-bottom:14px;
+}
+
+footer p,
+footer li{
+
+    color:rgba(255,255,255,.52);
+
+    font-size:13px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:8px;
+}
+
+footer a:hover{
+    color:var(--gold);
+}
+
+.copyright{
+
+    margin-top:40px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    text-align:center;
+
+    color:rgba(255,255,255,.35);
+
+    font-size:11px;
+}
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+    @media (max-width: 1000px) {
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .brand img {
+                width: 65px;
+                height: 65px;
+            }
+
+            .brand-text {
+                font-size: 12px;
+            }
+
+        }
+
+
+        @media(max-width:900px){
+
+.menu-toggle{
+    display:block;
+}
+
+
+.nav-links{
+
+    display:none;
+
+    position:absolute;
+
+    top:80px;
+    right:5%;
+
+    background:#071522;
+
+    width:230px;
+
+    padding:25px;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    border-radius:8px;
+
+}
+
+
+.nav-links.active{
+    display:flex;
+}
+
+.date-item{
+
+    display:block;
+    padding:25px 15px;
+
+}
+
+.date{
+    margin-bottom:10px;
+}
+
+.date-status{
+
+    display:inline-block;
+    margin-top:12px;
+
+}
+.dropdown{
+    width:100%;
+}
+
+
+.dropdown-content{
+
+    position:static;
+    display:none;
+    width:100%;
+    background:#071522;
+    box-shadow:none;
+    border-radius:0;
+
+}
+
+
+.dropdown.mobile-open .dropdown-content{
+
+    display:block;
+
+}
+
+
+.dropdown-content a{
+
+    color:white!important;
+    padding:10px 15px;
+
+}
+             .intro-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:750px;
+    }
+
+}
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 15px 5%;
+            }
+
+            .brand img {
+                width: 55px;
+                height: 55px;
+            }
+
+            .brand-text {
+                font-size: 10px;
+            }
+
+           .page-hero{
+min-height:360px;
+}
+
+            .hero-content {
+                padding-top: 100px;
+            }
+
+            .conference-id {
+                align-items: flex-start;
+            }
+
+            .centenary-logo {
+                width: 85px;
+                height: 85px;
+            }
+
+            .centenary-text {
+                margin-left: 14px;
+            }
+
+            .centenary-text strong {
+                font-size: 10px;
+            }
+
+            .centenary-text span {
+                font-size: 9px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+                line-height: 1.15;
+            }
+
+            .conference-shortname {
+                font-size: 23px;
+            }
+            .conference-date strong {
+    font-size: 20px;
+}
+
+.conference-date small {
+    font-size: 10px;
+}
+ .page-hero h1{
+        font-size:34px;
+        line-height:1.15;
+    }
+
+    .conference-title strong{
+        font-size:20px;
+    }
+
+    .conference-title span{
+        font-size:11px;
+    }
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .hero-actions {
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 34px;
+            }
+
+            .intro-card {
+                padding: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="brand">
+
+        <!-- COLLEGE LOGO -->
+        <img
+            src="college-logo.png"
+            alt="H.R.H. The P.O.W.I.E.T. College Logo"
+        >
+
+        <div class="brand-text">
+
+            H.R.H. THE P.O.W.I.E.T.<br>
+            JORHAT, ASSAM
+
+        </div>
+
+    </a>
+<button class="menu-toggle" id="menu-toggle">
+    ☰
+</button>
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+      <div class="dropdown">
+
+    <a href="#">
+        Information
+        <span class="dropdown-arrow">▼</span>
+    </a>
+
+    <div class="dropdown-content">
+
+        <a href="about.html">
+            About Us
+        </a>
+
+        <a href="important-dates.html">
+            Important Dates
+        </a>
+
+        <a href="programme.html">
+            Programme
+        </a>
+
+    </div>
+
+</div>
+
+        <a href="themes.html">
+            Themes
+        </a>
+
+        <a href="committee.html">
+            Committee
+        </a>
+
+        <a href="keynote.html">
+            Keynote
+        </a>
+
+     
+
+        <a href="call-for-papers.html">
+            Papers
+        </a>
+        <a href="contact.html">
+            Contacts
+        </a>
+
+        <a href="registration.html" class="nav-register">
+            Registration
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="page-hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+          <div class="conference-title">
+
+    <strong>
+        CIDSESRF-2027
+    </strong>
+
+    <span>
+        A Centenary Conference · 1927–2027
+    </span>
+
+</div>
+
+            <h1>
+                Important Dates
+            </h1>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            Conference Timeline
+        </div>
+
+        <h2>
+            Mark your calendar.
+        </h2>
+
+        <p>
+
+           The important milestones for CIDSESRF-2027,
+including abstract submission, acceptance and
+conference dates, are listed below.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DATE LIST
+===================================================== -->
+<section class="dates-section">
+
+    <div class="container">
+
+        <div class="dates-list">
+<!-- DATE 01 -->
+
+<div class="date-item">
+
+    <div class="date">
+        25 September 2026
+    </div>
+
+    <div>
+
+        <div class="date-label">
+            Registration & Abstract Submission Opens
+        </div>
+
+        <div class="date-description">
+            Opening of abstract submission for CIDSESRF-2027.
+        </div>
+
+    </div>
+
+    <div class="date-status">
+        Open
+    </div>
+
+</div>
+
+
+
+<!-- DATE 02 -->
+
+<div class="date-item">
+
+    <div class="date">
+        31 December 2026
+    </div>
+
+    <div>
+
+        <div class="date-label">
+            Abstract Submission Deadline
+        </div>
+
+        <div class="date-description">
+            Last date for submission of abstracts.
+        </div>
+
+    </div>
+
+    <div class="date-status">
+        Deadline
+    </div>
+
+</div>
+
+
+
+<!-- DATE 03 -->
+
+<div class="date-item">
+
+    <div class="date">
+        03 January 2027
+    </div>
+
+    <div>
+
+        <div class="date-label">
+            Notification of Acceptance
+        </div>
+
+        <div class="date-description">
+            Communication of abstract acceptance to participants.
+        </div>
+
+    </div>
+
+    <div class="date-status">
+        Important
+    </div>
+
+</div>
+
+
+
+<!-- DATE 04 -->
+
+<div class="date-item">
+
+    <div class="date">
+        26 January 2027
+    </div>
+
+    <div>
+
+        <div class="date-label">
+            Full Paper Submission Deadline
+        </div>
+
+        <div class="date-description">
+            Last date for submission of full papers from accepted contributions.
+        </div>
+
+    </div>
+
+    <div class="date-status">
+        Deadline
+    </div>
+
+</div>
+
+
+
+
+<!-- DATE 06 -->
+
+<div class="date-item">
+
+    <div class="date">
+        13–14 February 2027
+    </div>
+
+    <div>
+
+        <div class="date-label">
+            Conference Dates
+        </div>
+
+        <div class="date-description">
+            CIDSESRF-2027 at H.R.H. The P.O.W.I.E.T., Jorhat.
+        </div>
+
+    </div>
+
+    <div class="date-status">
+        Event
+    </div>
+
+</div>
+            </div>
+
+
+        <div class="update-note">
+
+            <strong>
+                Please note:
+            </strong>
+
+            The conference schedule and important dates are subject to
+    official announcements. Participants are advised to check
+    this page regularly for any updates.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <!-- INSTITUTION -->
+
+            <div>
+
+                <div class="footer-brand">
+
+                    <img
+                        src="college-logo.png"
+                        alt="H.R.H. The P.O.W.I.E.T. Logo"
+                    >
+
+                    <div>
+
+                        <h3>
+                            H.R.H. The P.O.W.I.E.T.
+                        </h3>
+
+                        <p>
+                            Jorhat, Assam
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <p style="margin-top:20px; max-width:450px;">
+
+                    A premier technical institution in Assam,
+                    celebrating a century of technical education,
+                    innovation and service.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- COLLEGE -->
+
+            <div>
+
+                <h3>
+                    Institution
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a
+                           href="https://powietjrt.in/"
+                target="_blank"
+            >
+                College Website →
+            </a>
+        </li>
+
+        <li>
+            H.R.H. The P.O.W.I.E.T.
+        </li>
+
+        <li>
+            Gar Ali, Jorhat
+        </li>
+
+        <li>
+            Assam – 785001
+        </li>
+
+    </ul>
+
+</div>
+
+
+
+            <!-- CONFERENCE -->
+
+            <div>
+
+                <h3>
+                    Conference
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contacts
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="downloads.html">
+                            Downloads
+                        </a>
+                    </li>
+
+                   
+
+                    <li>
+                        <a href="registration.html">
+                            Registration
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2027 H.R.H. The P.O.W.I.E.T., Jorhat, Assam
+
+        </div>
+
+    </div>
+
+</footer>
 <script>
 
 const menuToggle=document.getElementById("menu-toggle");
@@ -1218,21 +2503,10 @@ infoLink.onclick=function(e){
     }
 
 };
+    </script>
 
-
-// Close dropdown when another menu item is clicked
-
-document.querySelectorAll(".nav-links > a").forEach(link=>{
-
-    link.onclick=function(){
-
-        navDropdown.classList.remove("mobile-open");
-
-    };
-
-});
-
-</script>
 
 </body>
+
 </html>
+
