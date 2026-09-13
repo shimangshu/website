@@ -115,6 +115,43 @@ a{
 
     letter-spacing:.04em;
 }
+    .dropdown-content{
+
+    display:none;
+
+    position:absolute;
+
+     top:100%;
+     margin-top:10px;
+
+    left:0;
+
+    background:white;
+
+    min-width:200px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    z-index:100;
+}
+
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:12px 16px;
+
+    color:#10243e !important;
+
+    font-size:14px;
+
+}
+
 
 .nav-links{
 
@@ -633,37 +670,96 @@ footer a:hover{
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
 
-@media(max-width:900px){
+@media (max-width:900px){
+
+    .menu-toggle{
+        display:block;
+    }
 
     .nav-links{
         display:none;
+        position:absolute;
+        top:80px;
+        right:5%;
+        background:#071522;
+        width:230px;
+        padding:25px;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:14px;
+        border-radius:8px;
     }
 
-    .content-grid{
-        grid-template-columns:1fr;
+    .nav-links.active{
+        display:flex;
     }
 
-    .sidebar{
+
+    .nav-links > a,
+    .dropdown{
+        width:100%;
+    }
+
+
+    .nav-links > a{
+        text-align:left;
+        display:block;
+    }
+
+
+    .dropdown > a{
+
+        display:flex;
+        width:100%;
+        justify-content:space-between;
+        align-items:center;
+        text-align:left;
+
+    }
+
+
+    .dropdown-content{
+
         position:static;
+        display:none;
+        width:100%;
+        background:#071522;
+        box-shadow:none;
+        border-radius:0;
+        padding-left:0;
+
     }
 
-    .steps{
-        grid-template-columns:1fr;
+
+    .dropdown.mobile-open .dropdown-content{
+
+        display:block;
+
     }
 
-    .footer-grid{
-        grid-template-columns:1fr;
+
+    .dropdown-content a{
+
+        color:white!important;
+        padding:10px 0 10px 15px;
+
     }
 
 }
 
-@media(max-width:600px){
 
-    .navbar{
+        @media (max-width: 600px) {
+
+             .navbar{
         padding:15px 5%;
     }
 
@@ -676,25 +772,44 @@ footer a:hover{
         font-size:10px;
     }
 
+    .eyebrow{
+        font-size:15px;
+    }
+
+    .eyebrow span{
+        font-size:11px;
+    }
+
     .page-hero{
-        min-height:430px;
+        min-height:360px;
     }
 
     .page-hero h1{
         font-size:40px;
     }
 
+    .page-hero p{
+        font-size:14px;
+    }
+
     .intro{
-        padding:65px 0 40px;
+        padding:65px 0 45px;
     }
 
     .intro h2{
-        font-size:34px;
+        font-size:32px;
+    }
+
+    .themes-grid{
+        grid-template-columns:1fr;
+    }
+
+    .theme-card{
+        padding:30px 28px;
     }
 
 }
-
-</style>
+    </style>
 
 </head>
 
@@ -710,6 +825,7 @@ footer a:hover{
 
     <a href="index.html" class="brand">
 
+        <!-- COLLEGE LOGO -->
         <img
             src="college-logo.png"
             alt="H.R.H. The P.O.W.I.E.T. Logo"
@@ -725,37 +841,75 @@ footer a:hover{
     </a>
 
 
-    <nav class="nav-links">
+    <button class="menu-toggle" id="menu-toggle">
+    ☰
+</button>
 
-        <a href="index.html">
-            Home
-        </a>
+
+<nav class="nav-links">
+
+<a href="index.html">
+    Home
+</a>
+
+
+<div class="dropdown">
+
+    <a href="#">
+        Information
+        <span class="dropdown-arrow">▼</span>
+    </a>
+
+    <div class="dropdown-content">
 
         <a href="about.html">
-            About
-        </a>
-
-        <a href="themes.html">
-            Themes
-        </a>
-
-        <a href="committee.html">
-            Committee
+            About Us
         </a>
 
         <a href="important-dates.html">
-            Dates
+            Important Dates
         </a>
 
-        <a href="call-for-papers.html" class="active">
-            Papers
+        <a href="programme.html">
+            Programme
         </a>
 
-        <a href="registration.html" class="nav-register">
-            Registration
-        </a>
+    </div>
 
-    </nav>
+</div>
+
+
+<a href="themes.html" class="active">
+    Themes
+</a>
+
+
+<a href="committee.html">
+    Committee
+</a>
+
+
+<a href="keynote.html">
+    Keynote
+</a>
+
+
+<a href="call-for-papers.html">
+    Papers
+</a>
+
+
+<a href="contact.html">
+    Contacts
+</a>
+
+
+<a href="registration.html" class="nav-register">
+    Registration
+</a>
+
+
+</nav>
 
 </header>
 
@@ -771,21 +925,16 @@ footer a:hover{
 
         <div class="hero-content">
 
-            <div class="eyebrow">
-                CIDSESRF-2027 · 1927–2027
-            </div>
+          <div class="eyebrow">
+    CIDSESRF-2027<br>
+    <span>A Centenary Conference · 1927–2027</span>
+</div>
 
             <h1>
-                Call for Papers
+                Conference Themes
             </h1>
 
-            <p>
-
-              Submit your research abstract and become a part of
-CIDSESRF-2027, the centenary conference of
-H.R.H. The P.O.W.I.E.T., Jorhat.
-
-            </p>
+            
 
         </div>
 
