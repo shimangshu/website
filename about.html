@@ -173,6 +173,83 @@
 
             color: var(--gold);
         }
+        .nav-dropdown{
+    position:relative;
+}
+
+
+.nav-dropdown > a{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+
+.dropdown-arrow{
+    font-size:10px;
+}
+
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:100%;
+
+    left:50%;
+
+    transform:translateX(-50%) translateY(8px);
+
+    min-width:190px;
+
+    background:white;
+
+    padding:10px 0;
+
+    border-radius:7px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.2s ease;
+
+}
+
+
+.nav-dropdown:hover .dropdown-menu{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateX(-50%) translateY(0);
+
+}
+
+
+.dropdown-menu a{
+
+    display:block;
+
+    padding:10px 20px;
+
+    color:var(--navy)!important;
+
+    font-size:13px;
+
+}
+
+
+.dropdown-menu a:hover{
+
+    background:var(--cream);
+
+    color:var(--gold)!important;
+
+}
 .menu-toggle{
 
     display:none;
@@ -736,7 +813,62 @@
 
     }
 
+.nav-dropdown{
+    width:100%;
+}
 
+
+.nav-dropdown > a{
+
+    width:100%;
+
+    justify-content:space-between;
+
+}
+
+
+.dropdown-menu{
+
+    position:static;
+
+    transform:none;
+
+    width:100%;
+
+    margin-top:8px;
+
+    background:#071522;
+
+    box-shadow:none;
+
+    display:none;
+
+}
+
+
+.nav-dropdown.mobile-open .dropdown-menu{
+
+    display:block;
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+.dropdown-menu a{
+
+    color:rgba(255,255,255,.78)!important;
+
+}
+
+
+.nav-dropdown.mobile-open .dropdown-arrow{
+
+    transform:rotate(180deg);
+
+}
     .about-grid {
 
         grid-template-columns:1fr;
@@ -886,45 +1018,71 @@
 
 <nav class="nav-links">
 
-        <a href="index.html">
-            Home
+    <a href="index.html">
+        Home
+    </a>
+
+
+    <a href="themes.html">
+        Themes
+    </a>
+
+
+    <!-- INFORMATION DROPDOWN -->
+
+    <div class="nav-dropdown">
+
+        <a href="#">
+            Information
+            <span class="dropdown-arrow">▼</span>
         </a>
 
-        <a href="about.html" class="active">
-            About
-        </a>
 
-        <a href="themes.html">
-            Themes
-        </a>
+        <div class="dropdown-menu">
 
-        <a href="committee.html">
-            Committee
-        </a>
+            <a href="about.html">
+                About Us
+            </a>
 
-        <a href="keynote.html">
-            Keynote
-        </a>
+            <a href="important-dates.html">
+                Important Dates
+            </a>
 
-        <a href="programme.html">
-            Programme
-        </a>
-         <a href="contact.html">
-            Contact
-        </a>
+            <a href="programme.html">
+                Programme
+            </a>
 
-        <a href="call-for-papers.html">
-            Papers
-        </a>
+        </div>
 
-        <a
-            href="registration.html"
-            class="nav-register"
-        >
-            Registration
-        </a>
+    </div>
 
-    </nav>
+
+    <a href="committee.html">
+        Committee
+    </a>
+
+
+    <a href="keynote.html">
+        Keynote
+    </a>
+
+
+    <a href="contact.html">
+        Contact
+    </a>
+
+
+    <a href="call-for-papers.html">
+        Papers
+    </a>
+
+
+    <a href="registration.html" class="nav-register">
+        Registration
+    </a>
+
+
+</nav>
 
 </header>
 
@@ -1290,16 +1448,41 @@
     <script>
 
 const menuToggle = document.getElementById("menu-toggle");
-
 const navLinks = document.querySelector(".nav-links");
 
+const navDropdown = document.querySelector(".nav-dropdown");
+const infoLink = navDropdown.querySelector(":scope > a");
 
-menuToggle.onclick = function(){
+
+menuToggle.addEventListener("click", () => {
 
     navLinks.classList.toggle("active");
 
-};
+});
 
+
+infoLink.addEventListener("click", (event)=>{
+
+    if(window.innerWidth <= 900){
+
+        event.preventDefault();
+
+        navDropdown.classList.toggle("mobile-open");
+
+    }
+
+});
+
+
+window.addEventListener("resize",()=>{
+
+    if(window.innerWidth > 900){
+
+        navDropdown.classList.remove("mobile-open");
+
+    }
+
+});
 </script>
 
 
