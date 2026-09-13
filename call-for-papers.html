@@ -115,6 +115,12 @@ a{
 
     letter-spacing:.04em;
 }
+    .dropdown{
+
+    position:relative;
+
+}
+
     .dropdown-content{
 
     display:none;
@@ -151,7 +157,11 @@ a{
     font-size:14px;
 
 }
+.dropdown:hover .dropdown-content{
 
+    display:block;
+
+}
 
 .nav-links{
 
@@ -237,9 +247,11 @@ a{
 
 .eyebrow{
 
+    display:inline-block;
+
     color:var(--gold);
 
-    font-size:12px;
+    font-size:18px;
 
     font-weight:700;
 
@@ -247,7 +259,22 @@ a{
 
     letter-spacing:.18em;
 
-    margin-bottom:15px;
+    margin-bottom:20px;
+}
+
+
+.eyebrow span{
+
+    display:block;
+
+    font-size:13px;
+
+    letter-spacing:.12em;
+
+    margin-top:8px;
+
+    color:rgba(255,255,255,.75);
+
 }
 
 .page-hero h1{
@@ -773,11 +800,11 @@ footer a:hover{
     }
 
     .eyebrow{
-        font-size:15px;
+        font-size:13px;
     }
 
     .eyebrow span{
-        font-size:11px;
+        font-size:10px;
     }
 
     .page-hero{
